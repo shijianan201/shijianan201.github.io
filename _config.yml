@@ -18,12 +18,12 @@ highlighter: rouge
 title : 学习笔记
 tagline: Coding For Future
 image: https://lh5.googleusercontent.com/-hnukhkmD--I/V4m8XAu5yCI/AAAAAAABAAE/M4l0oJTVFoIOZoY4hSG7-rgFwbgym5H5wCL0B/w512-h439-no/IMG_20160715_125428.jpg
-repo_url: https://github.com/shijianan201/JianAn-Shi.github.io
+repo_url: https://github.com/shijianan201/shijianan201.github.io
 author :
   name : 史建安
   email : xiaojiangagaga@gmail.com
   google : xiaojiangagaga
-  github : JianAn-Shi
+  github : shijianan201
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -33,7 +33,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : https://github.com/shijianan201/JianAn-Shi.github.io
+production_url : https://github.com/shijianan201/shijianan201.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
