@@ -28,7 +28,7 @@ last_updated: 2020-11-20 14:08
 context.startActivity(new Intent(context,XXXActivity.class));//XXXActivity是新页面的类名
 ```
 
-这里的context一般是Activity也可以是Application或者其他的四大组件（BroadCastReceiver、Service、ContentProvider），但是如果在**targetSdkVersion大于或者等于9.0或者targetSdkVersion小于7.0**并且**context不是Activity**的话需要使用`Intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)`或者`Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)`设置flag，不然系统会抛出一个运行时异常如下：
+这里的context一般是Activity也可以是Application、Service，但是如果在**targetSdkVersion大于或者等于9.0或者targetSdkVersion小于7.0**并且**context不是Activity**的话需要使用`Intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)`或者`Intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)`设置flag，不然系统会抛出一个运行时异常如下：
 
 > Calling startActivity() from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag. Is this really what you want?
 
