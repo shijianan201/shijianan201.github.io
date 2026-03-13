@@ -1,7 +1,3 @@
----
-layout: null
----
-
 # OmniHub Help Center
 
 Welcome to OmniHub! This document provides help for using the various features of the app.
@@ -54,7 +50,7 @@ OmniHub is a powerful and versatile toolbox designed to assist you in various da
 
 **Q: How do the ads in the app work?**
 **A:** To support our development, OmniHub includes two types of ads:
--   **Rewarded Ads**: By watching a short rewarded ad, you can unlock an ad-free experience for the rest of the day. This is our recommended way for you to support us while enjoying the app.
+-   **Rewarded Ads**: By watching rewarded ad, you can unlock an ad-free experience for the rest of the day. This is our recommended way for you to support us while enjoying the app.
 -   **Interstitial Ads**: These ads may occasionally appear when you switch between major features. They are designed to be as non-intrusive as possible.
 Your support through watching ads allows us to continue improving the app.
 
@@ -133,7 +129,7 @@ OmniHub 是一个功能强大的多功能工具箱，旨在帮助您完成各种
 
 **问：应用内的广告是如何运作的？**
 **答：** 为了支持我们的持续发展，OmniHub 包含两种类型的广告：
--   **激励广告**: 通过观看一个简短的激励广告，您可以解锁当日的免广告体验。这是我们推荐的支持方式，既能帮助我们，也能让您享受更好的体验。
+-   **激励广告**: 通过观看激励广告，您可以解锁当日的免广告体验。这是我们推荐的支持方式，既能帮助我们，也能让您享受更好的体验。
 -   **插页广告**: 这类广告可能会在您切换主要功能时偶尔出现。我们已将其设计得尽可能不打扰您的使用。
 您通过观看广告给予的支持，是我们不断改进应用的最大动力。
 
