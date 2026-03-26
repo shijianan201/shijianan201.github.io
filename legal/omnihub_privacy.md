@@ -1,74 +1,135 @@
+# Privacy Policy for OmniHub
+
+**Last Updated: 2026-03-25**
+
+This Privacy Policy describes how OmniHub ("we," "us," or "our") collects, uses, and discloses your information when you use our mobile application (the "App").
+
 ---
-layout: null
+
+### Information We Collect
+
+We may collect the following types of information:
+
+**1. Information You Provide**
+-   **Feedback and Support**: If you contact us for support or provide feedback, we may collect your name, email address, and the content of your message.
+-   **Password Book Data**: All data entered into the Password Book, such as account names, passwords, and websites, is encrypted and stored **locally** on your device. We do not have access to this information, and it is never transmitted to our servers.
+
+**2. Information Collected Automatically**
+-   **Usage Data**: We may collect anonymous data about your interactions with the App, such as which features you use and the frequency of use. This helps us understand how to improve the App.
+-   **Device and Ad Information**: We may collect device-specific information, such as your device model and operating system version. We also use your device's Advertising ID to serve personalized ads. This is done through third-party services like Google AdMob.
+-   **Motion Sensor Data (New in v1.3.0)**: To enable interactive features like Coin Toss and Dice Roll, the App reads data from the device's motion sensors (accelerometer). This data is processed **locally on the device only** to detect gestures (shake, toss) and is **never collected or transmitted**.
+
+**3. Permissions**
+-   **Camera**: We request camera permission to enable QR code scanning and to allow you to pick colors from images taken with the camera.
+-   **Photo Gallery**: We request access to your photo gallery so you can select images for color picking.
+
 ---
 
-**Privacy Policy**
+### How We Use Your Information
 
-This privacy policy is applicable to the OmniHub app (hereinafter referred to as "Application") for mobile devices, which was developed by Jannix Shi (hereinafter referred to as "Service Provider") as a an Ad Supported service. This service is provided "AS IS".
+-   **To Provide and Improve the App**: We use the information to operate, maintain, and enhance the features and functionality of the App.
+-   **For Support**: We use your provided information to respond to your comments and questions and to provide customer service.
+-   **For Advertising**: We use third-party services (Google AdMob) to display ads. These services may use your Advertising ID to show ads that are more relevant to you. Watching a rewarded ad can disable interstitial ads for a period of time.
+-   **For Gesture-Based Tools (v1.3.0)**: Motion sensor data is used exclusively for triggering gesture-based tools (Dice/Coin). This data is processed **locally on the device only** and is **never collected or transmitted**.
 
-**What information does the Application obtain and how is it used?**
+---
 
-The Application acquires the information you supply when you download and register the Application. Registration with the Service Provider is not mandatory. However, bear in mind that you might not be able to utilize some of the features offered by the Application unless you register with them.
+### Data Storage and Security
 
-The Service Provider may also use the information you provided them to contact you from time to time to provide you with important information, required notices and marketing promotions.
+We prioritize your data's security. Sensitive information, especially data in the Password Book, is encrypted and stored exclusively on your local device. We implement reasonable security measures to protect your information, but no method of transmission or storage is 100% secure.
 
-**What information does the Application collect automatically?**
+---
 
-In addition, the Application may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile devices unique device ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use the Application.
+### Third-Party Services
 
-**Does the Application collect precise real time location information of the device?**
+The App uses third-party services for advertising and analytics. These services may collect information used to identify you. We recommend you review their privacy policies:
+-   [Google AdMob & AdSense Privacy Policy](https://policies.google.com/technologies/ads)
 
-This Application does not gather precise information about the location of your mobile device.
+---
 
-**Does the Application use Artificial Intelligence (AI) technologies?**
+### Children's Privacy
 
-The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.
+Our App is not intended for use by children under the age of 13. We do not knowingly collect personally identifiable information from children under 13.
 
-**Do third parties see and/or have access to information obtained by the Application?**
+---
 
-Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
+### Changes to This Privacy Policy
 
-Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
+We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the App and updating the "Last Updated" date.
 
-*   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [AdMob](https://support.google.com/admob/answer/6128543?hl=en)
-*   [Google Analytics for Firebase](https://firebase.google.com/support/privacy)
-*   [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
+---
 
-The Service Provider may disclose User Provided and Automatically Collected Information:
+### Contact Us
 
-*   as required by law, such as to comply with a subpoena, or similar legal process;
-*   when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;
-*   with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
+If you have any questions about this Privacy Policy, please contact us at:
+**Email**: xiaojiangagaga@gmail.com
 
-**What are my opt-out rights?**
+<br>
+<hr>
+<br>
 
-You can halt all collection of information by the Application easily by uninstalling the Application. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.
+# OmniHub 隐私政策
 
-**What is the data retention policy and how can you manage your information?**
+**最后更新日期: [2026-03-25 - Update for v1.3.0]**
 
-The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. The Service Provider will retain Automatically Collected information for up to 24 months and thereafter may store it in aggregate. If you'd like the Service Provider to delete User Provided Data that you have provided via the Application, please contact them at xiaojiangagaga@gmail.com and we will respond in a reasonable time. Please note that some or all of the User Provided Data may be required in order for the Application to function properly.
+本隐私政策说明了当您使用我们的移动应用 OmniHub（以下简称“本应用”）时，我们如何收集、使用和披露您的信息。
 
-**How does the Application address children's privacy?**
+---
 
-The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.
+### 我们收集的信息
 
-The Application does not address anyone under the age of 13\. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (xiaojiangagaga@gmail.com) so that they will be able to take the necessary actions.
+我们可能收集以下类型的信息：
 
-**How is your information kept secure?**
+**1. 您提供的信息**
+-   **反馈与支持**: 如果您联系我们以获取支持或提供反馈，我们可能会收集您的姓名、电子邮件地址以及您的消息内容。
+-   **密码本数据**: 您在密码本中输入的所有数据（例如账户名、密码、网站等）均经过加密并存储在您的设备 **本地**。我们无法访问这些信息，且这些信息绝不会传输到我们的服务器。
 
-The Service Provider are concerned about safeguarding the confidentiality of your information. The Service Provider provide physical, electronic, and procedural safeguards to protect information we process and maintain. For example, we limit access to this information to authorized employees and contractors who need to know that information in order to operate, develop or improve their Application. Please be aware that, although we endeavor provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.
+**2. 自动收集的信息**
+-   **使用数据**: 我们可能收集关于您与本应用互动的匿名数据，例如您使用的功能和使用频率。这有助于我们了解如何改进应用。
+-   **设备与广告信息**: 我们可能收集设备特定信息，例如您的设备型号和操作系统版本。我们还会使用您设备的广告ID来投放个性化广告。这是通过第三方服务（如 Google AdMob）实现的。
+-   **运动传感器数据 (v1.3.0 新增)**：为了实现“抛硬币”和“掷骰子”等工具的动态交互体验，本应用会读取设备的**运动传感器数据（加速度计）**。这些数据**仅在本地处理**以检测手势（如抛掷、摇晃），**绝不会被收集或传输**。
 
-**How will you be informed of changes to this Privacy Policy?**
+**3. 应用权限**
+-   **相机权限**: 我们请求相机权限以启用二维码扫描功能，并允许您通过相机拍摄的图片进行取色。
+-   **相册权限**: 我们请求访问您的相册，以便您可以选择图片进行取色。
 
-This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.
+---
 
-This privacy policy is effective as of 2026-03-04
+### 我们如何使用您的信息
 
-**How do you give your consent?**
+-   **提供和改进应用**: 我们使用收集到的信息来运营、维护和增强本应用的功能。
+-   **客户支持**: 我们使用您提供的信息来回复您的评论和问题，并提供客户服务。
+-   **广告服务**: 我们使用第三方服务（Google AdMob）来展示广告。这些服务可能会使用您的广告ID来展示与您更相关的广告。观看激励广告可以在一段时间内禁用插页式广告。
+-   **增强交互 (v1.3.0)**：运动传感器数据专门用于触发基于手势的工具（掷骰子/抛硬币）。**这些数据仅在本地处理，绝不会被收集或传输。**
 
-By using the Application, you are giving your consent to the Service Provider processing of your information as set forth in this Privacy Policy now and as amended by us. "Processing,” means using cookies on a computer/hand held device or using or touching information in any way, including, but not limited to, collecting, storing, deleting, using, combining and disclosing information.
+---
 
-**How can you contact us?**
+### 数据存储与安全
 
-If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at xiaojiangagaga@gmail.com.
+我们优先考虑您的数据安全。敏感信息，特别是密码本中的数据，经过加密并仅存储在您的本地设备上。我们采取了合理的安全措施来保护您的信息，但没有任何传输或存储方法是100%安全的。
+
+---
+
+### 第三方服务
+
+本应用使用第三方服务进行广告和分析。这些服务可能会收集用于识别您的信息。我们建议您查阅其隐私政策：
+-   [Google AdMob & AdSense 隐私政策](https://policies.google.com/technologies/ads)
+
+---
+
+### 儿童隐私
+
+我们的应用不适用于13岁以下的儿童。我们不会故意收集13岁以下儿童的个人身份信息。
+
+---
+
+### 隐私政策的变更
+
+我们可能会不时更新我们的隐私政策。如有任何变更，我们将在应用内发布新的隐私政策并更新“最后更新日期”。
+
+---
+
+### 联系我们
+
+如果您对本隐私政策有任何疑问，请通过以下方式联系我们：
+**电子邮件**: xiaojiangagaga@gmail.com

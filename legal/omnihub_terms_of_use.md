@@ -1,43 +1,121 @@
+# Terms of Use for OmniHub
+
+**Last Updated: 2024-07-30**
+
+Please read these Terms of Use ("Terms") carefully before using the OmniHub mobile application (the "App"). Your access to and use of the App is conditioned on your acceptance of and compliance with these Terms.
+
 ---
-layout: null
+
+### 1. Acceptance of Terms
+
+By downloading, accessing, or using the App, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the App.
+
 ---
 
-**Terms & Conditions**  
+### 2. Use of the App
 
-These terms and conditions apply to the OmniHub app (hereby referred to as "Application") for mobile devices that was created by Jannix Shi (hereby referred to as "Service Provider") as an Ad Supported service.
+-   **License**: We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes.
+-   **Prohibited Uses**: You agree not to use the App for any unlawful purpose or in any way that could damage, disable, or impair the App. You agree not to decompile, reverse-engineer, or otherwise attempt to derive the source code of the App.
 
-Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.
+---
 
-Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.
+### 3. In-App Content and Data
 
-The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As such, they reserve the right to modify the Application or charge for their services at any time and for any reason. The Service Provider assures you that any charges for the Application or its services will be clearly communicated to you.
+-   **Password Book**: You are solely responsible for the data you store in the Password Book. All data is encrypted and stored locally on your device. We have no access to this data and are not responsible for any loss or exposure of this data. It is your responsibility to keep your device and your access to the App secure.
+-   **Generated Content**: You are responsible for any content you generate using the App, such as QR codes.
 
-The Application stores and processes personal data that you have provided to the Service Provider in order to provide the Service. It is your responsibility to maintain the security of your phone and access to the Application. The Service Provider strongly advise against jailbreaking or rooting your phone, which involves removing software restrictions and limitations imposed by the official operating system of your device. Such actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security features, and may result in the Application not functioning correctly or at all.
+---
 
-Please note that the Application utilizes third-party services that have their own Terms and Conditions. Below are the links to the Terms and Conditions of the third-party service providers used by the Application:
+### 4. Advertising
 
-*   [Google Play Services](https://policies.google.com/terms)
-*   [AdMob](https://developers.google.com/admob/terms)
-*   [Google Analytics for Firebase](https://www.google.com/analytics/terms/)
-*   [Firebase Crashlytics](https://firebase.google.com/terms/crashlytics)
+The App is supported by advertising revenue and may display advertisements and promotions.
+-   **Rewarded Ads**: You may choose to watch rewarded ads to temporarily disable other types of ads (e.g., interstitial ads).
+-   **Interstitial Ads**: These ads may be displayed at various points within the App, such as when transitioning between features.
 
-Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network provider. The Service Provider cannot be held responsible if the Application does not function at full capacity due to lack of access to Wi-Fi or if you have exhausted your data allowance.
+---
 
-If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during the connection to the application, or other third-party charges. By using the application, you accept responsibility for any such charges, including roaming data charges if you use the application outside of your home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the device on which you are using the application, they assume that you have obtained permission from the bill payer.
+### 5. Disclaimers
 
-Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For instance, it is your responsibility to ensure that your device remains charged. If your device runs out of battery and you are unable to access the Service, the Service Provider cannot be held responsible.
+The App is provided "as is" and "as available," without any warranties of any kind, express or implied. We do not warrant that the App will be error-free or that defects will be corrected. You use the App at your own risk.
 
-In terms of the Service Provider's responsibility for your use of the application, it is important to note that while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to provide information to them so that they can make it available to you. The Service Provider accepts no liability for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of the application.
+---
 
-The Service Provider may wish to update the application at some point. The application is currently available as per the requirements for the operating system (and for any additional systems they decide to extend the availability of the application to) may change, and you will need to download the updates if you want to continue using the application. The Service Provider does not guarantee that it will always update the application so that it is relevant to you and/or compatible with the particular operating system version installed on your device. However, you agree to always accept updates to the application when offered to you. The Service Provider may also wish to cease providing the application and may terminate its use at any time without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the rights and licenses granted to you in these terms will end; (b) you must cease using the application, and (if necessary) delete it from your device.
+### 6. Limitation of Liability
 
-**Changes to These Terms and Conditions**
+In no event shall OmniHub, nor its developers, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or other intangibles, arising out of or in connection with your use of the App.
 
-The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review this page regularly for any changes. The Service Provider will notify you of any changes by posting the new Terms and Conditions on this page.
+---
 
-These terms and conditions are effective as of 2026-03-04
+### 7. Changes to These Terms
 
-**Contact Us**
+We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms of Use within the App and updating the "Last Updated" date. Your continued use of the App after any such changes constitutes your acceptance of the new Terms.
 
-If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the Service Provider at xiaojiangagaga@gmail.com.
+---
 
+### 8. Contact Us
+
+If you have any questions about these Terms, please contact us at:
+**Email**: xiaojiangagaga@gmail.com
+
+<br>
+<hr>
+<br>
+
+# OmniHub 用户协议
+
+**最后更新日期: 2024-07-30**
+
+在使用 OmniHub 移动应用（以下简称“本应用”）前，请仔细阅读本用户协议（以下简称“本协议”）。您访问和使用本应用的前提是您接受并遵守本协议。
+
+---
+
+### 1. 接受协议
+
+通过下载、访问或使用本应用，即表示您同意受本协议的约束。如果您不同意本协议的任何部分，则不得访问本应用。
+
+---
+
+### 2. 应用的使用
+
+-   **许可**: 我们授予您有限的、非独占的、不可转让的、可撤销的许可，允许您将本应用用于个人非商业目的。
+-   **禁止行为**: 您同意不为任何非法目的使用本应用，或以任何可能损坏、禁用或削弱本应用的方式使用本应用。您同意不对本应用进行反编译、逆向工程或以其他方式试图获取其源代码。
+
+---
+
+### 3. 应用内内容和数据
+
+-   **密码本**: 您对存储在密码本中的数据负全部责任。所有数据均在您的设备上本地加密存储。我们无法访问这些数据，也不对这些数据的任何丢失或泄露负责。您有责任保护好您的设备和对本应用的安全访问。
+-   **生成的内容**: 您对使用本应用生成的任何内容（如二维码）负责。
+
+---
+
+### 4. 广告
+
+本应用由广告收入支持，并可能显示广告和促销活动。
+-   **激励广告**: 您可以选择观看激励广告，以暂时禁用其他类型的广告（如插页式广告）。
+-   **插页广告**: 此类广告可能会在本应用的多个节点展示，例如在功能切换时。
+
+---
+
+### 5. 免责声明
+
+本应用按“原样”和“可用”的基础提供，不附带任何明示或暗示的保证。我们不保证本应用完全没有错误，也不保证所有缺陷都将被纠正。您使用本应用的风险由您自行承担。
+
+---
+
+### 6. 责任限制
+
+在任何情况下，OmniHub 及其开发者均不对因您使用本应用而产生的任何间接、附带、特殊、后果性或惩罚性损害承担责任，包括但不限于利润、数据或其他无形资产的损失。
+
+---
+
+### 7. 协议变更
+
+我们保留随时修改本协议的权利。如有任何变更，我们将在应用内发布新的用户协议并更新“最后更新日期”。您在任何此类变更后继续使用本应用，即表示您接受新的协议。
+
+---
+
+### 8. 联系我们
+
+如果您对本协议有任何疑问，请通过以下方式联系我们：
+**电子邮件**: xiaojiangagaga@gmail.com

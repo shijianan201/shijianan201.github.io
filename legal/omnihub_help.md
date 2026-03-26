@@ -1,7 +1,3 @@
----
-layout: null
----
-
 # OmniHub Help Center
 
 Welcome to OmniHub! This document provides help for using the various features of the app.
@@ -10,8 +6,11 @@ Welcome to OmniHub! This document provides help for using the various features o
 
 ## Table of Contents
 1.  [Core Features](#core-features)
-2.  [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-3.  [Feedback and Support](#feedback-and-support)
+2.  [Lifestyle Tools (New in v1.3.0)](#lifestyle-tools-new-in-v130)
+3.  [Calculate Studio (Enhanced in v1.3.0)](#calculate-studio-enhanced-in-v130)
+4.  [Developer Tools](#developer-tools)
+5.  [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+6.  [Feedback and Support](#feedback-and-support)
 
 ---
 
@@ -44,6 +43,46 @@ OmniHub is a powerful and versatile toolbox designed to assist you in various da
     -   **Burn-in Test**: Helps identify screen burn-in or "ghost images" using specific patterns.
     -   **Grayscale & Gradient Test**: Tests the screen's ability to display details in shadows and smooth color transitions.
     -   **Touch Test**: Helps you find unresponsive areas (dead zones) on your screen and test multi-touch capabilities.
+
+---
+
+## Lifestyle Tools (便利生活) - New in v1.3.0
+### 1. Pick Me (选我)
+-   **Function**: A versatile spinner for making choices.
+-   **Usage**: Customize lists for "What to Eat", "What Exercise to Do", "Where to Play", "Which Drink Shop", "Truth or Dare", "Random Name Call". Create custom lists, spin the wheel to get a random result.
+    -   **Dice Roller (掷骰子)**:
+        -   **Function**: Roll 1 to 10 dice for various games or decisions.
+        -   **Usage**: Tap the dice or **shake your device** to roll. Achieving "Leopards" (all same numbers) or "Straights" (consecutive numbers like 4-5-6) with 3+ dice triggers a special fireworks celebration. Dice are arranged in a clean grid.
+    -   **Coin Flipper (抛硬币)**:
+        -   **Function**: Flip a coin for a quick decision.
+        -   **Usage**: Tap the coin or **flick/toss your device upwards** to flip. Special celebration for "Edge" results.
+    -   **Editor Enhancement**: Toggle "Fake (Rigged)" to force an option to win.
+### 2. Scoreboard (记分板)
+-   **Function**: Manage and track scores for multi-player games or activities.
+-   **Usage**: Create groups, add options, assign points, and view final results.
+
+---
+
+## Calculate Studio (计算工坊) - Enhanced in v1.3.0
+### 1. Currency Exchange (汇率换算)
+-   **Function**: Real-time currency conversion based on latest exchange rates.
+-   **Usage**: Select multiple currencies to monitor. Customizable list.
+### 2. Base Converter (进制转换)
+-   **Function**: Convert numbers between various bases (Binary, Octal, Decimal, Hexadecimal, and other bases from 2 to 36).
+-   **Usage**: Input a number in any base, and see its equivalents in other bases instantly.
+### 3. Unit Converter (单位换算)
+-   **Function**: Convert units across 15+ categories including Length, Mass, Area, Volume, Time, Temperature, etc.
+-   **Usage**: Select a category, input a value for any unit, and get instant conversions for all other units in that category.
+
+---
+
+## Developer Tools (开发工具)
+### 1. OS Version Query (OS版本查询)
+-   **Function**: Query Android and iOS version details (API Level, Code Name, Release Date, etc.).
+-   **Usage**: Search by version number, code name, or API level.
+### 2. App Store Query (应用商店查询)
+-   **Function**: Look up app information (name, seller, rating, price, description) directly from the Apple App Store or Google Play Store.
+-   **Usage**: Enter an iOS Bundle ID/App ID or an Android Package Name.
 
 ---
 
@@ -89,8 +128,11 @@ Thank you for using OmniHub!
 
 ## 目录
 1.  [核心功能](#核心功能)
-2.  [常见问题 (FAQ)](#常见问题-faq)
-3.  [反馈与支持](#反馈与支持)
+2.  [便利生活 (v1.3.0 新增)](#便利生活-v130-新增)
+3.  [计算工坊 (v1.3.0 增强)](#计算工坊-v130-增强)
+4.  [开发工具](#开发工具)
+5.  [常见问题 (FAQ)](#常见问题-faq)
+6.  [反馈与支持](#反馈与支持)
 
 ---
 
@@ -98,7 +140,7 @@ Thank you for using OmniHub!
 
 OmniHub 是一个功能强大的多功能工具箱，旨在帮助您完成各种日常数字任务。以下是各项核心功能的详细介绍。
 
-### 1. 密码生成器 (Password Studio)
+### 1. 密码工坊 (Password Studio)
 -   **功能**: 生成安全且高度随机的密码。
 -   **使用方法**: 您可以自定义密码的长度，以及是否包含数字、大小写字母和特殊符号。工具还提供密码安全评分，确保密码的强度。
 
@@ -106,11 +148,11 @@ OmniHub 是一个功能强大的多功能工具箱，旨在帮助您完成各种
 -   **功能**: 安全地存储和管理您的各类账户和密码信息。
 -   **使用方法**: 您可以添加、编辑和删除各种平台（如网站、邮箱、社交媒体）的账户信息。支持生物识别验证（指纹/面容ID），确保只有您本人才能访问敏感信息。
 
-### 3. 色彩实验室 (Color Studio)
+### 3. 色彩工作室 (Color Studio)
 -   **功能**: 专业的颜色转换与管理工具。
 -   **使用方法**: 包括取色器、颜色转换（支持RGB、HSB、CMYK等多种格式）、颜色混合以及 Material 3 主题调色板。您可以从图片中提取颜色，保存到调色板，并生成主题配置。
 
-### 4. 二维码工作室 (QR Studio)
+### 4. 二维码工坊 (QR Studio)
 -   **功能**: 全面的二维码工具集，包含生成和扫描功能。
 -   **使用方法**:
     -   **生成**: 可为网址、文本、Wi-Fi网络、联系人、日历事件等多种信息创建专属二维码。
@@ -126,30 +168,70 @@ OmniHub 是一个功能强大的多功能工具箱，旨在帮助您完成各种
 
 ---
 
+## 便利生活 (Lifestyle Tools) - v1.3.0 新增
+### 1. 选我 (Pick Me)
+-   **功能**: 一款多功能的选择器。
+-   **使用方法**: 自定义列表，例如“今天吃什么”、“今天练什么”、“去哪儿玩”、“喝哪家奶茶”、“真心话大冒险”、“随机点名”等。创建自定义列表，转动滚轮获取随机结果。
+    -   **掷骰子**: 
+        -   **功能**: 掷出 1 到 10 颗骰子，用于游戏或决策。
+        -   **使用方法**: 点击骰子或**摇晃设备**即可掷骰子。当掷出 3 颗或更多骰子，且结果为“豹子”（所有数字相同）或“顺子”（连续数字，如 4-5-6）时，将触发特殊的烟花庆祝动画。骰子以整齐的网格布局排列。
+    -   **抛硬币**: 
+        -   **功能**: 快速抛掷硬币进行决策。
+        -   **使用方法**: 点击硬币或**向上挥动设备**（屏幕朝上）即可抛硬币。出现“立起”结果时有特殊庆祝动画。
+    -   **编辑器增强**: 在编辑或添加选项时，可以切换“作弊模式 (Fake Rigged)”开关，强制该选项为“必中”选项。
+### 2. 记分板 (Scoreboard)
+-   **功能**: 管理和追踪多玩家游戏或活动的分数。
+-   **使用方法**: 创建分组，添加选项，分配分数，并查看最终结果。
+
+---
+
+## 计算工坊 (Calculate Studio) - v1.3.0 增强
+### 1. 汇率换算 (Currency Exchange)
+-   **功能**: 基于最新汇率的实时货币转换。
+-   **使用方法**: 可选择并管理要显示在列表中的多种货币。
+### 2. 进制转换 (Base Converter)
+-   **功能**: 在各种进制（二进制、八进制、十进制、十六进制，以及 2 到 36 之间的其他任意进制）之间转换数字。
+-   **使用方法**: 在任意进制输入数字，即可立即查看其在其他进制中的等效值。
+### 3. 单位换算 (Unit Converter)
+-   **功能**: 长度、质量、面积、体积、时间、温度等 15 种以上类别的单位转换。
+-   **使用方法**: 选择一个类别，输入任意单位的值，即可获得该类别中所有其他单位的即时转换结果。
+
+---
+
+## 开发工具 (Developer Tools)
+### 1. OS 版本查询 (OS Version Query)
+-   **功能**: 查询 Android 和 iOS 的系统版本详情（API 级别、代号、发布日期等）。
+-   **使用方法**: 按版本号、代号或 API 级别搜索。
+### 2. 应用商店查询 (App Store Query)
+-   **功能**: 直接从 Apple App Store 或 Google Play Store 查询应用信息（名称、开发者、评分、价格、描述）。
+-   **使用方法**: 输入 iOS Bundle ID/App ID 或 Android 包名。
+
+---
+
 ## 常见问题 (FAQ)
 
-**问：我的数据安全吗？**
-**答：** 是的。特别是对于密码本管理的敏感数据，我们采用了可靠的行业标准加密，并支持生物识别验证。您的数据存储在本地设备上，不会上传到任何服务器。
+**Q: Is my data safe?**
+**A:** Yes. Especially for sensitive data managed by the Password Book, we use robust, industry-standard encryption and support biometric verification. Your data is stored locally on your device and is not uploaded to any servers.
 
-**问：应用内的广告是如何运作的？**
-**答：** 为了支持我们的持续发展，OmniHub 包含两种类型的广告：
--   **激励广告**: 通过观看激励广告，您可以解锁当日的免广告体验。这是我们推荐的支持方式，既能帮助我们，也能让您享受更好的体验。
--   **插页广告**: 这类广告可能会在您切换主要功能时偶尔出现。我们已将其设计得尽可能不打扰您的使用。
-您通过观看广告给予的支持，是我们不断改进应用的最大动力。
+**Q: How do the ads in the app work?**
+**A:** To support our development, OmniHub includes two types of ads:
+-   **Rewarded Ads**: By watching rewarded ad, you can unlock an ad-free experience for the rest of the day. This is our recommended way for you to support us while enjoying the app.
+-   **Interstitial Ads**: These ads may occasionally appear when you switch between major features. They are designed to be as non-intrusive as possible.
+Your support through watching ads allows us to continue improving the app.
 
-**问：如何支持开发者？**
-**答：** 您可以通过在应用内观看激励广告来支持我们。这有助于我们维护和开发新功能。我们衷心感谢您的支持！
+**Q: How can I support the developer?**
+**A:** You can support us by watching rewarded ads within the app. This helps us maintain and develop new features. We sincerely thank you for your support!
 
-**问：如何提交反馈或报告Bug？**
-**答：** 请前往 `设置` -> `意见反馈`。您可以选择 `问题反馈` 或 `产品建议` 来提交您的想法。我们重视每一位用户的意见。
+**Q: How do I provide feedback or report a bug?**
+**A:** Please go to `Settings` -> `Feedback`. You can choose `Bug Report` or `Product Feedback` to submit your thoughts. We value every user's opinion.
 
 ---
 
 ## 反馈与支持
 
-如果您在使用过程中遇到任何问题或有任何建议，欢迎通过以下方式与我们联系：
+If you encounter any issues or have any suggestions while using the app, please feel free to contact us through the following methods:
 
--   **应用内反馈**: 前往 `设置` -> `意见反馈` 提交您的问题。
--   **电子邮件**: xiaojiangagaga@gmail.com
+-   **In-app Feedback**: Go to `Settings` -> `Feedback` to submit your issue.
+-   **Email**: xiaojiangagaga@gmail.com
 
-感谢您使用 OmniHub！
+Thank you for using OmniHub!
