@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # OmniHub Help Center
 
 Welcome to OmniHub! This document provides help for using the various features of the app.

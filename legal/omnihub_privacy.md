@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # Privacy Policy for OmniHub
 
 **Last Updated: 2026-03-25**

@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 # Terms of Use for OmniHub
 
 **Last Updated: 2024-07-30**
