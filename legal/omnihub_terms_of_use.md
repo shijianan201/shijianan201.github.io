@@ -4,7 +4,7 @@ layout: null
 
 # Terms of Use for OmniHub
 
-**Last Updated: 2026-04-10**
+**Last Updated: 2026-04-21**
 
 Please read these Terms of Use ("Terms") carefully before using the OmniHub mobile application (the "App"). Your access to and use of the App is conditioned on your acceptance of and compliance with these Terms.
 
@@ -38,7 +38,8 @@ OmniHub provides premium features through one-time purchases (e.g., Lifetime Acc
 ### 4. Use of the App
 
 -   **License**: We grant you a limited, non-exclusive, non-transferable, revocable license for personal, non-commercial use.
--   **Prohibited Content**: You agree not to use the App for any unlawful purpose or to generate/share harmful or infringing content.
+-   **Prohibited Content**: You agree not to use the App for any unlawful purpose or to generate/share harmful, infringing, or inappropriate content.
+-   **AI and OCR Features**: Certain features (e.g., OCR Name Draw, Face Draw) use AI models provided by third parties (**Google Gemini**). You agree to provide appropriate input and acknowledge that AI-generated results may not always be accurate. You are responsible for ensuring you have the necessary rights or permissions for any images (including those containing faces) you upload for processing.
 -   **Data Storage**: Data in the "Password Book" is encrypted and stored locally. You are solely responsible for backing up your data.
 
 ---
@@ -51,13 +52,13 @@ The App may display advertisements. Premium/Ad-Free users will not see third-par
 
 ### 6. Disclaimer of Warranties
 
-The App is provided "as is" without warranties of any kind. We do not guarantee that the App will always be secure, error-free, or function without disruptions.
+The App is provided "as is" without warranties of any kind. We do not guarantee that the App will always be secure, error-free, or function without disruptions. **AI-generated results are for entertainment or reference only and should not be relied upon for critical decisions.**
 
 ---
 
 ### 7. Limitation of Liability
 
-OmniHub and its developers shall not be liable for any indirect, incidental, or consequential damages resulting from the use of the App.
+OmniHub and its developers shall not be liable for any indirect, incidental, or consequential damages resulting from the use of the App, including any inaccuracies in AI or calculation features.
 
 ---
 
@@ -65,68 +66,158 @@ OmniHub and its developers shall not be liable for any indirect, incidental, or 
 
 If you have any questions about these Terms, please contact us at: **xiaojiangagaga@gmail.com**
 
-<br>
-<hr>
-<br>
+<br><hr><br>
 
-# OmniHub 用户协议
+# OmniHub 用户协议 (简体中文)
 
-**最后更新日期: 2026-04-10**
+**最后更新日期: 2026-04-21**
 
-在使用 OmniHub 移动应用（以下简称“本应用”）前，请仔细阅读本用户协议。
+**1. AI 与 OCR 功能约定**
+-   部分功能（如 OCR 抽名、OCR 抽奖）使用第三方 (**Google Gemini**) 的 AI 模型。
+-   AI 生成的结果可能并非百分之百准确。您对上传图像（包括人脸图像）的权利负全部责任。
+-   **AI 结果仅供娱乐或参考，不应用于关键决策。**
 
----
-
-### 1. 接受条款
-
-通过下载、访问或使用本应用，即表示您同意受本协议的约束。如果您不同意本协议的任何部分，请勿使用本应用。
+**2. 订阅与退款**
+-   所有交易由 Apple/Google 处理，遵循其退款政策。
 
 ---
 
-### 2. 用户账号
+# OmniHub 用戶協議 (繁體中文 - 台灣)
 
--   **注册**: 某些功能可能需要您创建账号（如通过 Google、Apple 或手机号）。您有责任维护账号凭据的机密性。
--   **责任**: 您对在您的账号下发生的所有活动负责。
--   **注销**: 您可以随时在应用设置中删除账号及其关联数据。
+**最後更新日期: 2026-04-21**
 
----
-
-### 3. 应用内购买与订阅
-
-OmniHub 通过一次性购买（如终身访问）和定期订阅（如按月/按年）提供高级功能。
--   **账单**: 付款将在确认购买时从您的 Apple ID 或 Google Play 账户中扣除。
--   **自动续订**: 订阅会自动续订，除非在当前周期结束前至少 24 小时取消。
--   **管理**: 您可以在 App Store 或 Google Play 商店的账户设置中管理或取消订阅。
--   **退款**: 所有交易均由 Apple 或 Google 处理，遵循其各自的退款政策。
+**1. AI 與 OCR 功能約定**
+-   部分功能（如 OCR 抽名、OCR 抽獎）使用第三方 (**Google Gemini**) 的 AI 模型。
+-   AI 生成的結果可能並非百分之百準確。您對上傳影像（包括人臉影像）的權利負全部責任。
+-   **AI 結果僅供娛樂或參考，不應用於關鍵決策。**
 
 ---
 
-### 4. 应用的使用
+# OmniHub 用戶協議 (繁體中文 - 香港)
 
--   **许可**: 我们授予您有限的、非独占的、可撤销的许可，允许您将本应用用于个人非商业目的。
--   **禁止行为**: 您不得将本应用用于非法用途，或生成/分享任何侵权或有害内容。
--   **数据存储**: “密码本”数据在本地加密存储。您需自行负责数据的备份。
+**最後更新日期: 2026-04-21**
 
----
-
-### 5. 广告
-
-本应用可能显示广告。高级版/免广告版用户将不会看到第三方广告。我们不对第三方广告的内容或行为负责。
+**1. AI 同埋 OCR 功能約定**
+-   部分功能（例如 OCR 抽名、OCR 抽獎）使用第三方 (**Google Gemini**) 嘅 AI 模型。
+-   AI 生成嘅結果可能唔係百分之百準確。你對上傳影像（包括人臉影像）嘅權利負全部責任。
+-   **AI 結果淨係供娛樂或者參考，唔應該用於關鍵決策。**
 
 ---
 
-### 6. 免责声明
+# Términos de Uso de OmniHub (Español)
 
-本应用按“原样”提供。我们不保证本应用始终安全、无错或运行不中断。
+**Última actualización: 21-04-2026**
 
----
-
-### 7. 责任限制
-
-OmniHub 及其开发者不对因使用本应用而产生的任何间接、附带或后果性损害承担责任。
+**1. Funciones de IA**
+-   Las funciones de IA (**Google Gemini**) pueden no ser siempre precisas.
+-   **Los resultados de la IA son solo para entretenimiento o referencia.**
 
 ---
 
-### 8. 联系我们
+# Nutzungsbedingungen für OmniHub (Deutsch)
 
-如有任何疑问，请通过以下方式联系：**xiaojiangagaga@gmail.com**
+**Zuletzt aktualisiert: 21.04.2026**
+
+**1. KI-Funktionen**
+-   KI-generierte Ergebnisse (**Google Gemini**) sind möglicherweise nicht immer korrekt.
+-   **KI-Ergebnisse dienen nur der Unterhaltung oder Referenz.**
+
+---
+
+# Conditions d'Utilisation OmniHub (Français)
+
+**Dernière mise à jour : 21/04/2026**
+
+**1. Fonctionnalités IA**
+-   Les résultats générés par l'IA (**Google Gemini**) peuvent ne pas être précis.
+-   **Les résultats de l'IA sont fournis à titre de divertissement uniquement.**
+
+---
+
+# OmniHub 利用規約 (日本語)
+
+**最終更新日: 2026年4月21日**
+
+**1. AI機能について**
+-   AI（**Google Gemini**）によって生成された結果は、必ずしも正確であるとは限りません。
+-   **AIの結果はエンターテインメントまたは参考用であり、重要な意思決定には使用しないでください。**
+
+---
+
+# OmniHub 이용 약관 (한국어)
+
+**최종 업데이트: 2026-04-21**
+
+**1. AI 기능 관련**
+-   AI(**Google Gemini**) 결과물은 100% 정확하지 않을 수 있습니다.
+-   **AI 결과는 오락 또는 참고용이며, 중요한 결정의 근거로 사용해서는 안 됩니다.**
+
+---
+
+# Termos de Uso OmniHub (Português)
+
+**Última Atualização: 21/04/2026**
+
+**1. Recursos de IA**
+-   Os resultados da IA (**Google Gemini**) podem não ser precisos.
+-   **Os resultados da IA são apenas para entretenimento ou referência.**
+
+---
+
+# Termini di Utilizzo di OmniHub (Italiano)
+
+**Ultimo aggiornamento: 21/04/2026**
+
+**1. Funzionalità IA**
+-   I risultati dell'IA (**Google Gemini**) potrebbero non essere accurati.
+-   **I risultati dell'IA sono solo a scopo di intrattenimento o consultazione.**
+
+---
+
+# Syarat Penggunaan OmniHub (Indonesian)
+
+**Terakhir Diperbarui: 21-04-2026**
+
+**1. Fitur AI**
+-   Hasil AI (**Google Gemini**) mungkin tidak selalu akurat.
+-   **Hasil AI hanya untuk hiburan atau referensi.**
+
+---
+
+# เงื่อนไขการใช้งาน OmniHub (Thai)
+
+**อัปเดตล่าสุด: 21-04-2026**
+
+**1. ฟีเจอร์ AI**
+-   ผลลัพธ์จาก AI (**Google Gemini**) อาจไม่ถูกต้องเสมอไป
+-   **ผลลัพธ์จาก AI มีไว้เพื่อความบันเทิงหรือการอ้างอิงเท่านั้น**
+
+---
+
+# Điều khoản Sử dụng OmniHub (Vietnamese)
+
+**Cập nhật lần cuối: 21-04-2026**
+
+**1. Tính năng AI**
+-   Kết quả từ AI (**Google Gemini**) có thể không chính xác.
+-   **Kết quả AI chỉ dành cho mục đích giải trí hoặc tham khảo.**
+
+---
+
+# OmniHub Kullanım Koşulları (Turkish)
+
+**Son Güncelleme: 21.04.2026**
+
+**1. AI Özellikleri**
+-   AI (**Google Gemini**) sonuçları her zaman doğru olmayabilir.
+-   **AI sonuçları yalnızca eğlence veya referans amaçlıdır.**
+
+---
+
+# Условия использования OmniHub (Russian)
+
+**Последнее обновление: 21.04.2026**
+
+**1. Функции ИИ**
+-   Результаты ИИ (**Google Gemini**) могут быть неточными.
+-   **Результаты ИИ предназначены только для развлечения или справки.**

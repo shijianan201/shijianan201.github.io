@@ -1,129 +1,65 @@
----
-layout: null
----
+# OmniHub 全能帮助中心 (v1.5.0 全量版)
 
-# OmniHub Help Center
-
-Welcome to OmniHub! This document provides help for using the various features of the app.
+欢迎使用万象枢！本手册涵盖了应用内 **30+ 项工具** 的详细使用指南。
 
 ---
 
-## Table of Contents
-1.  [Core Features](#core-features)
-2.  [Lifestyle Tools](#lifestyle-tools)
-3.  [Calculate Studio](#calculate-studio)
-4.  [Premium Subscription](#premium-subscription)
-5.  [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-6.  [Feedback and Support](#feedback-and-support)
+## 1. AI & OCR 实验室 (智能助手)
+基于 Google Gemini 模型，让图片“开口说话”。
+-   **OCR 抽名**：拍摄名单，AI 自动提取姓名并随机点名。
+-   **OCR 抽奖**：识别合影中的所有人脸，动画随机选中幸运儿。
+-   **AI 模型设置**：可在“设置”中选择 Pro（高智能）或 Flash（极速）。
 
----
+## 2. 开发者百宝箱 (程序员必备)
+-   **HTTP 状态码**：查询 100-505 所有响应代码。
+-   **ASCII 对照表**：字符与十/十六进制快速换算。
+-   **App 商店查询**：输入包名，一键获取应用版本、大小、图标等元数据。
+-   **系统版本查询**：查阅 Android/iOS 各版本的发布时间、代号及 API Level。
+-   **字符串转换**：
+    -   **哈希**：MD5, SHA1, SHA256。
+    -   **加解密**：AES, RSA, DES。
+    -   **编码**：Base64, URL Encode/Decode。
+    -   **大小写**：驼峰、下划线、首字母大写转换。
 
-## Core Features
+## 3. 极简计算工坊 (生活计算)
+-   **单位换算**：支持长度、面积、体积、质量、时间、速度、能量、压强、频率、数据存储、燃料消耗等。
+-   **汇率转换**：全球 100+ 货币实时同步。
+-   **进制转换**：2-36 进制间互转。
+-   **金融助手**：房贷计算（商业/公积金组合贷）、薪资计算（五险一金明细）。
 
-### 1. Password Studio
--   **Password Generator**: Create secure passwords with customizable length and character types. Includes a security strength score.
--   **Password Book**: Securely store account credentials locally. Supports biometric (FaceID/TouchID) protection.
+## 4. 趣味生活 & 聚会插件
+-   **选我选我**：随机转盘、真心话大冒险、大转盘模板。
+-   **手指大逃杀**：指尖触控，随机淘汰。
+-   **物理感应**：高品质 3D 骰子、3D 抛硬币（支持手机摇一摇）。
+-   **全能计分板**：篮球、足球、桌游、棋牌实时计分。
+-   **彩票模拟器**：模拟全球多种彩票规则，测试今日手气。
 
-### 2. Color Studio
--   **Color Lab**: Convert between RGB, HSB, CMYK.
--   **Material 3 Palette**: Generate modern theme configurations.
--   **Image Picker (Premium)**: Extract dominant colors directly from your photos.
--   **Color Blend (Premium)**: Advanced tool for mixing and simulating color blending.
+## 5. 色彩 & 二维码实验室
+-   **二维码 Pro**：支持 WiFi、联系人、事件卡片、URL、短信、地理位置等 10+ 种类。
+-   **色彩工坊**：
+    -   **Material 3 调色盘**：智能生成主题配色方案。
+    -   **图片取色**：精准抓取照片中的像素色彩。
+    -   **色彩参考**：内置中国/日本传统色、Web 安全色、Material 设计色。
 
-### 3. QR Studio
--   **Generate**: Create codes for Wi-Fi, Contacts, URLs, and more.
--   **Scan**: Fast scanning with history tracking.
+## 6. 屏幕与硬件检测
+-   **屏幕测试**：纯色坏点检测、烧屏残留修复辅助测试、屏幕灰阶表现测试。
+-   **触控检测**：多点触控点数检测、屏幕触摸死区识别。
 
----
-
-## Premium Subscription (New!)
-
-OmniHub now offers a **Premium Membership** to unlock the full potential of your toolbox.
-
-### Membership Benefits:
--   **Ad-Free Experience**: Remove all banner and interstitial ads across the entire app.
--   **Pro Tools Unlocked**: Unlimited access to professional tools like Image Color Picker, Color Blending, Material 3 Palette, and App Store Query.
--   **Priority Updates**: Be the first to access new features and tools.
-
-### Subscription Options:
--   **Monthly/Yearly**: Flexible subscription plans.
--   **Lifetime Access**: A one-time purchase for permanent Pro access.
--   **Ad-Free Only**: A dedicated option for users who just want to remove ads.
-
----
-
-## Frequently Asked Questions (FAQ)
-
-**Q: Is my data safe?**
-**A:** Yes. Password data is encrypted and stored **only** on your device. We do not have access to your sensitive information.
-
-**Q: How do I manage my subscription?**
-**A:** You can manage or cancel your subscription at any time through your Apple App Store or Google Play Store account settings.
-
-**Q: I bought Premium but it's not showing up.**
-**A:** Go to `Settings` -> `Subscription` and tap **"Restore Purchases"**. This will re-sync your status with the store.
-
-**Q: Can I delete my account?**
-**A:** Yes. Go to `Settings` -> `Account Info` and select **"Delete Account"**. This will permanently remove your profile and data.
-
----
-
-## Feedback and Support
-
--   **In-app Feedback**: `Settings` -> `Feedback`
--   **Email**: xiaojiangagaga@gmail.com
-
----
-
-# OmniHub 帮助中心
-
-欢迎使用 OmniHub！本文档旨在帮助您更好地了解和使用本应用的各项功能。
-
----
-
-## 目录
-1.  [核心功能](#核心功能)
-2.  [便利生活](#便利生活)
-3.  [计算工坊](#计算工坊)
-4.  [高级会员 (Premium)](#高级会员-premium)
-5.  [常见问题 (FAQ)](#常见问题-faq)
-6.  [反馈与支持](#反馈与支持)
-
----
-
-## 高级会员 (Premium) - 全新上线！
-
-OmniHub 现已推出 **高级会员服务**，助力您更高效地使用工具箱。
-
-### 会员专属权益：
--   **纯净免广告**: 彻底移除应用内所有横幅和插屏广告。
--   **解锁专业工具**: 无限制使用图片取色、颜色融合、Material 3 调色板、高级应用查询等专业功能。
--   **优先体验**: 第一时间获取未来更新的所有新工具。
-
-### 订阅选项：
--   **按月/按年订阅**: 灵活的订阅计划。
--   **终身访问**: 一次购买，永久享有所有高级权益。
--   **仅免广告**: 专为只想去除广告的用户提供的选项。
+## 7. 安全与隐私
+-   **密码工坊**：随机密码生成、本地加密密码本。
+-   **生物识别锁**：支持 FaceID/指纹，可锁定整个应用或仅锁定密码本。
 
 ---
 
 ## 常见问题 (FAQ)
 
-**问：我的数据安全吗？**
-**答：** 绝对安全。密码数据经过加密且**仅存储在您的本地设备**上。我们无法访问您的敏感信息。
+**Q: 为什么我的数据无法同步？**
+A: 为了保护隐私，万象枢默认所有数据 **仅存储在本地设备**。您可以手动导出数据。
 
-**问：如何管理我的订阅？**
-**答：** 您可以随时在 Apple App Store 或 Google Play 商店的账户设置中管理或取消订阅。
-
-**问：我购买了会员但没有生效怎么办？**
-**答：** 请前往 `设置` -> `订阅`，点击 **“恢复购买”**。这将重新同步您的会员状态。
-
-**问：我可以注销账号吗？**
-**答：** 可以。请前往 `设置` -> `账户信息`，选择 **“删除账号”**。这将永久移除您的个人资料及关联数据。
+**Q: 订阅会员后如何生效？**
+A: 前往 `设置` -> `订阅`，点击底部的 **“恢复购买”** 即可。
 
 ---
 
 ## 反馈与支持
-
--   **应用内反馈**: `设置` -> `意见反馈`
--   **电子邮件**: xiaojiangagaga@gmail.com
+如果您有任何新工具的需求，请通过 `设置` -> `意见反馈` 联系我们。
