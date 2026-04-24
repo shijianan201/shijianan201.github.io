@@ -8,7 +8,7 @@ tags: [动态规划]
 last_updated: 2020-03-06 15:00
 ---
 
-“不同路径问题”是LeetCode上的一系列问题（包含[第62题](https://leetcode-cn.com/problems/unique-paths/)、[第63题](https://leetcode-cn.com/problems/unique-paths-ii/)和[第980题](https://leetcode-cn.com/problems/unique-paths-iii/)），本文以第62题入手记录一下解决这种问题的思路，先贴上[代码实现的Github地址](https://github.com/JianAn-Shi/LeetCode/tree/master/src/solver/test62)。
+“不同路径问题”是LeetCode上的一系列问题（包含[第62题](https://leetcode-cn.com/problems/unique-paths/)、[第63题](https://leetcode-cn.com/problems/unique-paths-ii/)和[第980题](https://leetcode-cn.com/problems/unique-paths-iii/)），本文以第62题入手记录一下解决这种问题的思路，先贴上[代码实现的Github地址](https://github.com/shijianan201/LeetCode/tree/master/src/solver/test62)。
 
 ## 问题描述
 

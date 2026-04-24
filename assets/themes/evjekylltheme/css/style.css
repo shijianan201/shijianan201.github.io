@@ -277,9 +277,9 @@ code {
   margin: 0 0 0 5px;
 }
 
-.post-content a[href^="//einverne.github.io/"]:after,
-.post-content a[href^="http://einverne.github.io/"]:after,
-.post-content a[href^="https://einverne.github.io/"]:after {
+.post-content a[href^="//shijianan201.github.io/"]:after,
+.post-content a[href^="http://shijianan201.github.io/"]:after,
+.post-content a[href^="https://shijianan201.github.io/"]:after {
   content: '';
   margin: 0;
 }

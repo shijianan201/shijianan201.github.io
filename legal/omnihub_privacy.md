@@ -47,7 +47,8 @@ We may collect the following types of information:
 
 You have the right to delete your account and associated data at any time.
 -   **In-App Deletion**: You can request account deletion directly within the "Account Info" section of the App.
--   **Data Removal**: Upon deletion, your account profile and associated personal data will be permanently removed from our authentication systems.
+-   **Web Request**: If you cannot access the app, you can follow our [Data Deletion Instructions](/legal/omnihub_data_deletion.html).
+-   **Data Removal**: Upon deletion, your account profile and associated personal data will be permanently removed from our authentication systems (Firebase).
 
 ---
 
