@@ -63,7 +63,7 @@ The App uses third-party services that may collect information used to identify 
 
 ### Contact Us
 
-If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
+If you have any questions, contact us at: [xiaojiangagaga@gmail.com](mailto:xiaojiangagaga@gmail.com)
 
 <br><hr><br>
 
