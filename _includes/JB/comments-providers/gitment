@@ -5,7 +5,7 @@
 var client_id = '{{ site.JB.comments.gitment.client_id }}';
 var client_secret = '{{ site.JB.comments.gitment.client_secret }}';
 var gitment = new Gitment({
-    owner: '史建安',
+    owner: 'Jannix Shi',
     repo: 'https://jianan-shi.github.io/',
     oauth: {
         client_id: client_id,
