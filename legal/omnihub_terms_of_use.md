@@ -64,7 +64,7 @@ OmniHub and its developers shall not be liable for any indirect, incidental, or 
 
 ### 8. Contact Us
 
-If you have any questions about these Terms, please contact us at: [xiaojiangagaga@gmail.com](mailto:xiaojiangagaga@gmail.com)
+If you have any questions about these Terms, please contact us at: [xiaojiangagaga@gmail.com](mailto:xiaojiangagaga@gmail.com?subject=Question%20about%20OmniHub%20Terms%20of%20Use)
 
 <br><hr><br>
 
