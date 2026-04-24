@@ -46,6 +46,14 @@ description: "隐私权政策"
 ## 我们如何存储您的信息
 应用信息保存在 Firebase 中，由 Google 托管。
 
+## OmniHub 应用
+
+如果您是 **OmniHub** 的用户，请参阅专门针对该应用的法律文档：
+
+*   [OmniHub 隐私政策](/legal/omnihub_privacy.html)
+*   [OmniHub 用户协议](/legal/omnihub_terms_of_use.html)
+*   [OmniHub 数据删除申请](/legal/omnihub_data_deletion.html) (Data Deletion Request)
+
 ## 如何联系我
 任何问题都可以通过[关于](/about)的邮箱来联系我。
 
