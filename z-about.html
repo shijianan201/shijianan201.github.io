@@ -1,8 +1,128 @@
 ---
 layout: page
 title: "About"
-description: "About this blog and about me"
+description: "Learn more about Jannix Shi, the creator of OmniHub, and the mission behind this site."
 group: navigation
 ---
 
-<h2 id="about-blog" itemprop="about">About Blog</h2>
+<style>
+  .about-container {
+    line-height: 1.8;
+    color: #444;
+  }
+  .about-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #2196F3;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #1565C0;
+  }
+  .about-section {
+    margin-bottom: 50px;
+  }
+  .highlight-box {
+    background: #f0f7ff;
+    padding: 25px;
+    border-left: 5px solid #2196F3;
+    border-radius: 4px;
+    margin: 30px 0;
+  }
+  .skill-tag {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  .contact-links a {
+    margin-right: 20px;
+    font-size: 1.1em;
+    color: #555;
+    transition: color 0.3s;
+  }
+  .contact-links a:hover {
+    color: #2196F3;
+    text-decoration: none;
+  }
+</style>
+
+<div class="about-container">
+  <!-- Biography Section -->
+  <section class="about-section">
+    <h2 class="about-header">Who is Jannix Shi?</h2>
+    <p>
+      I am a <strong>Software Engineer</strong> and <strong>Product Creator</strong> driven by the philosophy that technology should be an invisible assistant—powerful enough to solve complex problems, yet simple enough to be used by anyone. 
+    </p>
+    <p>
+      My journey in technology began with a fascination for how code can bridge the gap between imagination and utility. Today, I specialize in <strong>Android development</strong>, <strong>Kotlin</strong>, and the practical application of <strong>Artificial Intelligence</strong> to enhance everyday user experiences.
+    </p>
+    
+    <div class="highlight-box">
+      "My mission is to build digital tools that don't just function, but delight."
+    </div>
+  </section>
+
+  <!-- OmniHub Section -->
+  <section class="about-section">
+    <h2 class="about-header">The Vision Behind OmniHub</h2>
+    <p>
+      <strong>OmniHub</strong> is my most ambitious project to date. It was born from a personal frustration: the "app fatigue" caused by having dozens of single-purpose utilities cluttering my device. 
+    </p>
+    <p>
+      I envisioned a <strong>universal toolbox</strong>—a single, high-performance application that combines essential utilities like high-precision calculators, lifestyle gadgets, and developer tools, all supercharged by modern AI (Google Gemini). 
+    </p>
+    <p>
+      By integrating advanced OCR and face detection, OmniHub turns your smartphone into a truly "smart" instrument capable of interacting with the physical world in ways traditional apps cannot.
+    </p>
+    <p>
+      <a href="https://play.google.com/store/apps/details?id=com.jannix.omnihub" target="_blank" class="btn btn-primary">
+        <i class="fa fa-google-play"></i> Experience OmniHub on Google Play
+      </a>
+    </p>
+  </section>
+
+  <!-- Technical Expertise Section -->
+  <section class="about-section">
+    <h2 class="about-header">Technical Focus</h2>
+    <p>I am constantly learning and refining my stack. My primary areas of expertise include:</p>
+    <div style="margin-top: 15px;">
+      <span class="skill-tag">Android / Kotlin</span>
+      <span class="skill-tag">Material Design 3</span>
+      <span class="skill-tag">Generative AI (Gemini API)</span>
+      <span class="skill-tag">OCR & Computer Vision</span>
+      <span class="skill-tag">System Architecture</span>
+      <span class="skill-tag">Mobile Security</span>
+    </div>
+  </section>
+
+  <!-- Site Mission Section -->
+  <section class="about-section">
+    <h2 class="about-header">About This Site</h2>
+    <p>
+      This site is more than just a portfolio; it is a <strong>knowledge archive</strong>. I believe that the best way to master a concept is to explain it to others. 
+    </p>
+    <p>
+      In the <a href="/archive.html">Blog</a> section, you will find detailed technical articles where I document my solutions to challenging bugs, architectural patterns I've implemented, and my research into the latest mobile technologies. It's a space where I share my "lessons learned" with the global developer community.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="about-section">
+    <h2 class="about-header">Let's Connect</h2>
+    <p>I'm always open to discussing new ideas, potential collaborations, or just chatting about the future of tech.</p>
+    <div class="contact-links">
+      <a href="{{ site.author.github | prepend: 'https://github.com/' }}" target="_blank">
+        <i class="fa fa-github"></i> GitHub
+      </a>
+      <a href="mailto:{{ site.author.email }}">
+        <i class="fa fa-envelope"></i> Email
+      </a>
+      <a href="/rss.xml">
+        <i class="fa fa-rss"></i> RSS Feed
+      </a>
+    </div>
+  </section>
+</div>

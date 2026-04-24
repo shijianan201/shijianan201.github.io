@@ -3,134 +3,200 @@ layout: default
 title: Home
 ---
 
-<meta itemprop="image" content="{{ site.image }}">
-<div class="row">
-  <div class="col-xs-12 col-md-8">
-    {% for post in paginator.posts %}
-    {% capture summary %}{{post.content | split:'<!--more--> ' |first }}{% endcapture%}
-    <h1><a class="title" href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
-    <div class="post_at_index">
-      {{summary}}
-      {% if summary != post.content %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read More...</a>{% endif %}
-    </div>
-    <br/>
-    <div>
-      <cite>{{ post.date | date: "%Y-%m-%d" }}</cite> <i class="icon-tag"></i>
-      {% for tag in post.tags %}<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a>
-      {% if forloop.last %}
-      {% else %}, {% endif %}
-      {% endfor %}
-    </div>
-    <div style="clear: both;"></div>
-    <hr/>
-    {% endfor %}
+<style>
+  .hero-section {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .hero-section h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .hero-section p {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+  }
+  .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s;
+    display: inline-block;
+  }
+  .cta-button:hover {
+    background-color: #388E3C;
+    color: white;
+    text-decoration: none;
+  }
+  .feature-card {
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    background: #fff;
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+  .feature-icon {
+    font-size: 3em;
+    color: #2196F3;
+    margin-bottom: 20px;
+  }
+  .feature-card h3 {
+    margin-top: 0;
+    font-weight: 600;
+  }
+  .section-title {
+    text-align: center;
+    margin: 60px 0 40px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+  }
+  .about-jannix {
+    background: #f9f9f9;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px 0;
+  }
+  .recent-posts {
+    margin-bottom: 60px;
+  }
+  .post-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .post-item:last-child {
+    border-bottom: none;
+  }
+  .post-date {
+    color: #888;
+    font-size: 0.9em;
+  }
+</style>
 
-    <!-- Pagination links -->
-    <nav>
-      <ul class="pagination hidden-xs">
-        {% if paginator.previous_page %}
-        {% if paginator.previous_page == 1 %}
-        <li>
-          <a href="/">&laquo; Previous</a>
-        </li>
-        {% else %}
-        <li>
-          <a href="/page{{ paginator.previous_page }}">&laquo; Previous</a>
-        </li>
-        {% endif %}
-        {% else %}
-        <li class="disabled">
-          <a>&laquo; Previous</a>
-        </li>
-        {% endif %}
-
-        {% if paginator.page == 1 %}
-        <li class="active">
-          <a>1</a>
-        </li>
-        {% for count in (2..5) %}
-        <li>
-          <a href="/page{{count}}">{{count}}</a>
-        </li>
-        {% endfor %}
-        <li><span>...</span></li>
-        <li><a href="/page{{paginator.total_pages}}">{{paginator.total_pages}}</a></li>
-        {% else %}
-        <li>
-          <a href="/">1</a>
-        </li>
-        {% endif %}
-
-        {% if paginator.page < paginator.total_pages and paginator.page > 1 %}
-          {% if paginator.page > 5 %}
-            {% for count in (2..5) %}
-            <li>
-              <a href="/page{{count}}">{{count}}</a>
-            </li>
-            {% endfor %}
-            <li class="disabled"><span>...</span></li>
-            <li class="active"><a>{{paginator.page}}</a></li>
-          {% else %}
-            {% for count in (2..5) %}
-              {% if paginator.page == count %}
-                <li class="active"><a>{{count}}</a></li>
-                {% else %}
-                <li><a href="/page{{count}}">{{count}}</a></li>
-              {% endif %}
-            {% endfor %}
-          {% endif %}
-          <li class="disabled"><span>...</span></li>
-          <li><a href="/page{{paginator.total_pages}}">{{paginator.total_pages}}</a></li>
-        {% else %}
-        {% endif %}
-
-        {% if paginator.page == paginator.total_pages %}
-        <li><span>...</span></li>
-        <li class="active">
-          <a href="/page{{paginator.total_pages}}">{{paginator.total_pages}}</a>
-        </li>
-        {% else %}
-        {% endif %}
-
-        {% if paginator.next_page %}
-        <li>
-          <a href="/page{{paginator.next_page}}">Next &raquo;</a>
-        </li>
-        {% else %}
-        <li class="disabled">
-          <a>Next &raquo;</a>
-        </li>
-        {% endif %}
-      </ul>
-    </nav>
+<div class="hero-section">
+  <h1>Hi, I'm Jannix Shi</h1>
+  <p>Developer, Creator, and Problem Solver. Welcome to my digital workspace.</p>
+  <div style="margin-top: 20px;">
+    <a href="#omnihub" class="btn btn-link" style="color: white; font-size: 1.1em;">Discover My Work <i class="fa fa-chevron-down"></i></a>
   </div>
-  <div class="col-xs-12 col-md-4">
-    <!-- <div>
-      <h2>电子书</h2>
-      <ul> -->
-        <!-- <li><a href="http://einverne.github.io/markdown-style-guide/zh.html">Markdown 书写风格指南</a></li>
-        <li><a href="https://einverne.github.io/gitbook-tutorial">Gitbook 使用教程</a></li>
-        <li><a href="https://einverne.gitbooks.io/kafka/content/">Kafka 官方文档中文版</a></li>
-        <li><a href="https://einverne.gitbooks.io/intellij-idea-tutorial/content/">IntelliJ IDEA 教程</a></li> -->
-      <!-- </ul>
-    </div> -->
-    <div class="categories">
-      <h2>Categories</h2>
-      <ul class="tag_box">
-        {% assign categories_list = site.categories %}
-        {% include JB/categories_list %}
-      </ul>
+</div>
+
+<div id="omnihub">
+  <h2 class="section-title">Featured Project: OmniHub</h2>
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <p style="font-size: 1.2em; color: #555;">
+        <strong>OmniHub: AI Toolbox Utilities</strong> is an all-in-one utility app designed to simplify your life. 
+        It replaces dozens of single-purpose apps with a single, elegant interface powered by modern AI.
+      </p>
+      <div style="margin: 30px 0;">
+        <a href="https://play.google.com/store/apps/details?id=com.jannix.omnihub" target="_blank" class="cta-button">
+          <i class="fa fa-google-play"></i> Get it on Google Play
+        </a>
+      </div>
     </div>
-    <div>
-      <h2>Recent Posts</h2>
-      <ul>
-        {% for post in site.posts limit:5 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title}}</a>
-          {{ post.excerpt | strip_html }}
-        </li>
-        {% endfor %}
-      </ul>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="feature-card">
+        <i class="fa fa-magic feature-icon"></i>
+        <h3>AI & OCR Magic</h3>
+        <p>Scan lists to pick winners, detect faces for group draws, and leverage customizable Gemini AI integration.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card">
+        <i class="fa fa-calculator feature-icon"></i>
+        <h3>Precision Tools</h3>
+        <p>High-accuracy unit converters, real-time currency exchange, and smart financial calculators.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card">
+        <i class="fa fa-qrcode feature-icon"></i>
+        <h3>Smart QR & Dev</h3>
+        <p>Pro QR studio, cryptographic tools (MD5, SHA, AES), and App Store metadata queries.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-sm-4 col-sm-offset-2">
+      <div class="feature-card">
+        <i class="fa fa-paint-brush feature-icon"></i>
+        <h3>Design & Screen</h3>
+        <p>Material 3 Palette generator for designers and specialized screen health diagnostic tools.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card">
+        <i class="fa fa-smile-o feature-icon"></i>
+        <h3>Happy Lifestyle</h3>
+        <p>Random wheels, party selectors, 3D dice, and motion-controlled coin tosses.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-jannix">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2 style="margin-top: 0;">About Me</h2>
+      <p>
+        I'm a software engineer passionate about building tools that make everyday tasks easier and more joyful. 
+        I specialize in mobile development and AI integration. When I'm not coding, I'm usually exploring new technologies 
+        or writing about my development journey on this blog.
+      </p>
+      <div style="margin-top: 20px;">
+        <a href="{{ site.author.github | prepend: 'https://github.com/' }}" class="btn btn-default"><i class="fa fa-github"></i> GitHub</a>
+        <a href="/z-about.html" class="btn btn-default">Read More...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="recent-posts">
+  <h2 class="section-title">Latest Articles</h2>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      {% for post in site.posts limit:5 %}
+      <div class="post-item">
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ BASE_PATH }}{{ post.url }}" style="font-size: 1.2em; margin-left: 15px; font-weight: 600;">{{ post.title }}</a>
+      </div>
+      {% endfor %}
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="/archive.html" class="btn btn-primary">View Full Archive</a>
+      </div>
     </div>
   </div>
 </div>
