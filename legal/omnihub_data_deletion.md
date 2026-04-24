@@ -23,10 +23,17 @@ Fill out the details below to generate a pre-formatted email to our support team
       <label for="deviceId">Device ID (Optional)</label>
       <input type="text" class="form-control" id="deviceId" placeholder="Your device identifier">
     </div>
+    
     <div class="form-group">
-      <label for="reason">Reason for Deletion</label>
-      <textarea class="form-control" id="reason" rows="3" placeholder="Why would you like to delete your data? (Help us improve)"></textarea>
+      <label>Reason for Deletion</label>
+      <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="No longer need the app"> No longer need the app</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="Privacy concerns"> Privacy concerns</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="App has too many bugs"> App has too many bugs / stability issues</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="Found a better alternative"> Found a better alternative</label></div>
+      <div class="checkbox"><label><input type="checkbox" id="otherReasonEnToggle" onchange="toggleOther('en')"> Other (please specify below)</label></div>
+      <textarea class="form-control" id="reasonEnOther" rows="2" style="display:none; margin-top:10px;" placeholder="Please tell us more..."></textarea>
     </div>
+
     <div class="checkbox">
       <label>
         <input type="checkbox" id="confirm" required> I understand that this action is permanent and cannot be undone.
@@ -59,10 +66,17 @@ Fill out the details below to generate a pre-formatted email to our support team
       <label for="deviceIdZh">设备 ID (选填)</label>
       <input type="text" class="form-control" id="deviceIdZh" placeholder="您的设备识别码">
     </div>
+
     <div class="form-group">
-      <label for="reasonZh">删除原因</label>
-      <textarea class="form-control" id="reasonZh" rows="3" placeholder="您为什么要删除数据？（帮助我们改进应用）"></textarea>
+      <label>删除原因</label>
+      <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="不再需要此应用"> 不再需要此应用</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="隐私担忧"> 隐私担忧</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="应用运行不稳定/有Bug"> 应用运行不稳定 / 存在 Bug</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="找到了更好的替代品"> 找到了更好的替代品</label></div>
+      <div class="checkbox"><label><input type="checkbox" id="otherReasonZhToggle" onchange="toggleOther('zh')"> 其他（请在下方说明）</label></div>
+      <textarea class="form-control" id="reasonZhOther" rows="2" style="display:none; margin-top:10px;" placeholder="请详细说明您的原因..."></textarea>
     </div>
+
     <div class="checkbox">
       <label>
         <input type="checkbox" id="confirmZh" required> 我已知晓此操作不可逆，账户一旦删除将无法恢复。
@@ -75,15 +89,33 @@ Fill out the details below to generate a pre-formatted email to our support team
 </div>
 
 <script>
+function toggleOther(lang) {
+  var toggleId = lang === 'zh' ? 'otherReasonZhToggle' : 'otherReasonEnToggle';
+  var targetId = lang === 'zh' ? 'reasonZhOther' : 'reasonEnOther';
+  var isChecked = document.getElementById(toggleId).checked;
+  document.getElementById(targetId).style.display = isChecked ? 'block' : 'none';
+}
+
 function generateEmail(lang) {
-  var uid, deviceId, reason, confirm, subject, body;
+  var uid, deviceId, confirm, subject, body;
+  var reasons = [];
   
   if (lang === 'zh') {
     uid = document.getElementById('uidZh').value;
     deviceId = document.getElementById('deviceIdZh').value;
-    reason = document.getElementById('reasonZh').value;
     confirm = document.getElementById('confirmZh').checked;
     
+    // Collect checkboxes
+    var checkboxes = document.getElementsByName('reasonZh');
+    for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) reasons.push(checkboxes[i].value);
+    }
+    // Collect "Other"
+    if (document.getElementById('otherReasonZhToggle').checked) {
+      var otherText = document.getElementById('reasonZhOther').value;
+      if (otherText) reasons.push("其他: " + otherText);
+    }
+
     if (!uid) { alert('请填写注册邮箱或用户 ID'); return; }
     if (!confirm) { alert('请确认您已知晓此操作不可逆'); return; }
     
@@ -91,13 +123,23 @@ function generateEmail(lang) {
     body = "申请删除 OmniHub 登录账户及相关数据。\n\n" +
            "用户 ID / 邮箱: " + uid + "\n" +
            "设备 ID: " + (deviceId || "未提供") + "\n" +
-           "删除原因: " + (reason || "未提供") + "\n\n" +
+           "删除原因: " + (reasons.length > 0 ? reasons.join(", ") : "未提供") + "\n\n" +
            "确认事项: [X] 我已知晓此操作不可逆，账户一旦删除将无法恢复。";
   } else {
     uid = document.getElementById('uid').value;
     deviceId = document.getElementById('deviceId').value;
-    reason = document.getElementById('reason').value;
     confirm = document.getElementById('confirm').checked;
+
+    // Collect checkboxes
+    var checkboxesEn = document.getElementsByName('reasonEn');
+    for (var j = 0; j < checkboxesEn.length; j++) {
+      if (checkboxesEn[j].checked) reasons.push(checkboxesEn[j].value);
+    }
+    // Collect "Other"
+    if (document.getElementById('otherReasonEnToggle').checked) {
+      var otherTextEn = document.getElementById('reasonEnOther').value;
+      if (otherTextEn) reasons.push("Other: " + otherTextEn);
+    }
     
     if (!uid) { alert('Please enter your User ID or Email'); return; }
     if (!confirm) { alert('Please confirm the permanent nature of this action'); return; }
@@ -106,7 +148,7 @@ function generateEmail(lang) {
     body = "Please delete my OmniHub account data.\n\n" +
            "User ID / Email: " + uid + "\n" +
            "Device ID: " + (deviceId || "Not provided") + "\n" +
-           "Reason: " + (reason || "Not provided") + "\n\n" +
+           "Reason: " + (reasons.length > 0 ? reasons.join(", ") : "Not provided") + "\n\n" +
            "Confirmation: [X] I understand that this action is permanent and cannot be undone.";
   }
   

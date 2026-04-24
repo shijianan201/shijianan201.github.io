@@ -1,0 +1,104 @@
+---
+layout: page
+title: "OmniHub"
+description: "OmniHub: AI Toolbox Utilities - An all-in-one utility app powered by modern AI."
+---
+
+{% include JB/setup %}
+
+<div id="omnihub-page">
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-md-10 col-md-offset-1 text-center">
+      <h1 style="font-weight: bold; color: #2e9fff; margin-bottom: 20px;">Featured Project: OmniHub</h1>
+      <p style="font-size: 1.3em; color: #555; line-height: 1.6;">
+        <strong>OmniHub: AI Toolbox Utilities</strong> is an all-in-one utility app designed to simplify your life. 
+        It replaces dozens of single-purpose apps with a single, elegant interface powered by modern AI.
+      </p>
+      
+      <div style="margin: 40px 0; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <a href="https://play.google.com/store/apps/details?id=com.jannix.omnihub" target="_blank" class="btn btn-primary btn-lg" style="padding: 15px 30px; font-size: 1.2em; border-radius: 50px; background: linear-gradient(135deg, #2e9fff 0%, #007bff 100%); border: none; box-shadow: 0 4px 15px rgba(0,123,255,0.3);">
+          <i class="fa fa-google-play"></i> Get it on Google Play
+        </a>
+        <div style="text-align: center; margin-top: 20px;">
+          <div id="store-qrcode-page" style="padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: inline-block;"></div>
+          <p style="font-size: 0.9em; color: #888; margin-top: 10px;">Scan to download</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="feature-card" style="text-align: center; padding: 25px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px; transition: transform 0.3s ease;">
+        <i class="fa fa-magic" style="font-size: 3em; color: #2e9fff; margin-bottom: 15px;"></i>
+        <h3>AI & OCR Magic</h3>
+        <p>Scan lists to pick winners, detect faces for group draws, and leverage customizable Gemini AI integration.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card" style="text-align: center; padding: 25px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px;">
+        <i class="fa fa-calculator" style="font-size: 3em; color: #2e9fff; margin-bottom: 15px;"></i>
+        <h3>Precision Tools</h3>
+        <p>High-accuracy unit converters, real-time currency exchange, and smart financial calculators.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card" style="text-align: center; padding: 25px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px;">
+        <i class="fa fa-qrcode" style="font-size: 3em; color: #2e9fff; margin-bottom: 15px;"></i>
+        <h3>Smart QR & Dev</h3>
+        <p>Pro QR studio, cryptographic tools (MD5, SHA, AES), and App Store metadata queries.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+      <div class="feature-card" style="text-align: center; padding: 25px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px;">
+        <i class="fa fa-paint-brush" style="font-size: 3em; color: #2e9fff; margin-bottom: 15px;"></i>
+        <h3>Design & Screen</h3>
+        <p>Material 3 Palette generator for designers and specialized screen health diagnostic tools.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="feature-card" style="text-align: center; padding: 25px; border: 1px solid #eee; border-radius: 12px; margin-bottom: 20px;">
+        <i class="fa fa-smile-o" style="font-size: 3em; color: #2e9fff; margin-bottom: 15px;"></i>
+        <h3>Happy Lifestyle</h3>
+        <p>Random wheels, party selectors, 3D dice, and motion-controlled coin tosses.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
+    <div class="col-md-10 col-md-offset-1">
+      <h2 style="border-left: 5px solid #2e9fff; padding-left: 15px;">Legal Information</h2>
+      <p>Your privacy and data security are our top priorities. Below are the legal documents related to OmniHub:</p>
+      <div class="list-group">
+        <a href="/legal/omnihub_privacy.html" class="list-group-item">
+          <h4 class="list-group-item-heading"><i class="fa fa-shield"></i> Privacy Policy</h4>
+          <p class="list-group-item-text">Learn how we handle and protect your personal information.</p>
+        </a>
+        <a href="/legal/omnihub_terms_of_use.html" class="list-group-item">
+          <h4 class="list-group-item-heading"><i class="fa fa-file-text-o"></i> Terms of Use</h4>
+          <p class="list-group-item-text">Understand the rules and conditions for using OmniHub.</p>
+        </a>
+        <a href="/legal/omnihub_data_deletion.html" class="list-group-item list-group-item-warning">
+          <h4 class="list-group-item-heading"><i class="fa fa-trash"></i> Data Deletion Request</h4>
+          <p class="list-group-item-text">Submit a request to permanently delete your account and associated data.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    if (typeof $.fn.qrcode === 'function') {
+      $('#store-qrcode-page').qrcode({
+        render: "canvas",
+        width: 150,
+        height: 150,
+        text: "https://play.google.com/store/apps/details?id=com.jannix.omnihub"
+      });
+    }
+  });
+</script>
