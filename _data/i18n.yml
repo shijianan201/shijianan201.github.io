@@ -1,0 +1,470 @@
+---
+en:
+  name: English
+  home: Home
+  omnihub: OmniHub
+  about: About
+  search: Search
+  latest_articles: Latest Articles
+  view_full_archive: View Full Archive
+  discover_my_work: Discover My Work
+  open_source_contributions: Open Source Contributions
+  view_on_pub: View on Pub.dev
+  view_source: View Source
+  about_me: About Me
+  read_more: Read More...
+  github: GitHub
+  email: Email
+  archive: Archive
+  categories: Categories
+  tags: Tags
+  friends: Friends
+  hero_tagline: Senior Developer | Android · Flutter · iOS
+  hero_welcome: Creator, and Problem Solver. Welcome to my digital workspace.
+  hi_im: Hi, I'm Jannix Shi
+  logan_desc: A high-performance, mobile-optimized logging solution for Flutter. Built
+    with professional-grade stability and efficiency in mind, helping developers manage
+    logs seamlessly across platforms.
+  about_desc: I'm a software engineer passionate about building tools that make everyday
+    tasks easier and more joyful. I specialize in mobile development and AI integration.
+    When I'm not coding, I'm usually exploring new technologies or writing about my
+    development journey on this blog.
+zh:
+  name: 简体中文
+  home: 首页
+  omnihub: OmniHub
+  about: 关于
+  search: 搜索
+  latest_articles: 最新文章
+  view_full_archive: 查看全部存档
+  discover_my_work: 发现我的工作
+  open_source_contributions: 开源贡献
+  view_on_pub: 在 Pub.dev 查看
+  view_source: 查看源码
+  about_me: 关于我
+  read_more: 阅读更多...
+  github: GitHub
+  email: 邮件
+  hero_tagline: 高级开发工程师 | Android · Flutter · iOS
+  hero_welcome: 创造者，问题解决者。欢迎来到我的数字工作空间。
+  hi_im: 你好，我是 Jannix Shi
+  logan_desc: 一个高性能、移动端优化的 Flutter 日志解决方案。以专业级稳定性和效率为核心构建，帮助开发者在多平台间无缝管理日志。
+  about_desc: 我是一名热爱构建让日常任务变得更简单、更快乐工具的软件工程师。我专注于移动端开发和 AI 集成。不写代码时，我通常在探索新技术，或是在这个博客上记录我的开发旅程。
+  archive: 存档
+  categories: 分类
+  tags: 标签
+  friends: 朋友
+zh_HK:
+  name: 繁體中文 (香港)
+  home: 首頁
+  omnihub: OmniHub
+  about: 關於
+  search: 搜尋
+  latest_articles: 最新文章
+  view_full_archive: 查看全部存檔
+  discover_my_work: 發現我的工作
+  open_source_contributions: 開源貢獻
+  view_on_pub: 在 Pub.dev 查看
+  view_source: 查看源碼
+  about_me: 關於我
+  read_more: 閱讀更多...
+  github: GitHub
+  email: 電郵
+  hero_tagline: 高級開發工程師 | Android · Flutter · iOS
+  hero_welcome: 創造者，問題解決者。歡迎來到我的數字工作空間。
+  hi_im: 你好，我是 Jannix Shi
+  logan_desc: 一個高性能、移動端優化的 Flutter 日誌解決方案。以專業級穩定性和效率為核心構建，幫助開發者在多平台間無縫管理日誌。
+  about_desc: 我是一名熱愛構建讓日常任務變得更簡單、更快樂工具的軟件工程師。我專注於移動端開發和 AI 集成。不寫代碼時，我通常在探索新技術，或是在這個博客上記錄我的開發旅程。
+  archive: 存檔
+  categories: 分類
+  tags: 標籤
+  friends: 朋友
+zh_TW:
+  name: 繁體中文 (台灣)
+  home: 首頁
+  omnihub: OmniHub
+  about: 關於
+  search: 搜尋
+  latest_articles: 最新文章
+  view_full_archive: 查看全部存檔
+  discover_my_work: 發現我的工作
+  open_source_contributions: 開源貢獻
+  view_on_pub: 在 Pub.dev 查看
+  view_source: 查看源碼
+  about_me: 關於我
+  read_more: 閱讀更多...
+  github: GitHub
+  email: 電郵
+  hero_tagline: 高級開發工程師 | Android · Flutter · iOS
+  hero_welcome: 創造者，問題解決者。歡迎來到我的數字工作空間。
+  hi_im: 你好，我是 Jannix Shi
+  logan_desc: 一個高性能、移動端優化的 Flutter 日誌解決方案。以專業級穩定性和效率為核心構建，幫助開發者在多平台間無縫管理日誌。
+  about_desc: 我是一名熱愛構建讓日常任務變得更簡單、更快樂工具的軟件工程師。我專注於移動端開發和 AI 集成。不寫代碼時，我通常在探索新技術，或是在這個博客上記錄我的開發旅程。
+  archive: 存檔
+  categories: 分類
+  tags: 標籤
+  friends: 朋友
+ja:
+  name: 日本語
+  home: ホーム
+  omnihub: OmniHub
+  about: について
+  search: 検索
+  latest_articles: 最新記事
+  view_full_archive: すべてのアーカイブを表示
+  discover_my_work: 私の仕事を発見する
+  open_source_contributions: オープンソースへの貢献
+  view_on_pub: Pub.devで表示
+  view_source: ソースを表示
+  about_me: 私について
+  read_more: 続きを読む...
+  github: GitHub
+  email: メール
+  hero_tagline: シニアデベロッパー | Android · Flutter · iOS
+  hero_welcome: クリエイター、問題解決者。私のデジタルワークスペースへようこそ。
+  hi_im: こんにちは、Jannix Shiです
+  logan_desc: Flutter向けの高性能でモバイルに最適化されたロギングソリューション。プロフェッショナルグレードの安定性と効率を念頭に置いて構築されており、開発者がプラットフォーム間でログをシームレスに管理できるようにします。
+  about_desc: 私は、日々のタスクをより簡単に、より楽しくするツールを構築することに情熱を注いでいるソフトウェアエンジニアです。モバイル開発とAI統合を専門としています。コードを書いていないときは、通常、新しいテクノロジーを探索したり、このブログで開発の旅について書いたりしています。
+  archive: アーカイブ
+  categories: カテゴリー
+  tags: タグ
+  friends: 友達
+ko:
+  name: 한국어
+  home: 홈
+  omnihub: OmniHub
+  about: 정보
+  search: 검색
+  latest_articles: 최신 기사
+  view_full_archive: 전체 아카이브 보기
+  discover_my_work: 내 작업 발견하기
+  open_source_contributions: 오픈 소스 기여
+  view_on_pub: Pub.dev에서 보기
+  view_source: 소스 보기
+  about_me: 내 소개
+  read_more: 더 읽어보기...
+  github: GitHub
+  email: 이메일
+  hero_tagline: 시니어 개발자 | Android · Flutter · iOS
+  hero_welcome: 창작자이자 문제 해결사입니다. 제 디지털 작업 공간에 오신 것을 환영합니다.
+  hi_im: 안녕하세요, Jannix Shi입니다
+  logan_desc: Flutter를 위한 고성능 모바일 최적화 로깅 솔루션입니다. 전문가 수준의 안정성과 효율성을 염두에 두고 구축되어 개발자가
+    플랫폼 간에 로그를 원활하게 관리할 수 있도록 도와줍니다.
+  about_desc: 저는 일상적인 업무를 더 쉽고 즐겁게 만드는 도구를 만드는 데 열정을 가진 소프트웨어 엔지니어입니다. 모바일 개발과 AI
+    통합을 전문으로 합니다. 코딩을 하지 않을 때는 주로 새로운 기술을 탐구하거나 이 블로그에 제 개발 여정에 대해 글을 씁니다.
+  archive: 아카이브
+  categories: 카테고리
+  tags: 태그
+  friends: 친구
+de:
+  name: Deutsch
+  home: Startseite
+  omnihub: OmniHub
+  about: Über
+  search: Suche
+  latest_articles: Neueste Artikel
+  view_full_archive: Vollständiges Archiv anzeigen
+  discover_my_work: Entdecke meine Arbeit
+  open_source_contributions: Open-Source-Beiträge
+  view_on_pub: Auf Pub.dev ansehen
+  view_source: Quellcode anzeigen
+  about_me: Über mich
+  read_more: Weiterlesen...
+  github: GitHub
+  email: E-Mail
+  hero_tagline: Senior-Entwickler | Android · Flutter · iOS
+  hero_welcome: Schöpfer und Problemlöser. Willkommen in meinem digitalen Arbeitsbereich.
+  hi_im: Hallo, ich bin Jannix Shi
+  logan_desc: Eine leistungsstarke, mobiloptimierte Logging-Lösung für Flutter. Entwickelt
+    mit Fokus auf professionelle Stabilität und Effizienz, um Entwicklern die nahtlose
+    Verwaltung von Protokollen über Plattformen hinweg zu ermöglichen.
+  about_desc: Ich bin ein Softwareentwickler mit einer Leidenschaft für die Erstellung
+    von Tools, die alltägliche Aufgaben einfacher und freudvoller machen. Ich spezialisiere
+    mich auf mobile Entwicklung und KI-Integration. Wenn ich nicht gerade programmiere,
+    erkunde ich normalerweise neue Technologien oder schreibe über meine Entwicklungsreise
+    auf diesem Blog.
+  archive: Archiv
+  categories: Kategorien
+  tags: Tags
+  friends: Freunde
+fr:
+  name: Français
+  home: Accueil
+  omnihub: OmniHub
+  about: À propos
+  search: Rechercher
+  latest_articles: Derniers articles
+  view_full_archive: Voir toutes les archives
+  discover_my_work: Découvrir mon travail
+  open_source_contributions: Contributions Open Source
+  view_on_pub: Voir sur Pub.dev
+  view_source: Voir la source
+  about_me: À propos de moi
+  read_more: Lire la suite...
+  github: GitHub
+  email: E-mail
+  hero_tagline: Développeur Senior | Android · Flutter · iOS
+  hero_welcome: Créateur et solutionneur de problèmes. Bienvenue dans mon espace de
+    travail numérique.
+  hi_im: Salut, je suis Jannix Shi
+  logan_desc: Une solution de journalisation haute performance et optimisée pour le
+    mobile pour Flutter. Conçue pour une stabilité et une efficacité de niveau professionnel,
+    aidant les développeurs à gérer les journaux de manière transparente sur toutes
+    les plateformes.
+  about_desc: Je suis un ingénieur logiciel passionné par la création d'outils qui
+    rendent les tâches quotidiennes plus faciles et plus joyeuses. Je me spécialise
+    dans le développement mobile et l'intégration de l'IA. Quand je ne code pas, j'explore
+    généralement de nouvelles technologies ou j'écris sur mon parcours de développeur
+    sur ce blog.
+  archive: Archives
+  categories: Catégories
+  tags: Étiquettes
+  friends: Amis
+es:
+  name: Español
+  home: Inicio
+  omnihub: OmniHub
+  about: Acerca de
+  search: Buscar
+  latest_articles: Últimos artículos
+  view_full_archive: Ver archivo completo
+  discover_my_work: Descubre mi trabajo
+  open_source_contributions: Contribuciones de código abierto
+  view_on_pub: Ver en Pub.dev
+  view_source: Ver código fuente
+  about_me: Sobre mí
+  read_more: Leer más...
+  github: GitHub
+  email: Correo electrónico
+  hero_tagline: Desarrollador Senior | Android · Flutter · iOS
+  hero_welcome: Creador y solucionador de problemas. Bienvenido a mi espacio de trabajo
+    digital.
+  hi_im: Hola, soy Jannix Shi
+  logan_desc: Una solución de registro de alto rendimiento y optimizada para dispositivos
+    móviles para Flutter. Construida con estabilidad y eficiencia de nivel profesional
+    en mente, ayudando a los desarrolladores a gestionar registros de forma fluida
+    entre plataformas.
+  about_desc: Soy un ingeniero de software apasionado por crear herramientas que hagan
+    las tareas cotidianas más fáciles y alegres. Me especializo en desarrollo móvil
+    e integración de IA. Cuando no estoy programando, suelo explorar nuevas tecnologías
+    o escribir sobre mi viaje de desarrollo en este blog.
+  archive: Archivo
+  categories: Categorías
+  tags: Etiquetas
+  friends: Amigos
+pt:
+  name: Português
+  home: Início
+  omnihub: OmniHub
+  about: Sobre
+  search: Buscar
+  latest_articles: Artigos recentes
+  view_full_archive: Ver arquivo completo
+  discover_my_work: Descubra meu trabalho
+  open_source_contributions: Contribuições de código aberto
+  view_on_pub: Ver no Pub.dev
+  view_source: Ver código fonte
+  about_me: Sobre mim
+  read_more: Ler mais...
+  github: GitHub
+  email: E-mail
+  hero_tagline: Desenvolvedor Sênior | Android · Flutter · iOS
+  hero_welcome: Criador e solucionador de problemas. Bem-vindo ao meu espaço de trabalho
+    digital.
+  hi_im: Olá, eu sou Jannix Shi
+  logan_desc: Uma solução de log de alto desempenho e otimizada para dispositivos
+    móveis para Flutter. Construída com estabilidade e eficiência de nível profissional
+    em mente, ajudando os desenvolvedores a gerenciar logs perfeitamente em todas
+    as plataformas.
+  about_desc: Sou um engenheiro de software apaixonado por criar ferramentas que tornam
+    as tarefas cotidianas mais fáceis e alegres. Especializo-me em desenvolvimento
+    móvel e integração de IA. Quando não estou programando, costumo explorar novas
+    tecnologias ou escrever sobre minha jornada de desenvolvimento neste blog.
+  archive: Arquivo
+  categories: Categorias
+  tags: Tags
+  friends: Amigos
+it:
+  name: Italiano
+  home: Home
+  omnihub: OmniHub
+  about: Informazioni
+  search: Cerca
+  latest_articles: Ultimi articoli
+  view_full_archive: Vedi archivio completo
+  discover_my_work: Scopri il mio lavoro
+  open_source_contributions: Contributi Open Source
+  view_on_pub: Vedi su Pub.dev
+  view_source: Vedi sorgente
+  about_me: Su di me
+  read_more: Leggi di più...
+  github: GitHub
+  email: Email
+  hero_tagline: Sviluppatore Senior | Android · Flutter · iOS
+  hero_welcome: Creatore e risolutore di problemi. Benvenuti nel mio spazio di lavoro
+    digitale.
+  hi_im: Ciao, sono Jannix Shi
+  logan_desc: Una soluzione di log ad alte prestazioni e ottimizzata per il mobile
+    per Flutter. Costruita pensando alla stabilità e all'efficienza di livello professionale,
+    aiuta gli sviluppatori a gestire i log senza problemi tra le piattaforme.
+  about_desc: Sono un ingegnere del software appassionato di costruire strumenti che
+    rendano i compiti quotidiani più semplici e gioiosi. Mi occupo di sviluppo mobile
+    e integrazione AI. Quando non programmo, di solito esploro nuove tecnologie o
+    scrivo del mio percorso di sviluppo su questo blog.
+  archive: Archivio
+  categories: Categorie
+  tags: Tag
+  friends: Amici
+ru:
+  name: Русский
+  home: Главная
+  omnihub: OmniHub
+  about: Обо мне
+  search: Поиск
+  latest_articles: Последние статьи
+  view_full_archive: Посмотреть весь архив
+  discover_my_work: Узнать о моей работе
+  open_source_contributions: Вклад в Open Source
+  view_on_pub: Посмотреть на Pub.dev
+  view_source: Посмотреть исходный код
+  about_me: Обо мне
+  read_more: Читать далее...
+  github: GitHub
+  email: Email
+  hero_tagline: Ведущий разработчик | Android · Flutter · iOS
+  hero_welcome: Создатель и решатель проблем. Добро пожаловать в мое цифровое рабочее
+    пространство.
+  hi_im: Привет, я Янникс Ши
+  logan_desc: Высокопроизводительное решение для логирования для Flutter, оптимизированное
+    для мобильных устройств. Создано с учетом профессиональной стабильности и эффективности,
+    помогая разработчикам легко управлять логами на разных платформах.
+  about_desc: Я инженер-программист, увлеченный созданием инструментов, которые делают
+    повседневные задачи проще и приятнее. Я специализируюсь на мобильной разработке
+    и интеграции ИИ. Когда я не программирую, я обычно изучаю новые технологии или
+    пишу о своем пути разработчика в этом блоге.
+  archive: Архив
+  categories: Категории
+  tags: Теги
+  friends: Друзья
+th:
+  name: ไทย
+  home: หน้าแรก
+  omnihub: OmniHub
+  about: เกี่ยวกับ
+  search: ค้นหา
+  latest_articles: บทความล่าสุด
+  view_full_archive: ดูคลังบทความทั้งหมด
+  discover_my_work: ค้นหางานของฉัน
+  open_source_contributions: ผลงานโอเพนซอร์ส
+  view_on_pub: ดูบน Pub.dev
+  view_source: ดูซอร์สโค้ด
+  about_me: เกี่ยวกับฉัน
+  read_more: อ่านเพิ่มเติม...
+  github: GitHub
+  email: อีเมล
+  hero_tagline: นักพัฒนาอาวุโส | Android · Flutter · iOS
+  hero_welcome: ผู้สร้างและผู้แก้ปัญหา ยินดีต้อนรับสู่พื้นที่ทำงานดิจิทัลของฉัน
+  hi_im: สวัสดี ฉันคือ Jannix Shi
+  logan_desc: โซลูชันการบันทึกบันทึกที่มีประสิทธิภาพสูงและเหมาะสำหรับมือถือสำหรับ
+    Flutter สร้างขึ้นโดยคำนึงถึงความเสถียรและประสิทธิภาพระดับมืออาชีพ ช่วยให้นักพัฒนาจัดการบันทึกบันทึกได้อย่างราบรื่นในทุกแพลตฟอร์ม
+  about_desc: ฉันเป็นวิศวกรซอฟต์แวร์ที่มีความหลงใหลในการสร้างเครื่องมือที่ทำให้งานประจำวันง่ายขึ้นและมีความสุขมากขึ้น
+    ฉันเชี่ยวชาญในการพัฒนาบนมือถือและการรวม AI เมื่อฉันไม่ได้เขียนโค้ด ฉันมักจะสำรวจเทคโนโลยีใหม่ๆ
+    หรือเขียนเกี่ยวกับการเดินทางในการพัฒนาของฉันในบล็อกนี้
+  archive: คลังบทความ
+  categories: หมวดหมู่
+  tags: แท็ก
+  friends: เพื่อน
+vi:
+  name: Tiếng Việt
+  home: Trang chủ
+  omnihub: OmniHub
+  about: Giới thiệu
+  search: Tìm kiếm
+  latest_articles: Bài viết mới nhất
+  view_full_archive: Xem toàn bộ lưu trữ
+  discover_my_work: Khám phá công việc của tôi
+  open_source_contributions: Đóng góp mã nguồn mở
+  view_on_pub: Xem trên Pub.dev
+  view_source: Xem nguồn
+  about_me: Về tôi
+  read_more: Đọc thêm...
+  github: GitHub
+  email: Email
+  hero_tagline: Nhà phát triển cao cấp | Android · Flutter · iOS
+  hero_welcome: Người sáng tạo và giải quyết vấn đề. Chào mừng bạn đến với không gian
+    làm việc kỹ thuật số của tôi.
+  hi_im: Xin chào, tôi là Jannix Shi
+  logan_desc: Một giải pháp ghi log hiệu suất cao, tối ưu cho di động dành cho Flutter.
+    Được xây dựng với sự ổn định và hiệu quả ở mức chuyên nghiệp, giúp các nhà phát
+    triển quản lý log liền mạch trên các nền tảng.
+  about_desc: Tôi là một kỹ sư phần mềm đam mê xây dựng các công cụ giúp các công
+    việc hàng ngày trở nên dễ dàng và vui vẻ hơn. Tôi chuyên về phát triển di động
+    và tích hợp AI. Khi không viết code, tôi thường khám phá các công nghệ mới hoặc
+    viết về hành trình phát triển của mình trên blog này.
+  archive: Lưu trữ
+  categories: Danh mục
+  tags: Thẻ
+  friends: Bạn bè
+tr:
+  name: Türkçe
+  home: Ana Sayfa
+  omnihub: OmniHub
+  about: Hakkında
+  search: Ara
+  latest_articles: Son Yazılar
+  view_full_archive: Tüm Arşivi Görüntüle
+  discover_my_work: Çalışmalarımı Keşfet
+  open_source_contributions: Açık Kaynak Katkıları
+  view_on_pub: Pub.dev'de Görüntüle
+  view_source: Kaynağı Görüntüle
+  about_me: Hakkımda
+  read_more: Daha Fazla...
+  github: GitHub
+  email: E-posta
+  hero_tagline: Kıdemli Geliştirici | Android · Flutter · iOS
+  hero_welcome: Yaratıcı ve problem çözücü. Dijital çalışma alanıma hoş geldiniz.
+  hi_im: Merhaba, ben Jannix Shi
+  logan_desc: Flutter için yüksek performanslı, mobil uyumlu bir günlükleme çözümü.
+    Profesyonel düzeyde kararlılık ve verimlilik göz önünde bulundurularak oluşturulmuştur
+    ve geliştiricilerin günlükleri platformlar arasında sorunsuz bir şekilde yönetmesine
+    yardımcı olur.
+  about_desc: Günlük görevleri daha kolay ve keyifli hale getiren araçlar oluşturma
+    konusunda tutkulu bir yazılım mühendisiyim. Mobil geliştirme ve yapay zeka entegrasyonu
+    konusunda uzmanım. Kod yazmadığım zamanlarda genellikle yeni teknolojileri keşfediyorum
+    veya bu blogda geliştirme yolculuğum hakkında yazıyorum.
+  archive: Arşiv
+  categories: Kategoriler
+  tags: Etiketler
+  friends: Arkadaşlar
+id:
+  name: Bahasa Indonesia
+  home: Beranda
+  omnihub: OmniHub
+  about: Tentang
+  search: Cari
+  latest_articles: Artikel Terbaru
+  view_full_archive: Lihat Semua Arsip
+  discover_my_work: Jelajahi Pekerjaan Saya
+  open_source_contributions: Kontribusi Sumber Terbuka
+  view_on_pub: Lihat di Pub.dev
+  view_source: Lihat Sumber
+  about_me: Tentang Saya
+  read_more: Baca Selengkapnya...
+  github: GitHub
+  email: Email
+  hero_tagline: Pengembang Senior | Android · Flutter · iOS
+  hero_welcome: Kreator dan pemecah masalah. Selamat datang di ruang kerja digital
+    saya.
+  hi_im: Halo, saya Jannix Shi
+  logan_desc: Solusi pencatatan log berperforma tinggi yang dioptimalkan untuk seluler
+    untuk Flutter. Dibangun dengan mempertimbangkan stabilitas dan efisiensi tingkat
+    profesional, membantu pengembang mengelola log dengan mulus di berbagai platform.
+  about_desc: Saya adalah seorang insinyur perangkat lunak yang bersemangat membangun
+    alat yang membuat tugas sehari-hari menjadi lebih mudah dan menyenangkan. Saya
+    berspesialisasi dalam pengembangan seluler dan integrasi AI. Saat saya tidak sedang
+    coding, saya biasanya menjelajahi teknologi baru atau menulis tentang perjalanan
+    pengembangan saya di blog ini.
+  archive: Arsip
+  categories: Kategori
+  tags: Tag
+  friends: Teman

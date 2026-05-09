@@ -18,6 +18,8 @@
       {% assign ASSET_PATH = site.JB.ASSET_PATH %}
     {% else %}
 	  {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{% if page.theme.name %}{{ page.theme.name }}{% else %if %}{{layout.theme.name }}{% endif %}{% endcapture %}
-    {% endif %}  
+    {% endif %}
+
+    {% assign lang = page.lang | default: site.default_lang | default: "en" %}
   {% endif %}
 {% endcapture %}{% assign jbcache = nil %}

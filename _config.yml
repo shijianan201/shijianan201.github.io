@@ -150,3 +150,7 @@ plugins:
 #- jekyll-mentions
   - jekyll-sitemap
   - jekyll-feed
+
+# Multi-language configuration
+languages: ["en", "zh", "zh_HK", "zh_TW", "ja", "ko", "de", "fr", "es", "pt", "it", "ru", "th", "vi", "tr", "id"]
+default_lang: en

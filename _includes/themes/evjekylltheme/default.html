@@ -44,6 +44,8 @@
   </head>
 
   <body>
+    {% assign lang = page.lang | default: site.default_lang %}
+    {% assign t = site.data.i18n[lang] %}
     <div class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
           <div class="row mobilepadding">
@@ -55,15 +57,30 @@
           </button>
           <div class="collapse navbar-collapse" id="mNavbar">
   					<ul class="nav navbar-nav">
-              <li{% if page.url == "/index.html" %} class="active"{% endif %}><a href="/">Home</a></li>
-              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="/omnihub.html">OmniHub</a></li>
+              <li{% if page.url == "/index.html" or page.url == "/" or page.url contains "index.html" %} class="active"{% endif %}><a href="{% if lang == site.default_lang %}/{% else %}/{{ lang }}/{% endif %}">{{ t.home }}</a></li>
+              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="/omnihub.html">{{ t.omnihub }}</a></li>
   						{% assign pages_list = site.pages %}
   						{% assign group = 'navigation' %}
   						{% include JB/pages_list %}
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-language"></i> {{ t.name }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" style="max-height: 400px; overflow-y: auto;">
+                  {% for l in site.languages %}
+                  <li{% if l == lang %} class="active"{% endif %}>
+                    <a href="{% if l == site.default_lang %}/{% else %}/{{ l }}/{% endif %}">
+                      {{ site.data.i18n[l].name }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </li>
   					</ul>
   					<form id="search-form" class="navbar-form navbar-right" role="search">
   						<div class="form-group">
-  						<input type="text" class="form-control input-sm" placeholder="Search" id="query">
+  						<input type="text" class="form-control input-sm" placeholder="{{ t.search }}" id="query">
   						</div>
   					</form>
   					<!-- <div class="nav-icon">
