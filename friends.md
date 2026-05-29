@@ -2,7 +2,6 @@
 layout: page
 title: "Friends"
 description: "Friends"
-group: navigation
 ---
 
 <h2 id="friends" itemprop="about">Friends</h2>

@@ -57,8 +57,9 @@
           </button>
           <div class="collapse navbar-collapse" id="mNavbar">
   					<ul class="nav navbar-nav">
-              <li{% if page.url == "/index.html" or page.url == "/" or page.url contains "index.html" %} class="active"{% endif %}><a href="{% if lang == site.default_lang %}/{% else %}/{{ lang }}/{% endif %}">{{ t.home }}</a></li>
-              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="/omnihub.html">{{ t.omnihub }}</a></li>
+              <li{% if page.url == "/omnihub.html" or page.url == "/" or page.url == "/index.html" %} class="active"{% endif %}><a href="/omnihub.html">{{ t.omnihub }}</a></li>
+              <li{% if page.url == "/z-about.html" %} class="active"{% endif %}><a href="/z-about.html">{{ t.about | default: "About" }}</a></li>
+              <li{% if page.url == "/pages.html" or page.url contains "index.html" and page.url != "/" and page.url != "/index.html" %} class="active"{% endif %}><a href="/pages.html">{{ t.home }}</a></li>
   						{% assign pages_list = site.pages %}
   						{% assign group = 'navigation' %}
   						{% include JB/pages_list %}
