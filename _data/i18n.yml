@@ -3,6 +3,7 @@ en:
   name: English
   home: Home
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: About
   search: Search
   latest_articles: Latest Articles
@@ -33,6 +34,7 @@ zh:
   name: 简体中文
   home: 首页
   omnihub: OmniHub
+  kuntower: 只因魔塔
   about: 关于
   search: 搜索
   latest_articles: 最新文章
@@ -58,6 +60,7 @@ zh_HK:
   name: 繁體中文 (香港)
   home: 首頁
   omnihub: OmniHub
+  kuntower: 只因魔塔
   about: 關於
   search: 搜尋
   latest_articles: 最新文章
@@ -83,6 +86,7 @@ zh_TW:
   name: 繁體中文 (台灣)
   home: 首頁
   omnihub: OmniHub
+  kuntower: 只因魔塔
   about: 關於
   search: 搜尋
   latest_articles: 最新文章
@@ -108,6 +112,7 @@ ja:
   name: 日本語
   home: ホーム
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: について
   search: 検索
   latest_articles: 最新記事
@@ -133,6 +138,7 @@ ko:
   name: 한국어
   home: 홈
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: 정보
   search: 검색
   latest_articles: 최신 기사
@@ -160,6 +166,7 @@ de:
   name: Deutsch
   home: Startseite
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Über
   search: Suche
   latest_articles: Neueste Artikel
@@ -191,6 +198,7 @@ fr:
   name: Français
   home: Accueil
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: À propos
   search: Rechercher
   latest_articles: Derniers articles
@@ -224,6 +232,7 @@ es:
   name: Español
   home: Inicio
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Acerca de
   search: Buscar
   latest_articles: Últimos artículos
@@ -256,6 +265,7 @@ pt:
   name: Português
   home: Início
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Sobre
   search: Buscar
   latest_articles: Artigos recentes
@@ -288,6 +298,7 @@ it:
   name: Italiano
   home: Home
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Informazioni
   search: Cerca
   latest_articles: Ultimi articoli
@@ -319,6 +330,7 @@ ru:
   name: Русский
   home: Главная
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Обо мне
   search: Поиск
   latest_articles: Последние статьи
@@ -350,6 +362,7 @@ th:
   name: ไทย
   home: หน้าแรก
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: เกี่ยวกับ
   search: ค้นหา
   latest_articles: บทความล่าสุด
@@ -378,6 +391,7 @@ vi:
   name: Tiếng Việt
   home: Trang chủ
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Giới thiệu
   search: Tìm kiếm
   latest_articles: Bài viết mới nhất
@@ -409,6 +423,7 @@ tr:
   name: Türkçe
   home: Ana Sayfa
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Hakkında
   search: Ara
   latest_articles: Son Yazılar
@@ -440,6 +455,7 @@ id:
   name: Bahasa Indonesia
   home: Beranda
   omnihub: OmniHub
+  kuntower: Kun Tower
   about: Tentang
   search: Cari
   latest_articles: Artikel Terbaru
