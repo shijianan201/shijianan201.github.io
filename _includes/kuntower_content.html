@@ -2,23 +2,61 @@
 
 <style>
   /* ==========================================================================
-     KUN TOWER (kun塔50层) - Official Atmospheric Modern Gaming Landing Page
+     KUN TOWER (只因魔塔50层) - Official Landing Page
      ========================================================================== */
   .kuntower-wrapper {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #f1f5f9;
-    background: radial-gradient(circle at 50% 0%, #1c1335 0%, #0c0818 60%, #05030a 100%);
+    background: radial-gradient(circle at 50% 0%, #1e1238 0%, #0c0818 55%, #05030a 100%);
     border-radius: 28px;
-    padding: 36px 24px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    padding: 32px 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
     margin-bottom: 50px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255, 215, 0, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.2);
   }
 
   .kuntower-wrapper a {
     text-decoration: none;
+  }
+
+  /* Quick Navigation Bar */
+  .kt-nav-bar {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 8px 4px 16px 4px;
+    margin-bottom: 25px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 215, 0, 0.3) transparent;
+  }
+
+  .kt-nav-bar::-webkit-scrollbar {
+    height: 4px;
+  }
+  .kt-nav-bar::-webkit-scrollbar-thumb {
+    background: rgba(255, 215, 0, 0.35);
+    border-radius: 4px;
+  }
+
+  .kt-nav-link {
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #cbd5e1 !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.88em;
+    font-weight: 700;
+    transition: all 0.25s ease;
+  }
+
+  .kt-nav-link:hover {
+    background: rgba(255, 215, 0, 0.18);
+    border-color: #ffd700;
+    color: #ffd700 !important;
+    transform: translateY(-2px);
   }
 
   /* 1. HERO BANNER SECTION */
@@ -27,7 +65,7 @@
     border-radius: 24px;
     overflow: hidden;
     background: url('/images/kuntower_banner.jpg') center/cover no-repeat;
-    padding: 65px 32px;
+    padding: 55px 28px;
     margin-bottom: 45px;
     border: 1.5px solid rgba(255, 215, 0, 0.35);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.15);
@@ -36,7 +74,7 @@
   .kt-hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 5, 18, 0.94) 0%, rgba(22, 12, 42, 0.88) 55%, rgba(8, 5, 18, 0.96) 100%);
+    background: linear-gradient(135deg, rgba(8, 5, 18, 0.95) 0%, rgba(24, 12, 46, 0.88) 50%, rgba(8, 5, 18, 0.96) 100%);
     z-index: 1;
   }
 
@@ -53,8 +91,8 @@
   }
 
   .kt-logo-img {
-    width: 120px;
-    height: 120px;
+    width: 124px;
+    height: 124px;
     border-radius: 28px;
     box-shadow: 0 0 35px rgba(255, 215, 0, 0.7), 0 0 15px rgba(255, 107, 0, 0.5);
     border: 3px solid #ffd700;
@@ -63,26 +101,25 @@
   }
 
   .kt-logo-img:hover {
-    transform: scale(1.10) rotate(2deg);
+    transform: scale(1.08) rotate(2deg);
     box-shadow: 0 0 50px rgba(255, 215, 0, 0.95), 0 0 25px rgba(255, 107, 0, 0.85);
   }
 
   @keyframes kt-float {
     0% { transform: translateY(0px); }
-    100% { transform: translateY(-10px); }
+    100% { transform: translateY(-8px); }
   }
 
   .kt-title {
-    font-size: 3.4em;
+    font-size: 3.2em;
     font-weight: 900;
     background: linear-gradient(90deg, #ffd700, #ff7b00, #ff007b, #00e5ff, #ffd700);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: kt-gradient-shift 6s ease infinite;
-    margin: 16px 0 12px 0;
-    letter-spacing: 2px;
-    text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    margin: 16px 0 10px 0;
+    letter-spacing: 1.5px;
   }
 
   @keyframes kt-gradient-shift {
@@ -98,7 +135,7 @@
     color: #ffd700;
     padding: 6px 20px;
     border-radius: 50px;
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 700;
     margin-bottom: 16px;
     backdrop-filter: blur(8px);
@@ -106,35 +143,35 @@
   }
 
   .kt-story-lead {
-    font-size: 1.18em;
+    font-size: 1.15em;
     color: #cbd5e1;
     max-width: 860px;
-    margin: 0 auto 28px auto;
+    margin: 0 auto 26px auto;
     line-height: 1.8;
-    background: rgba(12, 8, 24, 0.75);
-    padding: 22px 28px;
+    background: rgba(14, 8, 28, 0.8);
+    padding: 22px 26px;
     border-radius: 18px;
     border-left: 4px solid #ffd700;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6);
   }
 
   .kt-badge-row {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
   .kt-badge-pill {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: #f8fafc;
-    padding: 7px 16px;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 0.92em;
+    font-size: 0.9em;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
   }
 
   .kt-badge-pill:hover {
@@ -151,19 +188,19 @@
     gap: 12px;
     background: linear-gradient(135deg, #ff9100 0%, #ff3d00 100%);
     color: #fff !important;
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: 800;
-    padding: 18px 42px;
+    padding: 16px 36px;
     border-radius: 50px;
-    box-shadow: 0 12px 30px rgba(255, 61, 0, 0.45), 0 0 20px rgba(255, 145, 0, 0.35);
+    box-shadow: 0 10px 25px rgba(255, 61, 0, 0.45), 0 0 20px rgba(255, 145, 0, 0.35);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border: none;
     cursor: pointer;
   }
 
   .kt-btn-primary:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow: 0 18px 40px rgba(255, 61, 0, 0.65), 0 0 30px rgba(255, 215, 0, 0.6);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 35px rgba(255, 61, 0, 0.65), 0 0 25px rgba(255, 215, 0, 0.55);
     color: #fff !important;
   }
 
@@ -171,44 +208,44 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
     color: #00e5ff !important;
-    font-size: 1.05em;
+    font-size: 1.02em;
     font-weight: 700;
-    padding: 14px 28px;
+    padding: 13px 26px;
     border-radius: 50px;
     border: 1px solid rgba(0, 229, 255, 0.45);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
     backdrop-filter: blur(6px);
   }
 
   .kt-btn-secondary:hover {
-    background: rgba(0, 229, 255, 0.22);
+    background: rgba(0, 229, 255, 0.2);
     border-color: #00e5ff;
     color: #fff !important;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
     transform: translateY(-2px);
   }
 
   .kt-qrcode-box {
-    margin-top: 28px;
+    margin-top: 26px;
     background: rgba(255, 255, 255, 0.96);
-    padding: 16px;
+    padding: 14px;
     border-radius: 18px;
     display: inline-block;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     border: 2px solid #ffd700;
   }
 
   /* 2. SECTION TITLES */
   .kt-section-header {
     text-align: center;
-    margin: 60px 0 35px 0;
+    margin: 55px 0 32px 0;
   }
 
   .kt-section-title {
-    font-size: 2.2em;
+    font-size: 2.1em;
     font-weight: 900;
     color: #ffffff;
     display: inline-block;
@@ -223,7 +260,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 70px;
+    width: 65px;
     height: 4px;
     background: linear-gradient(90deg, #ffd700, #ff3d00);
     border-radius: 2px;
@@ -231,53 +268,58 @@
 
   .kt-section-subtitle {
     color: #94a3b8;
-    font-size: 1.05em;
-    margin-top: 10px;
+    font-size: 1.02em;
+    margin-top: 8px;
   }
 
-  /* 3. DUAL-MODE SHOWCASE SECTION */
+  /* 3. THREE MODES SHOWCASE */
   .kt-mode-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 28px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 24px;
+    margin-bottom: 45px;
   }
 
   .kt-mode-card {
     background: linear-gradient(145deg, rgba(28, 18, 52, 0.85), rgba(14, 9, 28, 0.95));
-    border-radius: 24px;
-    padding: 32px 26px;
+    border-radius: 22px;
+    padding: 28px 24px;
     border: 1.5px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
-    transition: all 0.35s ease;
+    transition: all 0.3s ease;
   }
 
   .kt-mode-card.classic:hover {
     border-color: #00e676;
-    box-shadow: 0 15px 40px rgba(0, 230, 118, 0.25);
-    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0, 230, 118, 0.25);
+    transform: translateY(-5px);
   }
 
   .kt-mode-card.wild:hover {
     border-color: #ff9100;
-    box-shadow: 0 15px 40px rgba(255, 145, 0, 0.28);
-    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(255, 145, 0, 0.28);
+    transform: translateY(-5px);
+  }
+
+  .kt-mode-card.endless:hover {
+    border-color: #a855f7;
+    box-shadow: 0 12px 35px rgba(168, 85, 247, 0.3);
+    transform: translateY(-5px);
   }
 
   .kt-mode-header {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin-bottom: 18px;
+    gap: 12px;
+    margin-bottom: 16px;
   }
 
   .kt-mode-badge {
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 30px;
     font-weight: 800;
-    font-size: 0.9em;
-    letter-spacing: 0.5px;
+    font-size: 0.88em;
   }
 
   .kt-mode-badge.classic {
@@ -292,8 +334,14 @@
     color: #ff9100;
   }
 
+  .kt-mode-badge.endless {
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid #a855f7;
+    color: #c084fc;
+  }
+
   .kt-mode-title {
-    font-size: 1.6em;
+    font-size: 1.45em;
     font-weight: 800;
     color: #ffffff;
   }
@@ -301,43 +349,95 @@
   .kt-mode-list {
     list-style: none;
     padding: 0;
-    margin: 18px 0 0 0;
+    margin: 16px 0 0 0;
   }
 
   .kt-mode-list li {
     padding: 8px 0;
     color: #cbd5e1;
-    font-size: 0.98em;
+    font-size: 0.94em;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 9px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.5;
   }
 
   .kt-mode-list li:last-child {
     border-bottom: none;
   }
 
+  /* Cultivation Step Flow */
+  .kt-cultivation-flow {
+    background: rgba(16, 10, 32, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 20px;
+    padding: 24px 20px;
+    margin-bottom: 45px;
+  }
+
+  .kt-realm-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .kt-realm-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 8px 14px;
+    text-align: center;
+    min-width: 120px;
+    transition: all 0.25s ease;
+  }
+
+  .kt-realm-item.highlight {
+    background: rgba(255, 215, 0, 0.14);
+    border-color: #ffd700;
+  }
+
+  .kt-realm-lvl {
+    font-size: 0.8em;
+    color: #94a3b8;
+    font-weight: 700;
+  }
+
+  .kt-realm-name {
+    font-size: 0.95em;
+    font-weight: 800;
+    color: #ffd700;
+    margin-top: 2px;
+  }
+
+  .kt-realm-perk {
+    font-size: 0.78em;
+    color: #38bdf8;
+    margin-top: 2px;
+  }
+
   /* 4. GAME ARTIFACTS SHOWCASE GRID */
   .kt-artifact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 45px;
   }
 
   .kt-artifact-card {
     background: rgba(18, 12, 34, 0.85);
     border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 20px;
-    padding: 22px 18px;
+    border-radius: 18px;
+    padding: 20px 16px;
     text-align: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(6px);
   }
 
   .kt-artifact-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: #ffd700;
     box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
     background: rgba(30, 18, 55, 0.95);
@@ -360,7 +460,7 @@
     font-size: 1.15em;
     font-weight: 800;
     color: #ffd700;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .kt-artifact-desc {
@@ -373,14 +473,14 @@
   .kt-school-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-bottom: 45px;
   }
 
   .kt-school-card {
     background: linear-gradient(135deg, rgba(25, 16, 48, 0.9), rgba(12, 8, 24, 0.95));
-    border-radius: 20px;
-    padding: 24px 20px;
+    border-radius: 18px;
+    padding: 22px 18px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
   }
@@ -395,7 +495,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .kt-school-icon {
@@ -403,7 +503,7 @@
   }
 
   .kt-school-title {
-    font-size: 1.2em;
+    font-size: 1.18em;
     font-weight: 800;
     color: #ffd700;
   }
@@ -411,24 +511,49 @@
   .kt-school-desc {
     font-size: 0.9em;
     color: #cbd5e1;
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
   /* 6. INTERACTIVE DAMAGE CALCULATOR */
   .kt-widget-box {
     background: linear-gradient(135deg, rgba(22, 14, 44, 0.96), rgba(36, 22, 68, 0.96));
     border: 2px solid rgba(255, 215, 0, 0.35);
-    border-radius: 26px;
-    padding: 32px 26px;
-    margin: 50px 0;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    padding: 30px 22px;
+    margin: 45px 0;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55);
+  }
+
+  .kt-calc-monster-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(10, 6, 20, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    border-radius: 18px;
+    padding: 16px 20px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+
+  .kt-calc-monster-img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px rgba(255, 0, 123, 0.6));
+    animation: kt-float 3s ease-in-out infinite alternate;
+  }
+
+  .kt-calc-monster-info {
+    text-align: left;
   }
 
   .kt-calc-inputs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .kt-input-group {
@@ -447,9 +572,9 @@
     background: rgba(10, 6, 20, 0.85);
     border: 1px solid rgba(255, 215, 0, 0.25);
     color: #fff;
-    padding: 11px 15px;
+    padding: 11px 14px;
     border-radius: 12px;
-    font-size: 1em;
+    font-size: 0.98em;
     outline: none;
     transition: border-color 0.3s ease;
   }
@@ -463,16 +588,16 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin: 15px 0 25px 0;
+    margin: 12px 0 22px 0;
   }
 
   .kt-gear-btn {
     background: rgba(255, 215, 0, 0.14);
     border: 1px solid rgba(255, 215, 0, 0.35);
     color: #ffd700;
-    padding: 8px 18px;
+    padding: 8px 16px;
     border-radius: 25px;
-    font-size: 0.9em;
+    font-size: 0.88em;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -485,7 +610,7 @@
   }
 
   .kt-calc-result {
-    background: rgba(10, 6, 22, 0.92);
+    background: rgba(10, 6, 22, 0.94);
     border-radius: 18px;
     padding: 22px;
     border: 1px solid rgba(0, 229, 255, 0.35);
@@ -493,9 +618,25 @@
   }
 
   .kt-result-status {
-    font-size: 1.45em;
+    font-size: 1.4em;
     font-weight: 900;
     margin-bottom: 12px;
+  }
+
+  .kt-hp-bar-wrap {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 12px 0 18px 0;
+  }
+
+  .kt-hp-bar-inner {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00e676, #ffd700);
+    transition: width 0.4s ease, background 0.4s ease;
   }
 
   .kt-result-details {
@@ -503,7 +644,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 15px;
+    margin-top: 12px;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -523,69 +664,120 @@
     color: #94a3b8;
   }
 
-  /* 7. SOUNDBOARD SECTION */
-  .kt-soundboard {
+  /* 7. GOOGLE PLAY ACHIEVEMENTS SECTION */
+  .kt-achieve-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
-    margin: 30px 0;
+    margin-bottom: 45px;
   }
 
-  .kt-sound-btn {
-    background: linear-gradient(135deg, rgba(42, 26, 78, 0.85), rgba(20, 12, 40, 0.85));
-    border: 1px solid rgba(255, 215, 0, 0.25);
+  .kt-achieve-card {
+    background: linear-gradient(135deg, rgba(26, 16, 50, 0.9), rgba(12, 8, 24, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 18px;
-    padding: 18px 16px;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.25s ease;
+    padding: 18px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    position: relative;
-    overflow: hidden;
+    gap: 14px;
+    transition: all 0.3s ease;
   }
 
-  .kt-sound-btn:hover {
-    transform: translateY(-4px) scale(1.02);
+  .kt-achieve-card:hover {
+    transform: translateY(-3px);
     border-color: #ffd700;
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-    background: linear-gradient(135deg, rgba(62, 36, 112, 0.92), rgba(32, 18, 62, 0.92));
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.25);
   }
 
-  .kt-sound-btn:active {
-    transform: translateY(0) scale(0.98);
+  .kt-achieve-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 215, 0, 0.4);
+    flex-shrink: 0;
   }
 
-  .kt-sound-icon {
-    font-size: 2em;
-  }
-
-  .kt-sound-text {
+  .kt-achieve-title {
+    font-size: 1.05em;
     font-weight: 800;
-    font-size: 1em;
     color: #ffd700;
+    margin-bottom: 4px;
   }
 
-  .kt-sound-sub {
-    font-size: 0.78em;
+  .kt-achieve-desc {
+    font-size: 0.82em;
     color: #94a3b8;
+    line-height: 1.45;
   }
 
-  /* 8. SPIRE TIMELINE */
+  /* 8. NPC GALLERY */
+  .kt-npc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 45px;
+  }
+
+  .kt-npc-card {
+    background: rgba(18, 12, 34, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .kt-npc-card:hover {
+    transform: translateY(-4px);
+    border-color: #00e5ff;
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.2);
+  }
+
+  .kt-npc-img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.4));
+  }
+
+  .kt-npc-name {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .kt-npc-role {
+    font-size: 0.8em;
+    color: #ffd700;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .kt-npc-quote {
+    font-size: 0.82em;
+    color: #cbd5e1;
+    font-style: italic;
+    line-height: 1.5;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  /* 9. SPIRE TIMELINE */
   .kt-timeline {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
-    margin: 30px 0;
+    gap: 16px;
+    margin: 25px 0 45px 0;
   }
 
   .kt-timeline-item {
     background: rgba(255, 255, 255, 0.04);
     border-radius: 18px;
-    padding: 22px;
+    padding: 20px 18px;
     border-left: 4px solid #ff5500;
     transition: all 0.3s ease;
   }
@@ -604,42 +796,42 @@
   }
 
   .kt-floor-name {
-    font-size: 1.15em;
+    font-size: 1.12em;
     font-weight: 800;
     color: #fff;
-    margin: 5px 0 8px 0;
+    margin: 4px 0 6px 0;
   }
 
   .kt-floor-desc {
-    font-size: 0.88em;
+    font-size: 0.86em;
     color: #94a3b8;
     line-height: 1.5;
   }
 
-  /* 9. FOOTER SECTION */
-  .kt-footer-promise {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  /* 10. FOOTER SECTION */
+  .kt-footer-banner {
+    background: linear-gradient(135deg, rgba(30, 18, 56, 0.9), rgba(14, 8, 28, 0.95));
+    border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 22px;
-    padding: 38px 26px;
+    padding: 36px 24px;
     text-align: center;
-    margin-top: 55px;
+    margin-top: 50px;
   }
 
   .kt-legal-links {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
   .kt-legal-btn {
     background: rgba(255, 255, 255, 0.08);
     color: #cbd5e1;
-    padding: 11px 22px;
+    padding: 10px 20px;
     border-radius: 30px;
-    font-size: 0.92em;
+    font-size: 0.9em;
     font-weight: 600;
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all 0.25s ease;
@@ -653,6 +845,18 @@
 </style>
 
 <div class="kuntower-wrapper">
+  <!-- Quick Navigation Pills -->
+  <div class="kt-nav-bar">
+    <a href="#kt-modes" class="kt-nav-link"><i class="fa fa-gamepad"></i> 玩法模式</a>
+    <a href="#kt-cultivation" class="kt-nav-link"><i class="fa fa-level-up"></i> 修仙境界</a>
+    <a href="#kt-calculator" class="kt-nav-link"><i class="fa fa-calculator"></i> 战力计算器</a>
+    <a href="#kt-artifacts" class="kt-nav-link"><i class="fa fa-trophy"></i> 绝世神器</a>
+    <a href="#kt-talents" class="kt-nav-link"><i class="fa fa-bolt"></i> 坤门六艺</a>
+    <a href="#kt-achievements" class="kt-nav-link"><i class="fa fa-star"></i> 荣誉成就</a>
+    <a href="#kt-npcs" class="kt-nav-link"><i class="fa fa-users"></i> 人物图鉴</a>
+    <a href="#kt-spire-route" class="kt-nav-link"><i class="fa fa-map-signs"></i> 关卡路线</a>
+  </div>
+
   <!-- 1. HERO BANNER SECTION -->
   <div class="kt-hero">
     <div class="kt-hero-overlay"></div>
@@ -665,36 +869,33 @@
         <span class="kt-quote-badge"><i class="fa fa-fire"></i> “你干嘛~~ 哎哟！”</span>
       </div>
       
-      <h1 class="kt-title">kun塔50层 (KUN TOWER)</h1>
-      <p style="font-size: 1.35em; color: #ffd700; font-weight: 800; margin-bottom: 22px;">
-        练习时长两年半的尊严之战 · 50层黑粉魔塔硬核策略 RPG
+      <h1 class="kt-title">只因魔塔50层 (Kun Tower)</h1>
+      <p style="font-size: 1.3em; color: #ffd700; font-weight: 800; margin-bottom: 20px;">
+        练习时长两年半的尊严之战 · 50层经典魔塔 × 狂野肉鸽硬核策略 RPG
       </p>
 
       <div class="kt-story-lead">
-        在神秘的<strong>「艾坤大陆」</strong>上，练习时长两年半的见习练习生——坤坤，正一边唱跳一边练习他的钛合金篮球。<br>
-        不料，全网最大黑粉头子竟然嫉妒坤坤的才艺，在众目睽睽之下掳走了<strong>「鸡妹妹 (全球后援会会长)」</strong>！<br>
-        作为练习生的你，必须穿上战袍背带裤，握紧手中的元气篮球，只身闯入 50 层黑粉魔塔。<br>
-        <span style="color: #ffd700; font-weight: bold;">食不食油饼？这不只是一款魔塔，这是尊严之战！</span>
+        在神秘的<strong>「艾坤大陆」</strong>上，练习时长两年半的见习练习生——坤坤，正一边唱跳一边练习他的纯金元气篮球。<br>
+        不料，嫉妒坤坤才华的邪恶黑粉魔王，在众目睽睽之下掳走了<strong>「鸡妹妹 (全球后援会会长)」</strong>，将其囚禁在危机四伏的 50 层魔塔顶端！<br>
+        作为练习生的你，穿上标志性战袍背带裤，手持出道篮球，只身勇闯这片被黑粉与魔物占领的魔塔。<br>
+        <span style="color: #ffd700; font-weight: bold;">食不食油饼？这不只是一款魔塔，这是捍卫荣耀的尊严之战！</span>
       </div>
 
       <div class="kt-badge-row">
         <span class="kt-badge-pill">🏀 50层经典原版魔塔</span>
-        <span class="kt-badge-pill">🛡️ 保持“荔枝”策略</span>
         <span class="kt-badge-pill">🔥 狂野肉鸽模式 (Wild Mode)</span>
-        <span class="kt-badge-pill">🥋 铁山靠 & 控评爆破</span>
-        <span class="kt-badge-pill">🎵 专属BGM《只因你太美》</span>
-        <span class="kt-badge-pill">🌐 5大国际语言原汁支持</span>
+        <span class="kt-badge-pill">🌟 隐藏 51 层 VIP 套房大结局</span>
+        <span class="kt-badge-pill">☁️ Google Play 跨设备云存档</span>
+        <span class="kt-badge-pill">📊 全网战力名人堂排行榜</span>
+        <span class="kt-badge-pill">📜 一键生成超清荣誉长图战报</span>
       </div>
 
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 24px;">
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; margin-top: 22px;">
         <a href="https://play.google.com/store/apps/details?id=com.jannix.kuntower" target="_blank" class="kt-btn-primary">
           <i class="fa fa-google-play" style="font-size: 1.25em;"></i> 前往 Google Play 立即下载
         </a>
         <a href="#kt-calculator" class="kt-btn-secondary">
           <i class="fa fa-calculator"></i> 荔枝战力计算器
-        </a>
-        <a href="#kt-sound-section" class="kt-btn-secondary">
-          <i class="fa fa-music"></i> 爆梗音效试听
         </a>
       </div>
 
@@ -702,16 +903,16 @@
       <div style="text-align: center;">
         <div class="kt-qrcode-box">
           <div id="store-qrcode-kuntower"></div>
-          <p style="font-size: 0.82em; color: #334155; margin: 8px 0 0 0; font-weight: 700;">扫码直达 Google Play 下载</p>
+          <p style="font-size: 0.82em; color: #334155; margin: 8px 0 0 0; font-weight: 700;">扫码直达 Google Play 畅玩</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 2. DUAL-MODE EXPERIENCE SHOWCASE -->
-  <div class="kt-section-header">
-    <h2 class="kt-section-title">双模式重磅玩法 · 经典与狂野并存</h2>
-    <div class="kt-section-subtitle">满足原汁原味硬核算力党与肉鸽暴击爽游党</div>
+  <!-- 2. GAME MODES SHOWCASE -->
+  <div id="kt-modes" class="kt-section-header">
+    <h2 class="kt-section-title">三大核心模式 · 算力与肉鸽并存</h2>
+    <div class="kt-section-subtitle">满足严谨卡防数值党、爽快暴击肉鸽党与登顶挑战极限党</div>
   </div>
 
   <div class="kt-mode-grid">
@@ -719,14 +920,14 @@
     <div class="kt-mode-card classic">
       <div class="kt-mode-header">
         <span class="kt-mode-badge classic">🛡️ 经典模式</span>
-        <div class="kt-mode-title">原汁原味 1:1 魔塔算法</div>
+        <div class="kt-mode-title">1:1 魔塔经典算法</div>
       </div>
       <p style="color: #94a3b8; font-size: 0.92em; line-height: 1.6;">
-        完全遵循 50 层经典魔塔原版逻辑！无随机波动、无暴击闪避，100% 确定性路线规划，考验你每一步的卡防与路线决策！
+        严格遵从 50 层经典魔塔原版逻辑！无随机波动、零闪避暴击，100% 确定性路线规划，考验你每一步的卡防决策与钥匙资源配置。
       </p>
       <ul class="kt-mode-list">
-        <li><span style="color: #00e676;">✓</span> 纯物理与领域损耗：麻衣电击巫师(100)与红衣大魔导(200)领域伤害</li>
-        <li><span style="color: #00e676;">✓</span> 准确损耗角标预演：所见即所得，零随机性误伤</li>
+        <li><span style="color: #00e676;">✓</span> 纯物理与领域损耗：麻衣电击巫师(100)与红衣魔音大魔导(200)固定领域扣血</li>
+        <li><span style="color: #00e676;">✓</span> 准确损耗角标预演：所见即所得，拒绝随机性误伤</li>
         <li><span style="color: #00e676;">✓</span> 经典道具与机关解密：圣光十字架、神圣剑盾与 24F 传送门</li>
       </ul>
     </div>
@@ -738,85 +939,246 @@
         <div class="kt-mode-title">肉鸽暴击与修仙突破</div>
       </div>
       <p style="color: #94a3b8; font-size: 0.92em; line-height: 1.6;">
-        打破传统数值拘束！怪物属性随机波动，体验11阶修仙境界突破、18项流派天赋自由组合与金光圣盾抗伤！
+        打破传统数值束缚！怪物属性动态浮动，体验 11 阶修仙境界突破、18 项流派天赋自由组合与金光圣盾破防！
       </p>
       <ul class="kt-mode-list">
         <li><span style="color: #ff9100;">★</span> 11 阶修仙境界突破（Lv.0 个人练习生 ~ Lv.10 坤之巅峰·至尊神王）</li>
         <li><span style="color: #ff9100;">★</span> 六大肉鸽流派天赋（背带裤/跳/铁山靠/唱/Rap/篮球）</li>
-        <li><span style="color: #ff9100;">★</span> 全塔 15 只【沙包练习生】共生进化全歼成就（Google Play 15 步成就）</li>
-        <li><span style="color: #ff9100;">★</span> 狂野精英变异词缀（狂怒/铁壁/迅捷/宝藏）与金光圣盾破防</li>
+        <li><span style="color: #ff9100;">★</span> 全塔 15 只【沙包练习生】共生进化全歼隐藏成就</li>
+        <li><span style="color: #ff9100;">★</span> 狂野精英变异词缀（狂怒/铁壁/迅捷/宝藏）与金光圣盾抗伤</li>
+      </ul>
+    </div>
+
+    <!-- Endless Mode & 51F -->
+    <div class="kt-mode-card endless">
+      <div class="kt-mode-header">
+        <span class="kt-mode-badge endless">🌌 无尽幻境 & 51F</span>
+        <div class="kt-mode-title">终极套房与极限挑战</div>
+      </div>
+      <p style="color: #94a3b8; font-size: 0.92em; line-height: 1.6;">
+        突破传统 50 层魔塔界限！通关 50 层解锁神秘隐藏第 51 层 VIP 总统套房大结局与全宇宙无尽幻境榜单！
+      </p>
+      <ul class="kt-mode-list">
+        <li><span style="color: #c084fc;">✦</span> 51F 全塔魔王和解毕业册：魔龙、红衣巫师、大章鱼集体“黑转粉”感人留言</li>
+        <li><span style="color: #c084fc;">✦</span> 鸡妹妹常驻互动：喝生椰拿铁、吃华强保熟西瓜，揭晓最终出道大反转</li>
+        <li><span style="color: #c084fc;">✦</span> 坤界无尽幻境：随机层数与遗物构筑，冲击全球极简步数榜</li>
       </ul>
     </div>
   </div>
 
-  <!-- 3. WILD LEGEND ARTIFACTS SHOWCASE -->
-  <div class="kt-section-header">
+  <!-- Cultivation Roadmap -->
+  <div id="kt-cultivation" class="kt-cultivation-flow">
+    <div style="text-align: center; margin-bottom: 12px;">
+      <h3 style="color: #ffd700; font-size: 1.4em; font-weight: 800; margin: 0;">
+        <i class="fa fa-shield"></i> 狂野模式 · 11 阶修仙境界突破谱系
+      </h3>
+      <p style="color: #94a3b8; font-size: 0.88em; margin-top: 4px;">
+        战术压级突破：经验满级时不强制突破，手动点击升级可等量恢复生命值，充当战术应急大血瓶！
+      </p>
+    </div>
+
+    <div class="kt-realm-tags">
+      <div class="kt-realm-item">
+        <div class="kt-realm-lvl">Lv.0 / 1</div>
+        <div class="kt-realm-name">个人练习生</div>
+        <div class="kt-realm-perk">初始暴击 11%</div>
+      </div>
+      <div class="kt-realm-item">
+        <div class="kt-realm-lvl">Lv.2</div>
+        <div class="kt-realm-name">资深爱坤</div>
+        <div class="kt-realm-perk">HP上限 +20</div>
+      </div>
+      <div class="kt-realm-item highlight">
+        <div class="kt-realm-lvl">Lv.3 阶段突破</div>
+        <div class="kt-realm-name">舞台霸主</div>
+        <div class="kt-realm-perk">★ 初级天赋3选1</div>
+      </div>
+      <div class="kt-realm-item">
+        <div class="kt-realm-lvl">Lv.4 / 5</div>
+        <div class="kt-realm-name">全能偶像</div>
+        <div class="kt-realm-perk">HP上限 +60</div>
+      </div>
+      <div class="kt-realm-item highlight">
+        <div class="kt-realm-lvl">Lv.6 进阶突破</div>
+        <div class="kt-realm-name">顶流大咖</div>
+        <div class="kt-realm-perk">★ 进阶天赋3选1</div>
+      </div>
+      <div class="kt-realm-item">
+        <div class="kt-realm-lvl">Lv.7 / 8</div>
+        <div class="kt-realm-name">篮球巨星</div>
+        <div class="kt-realm-perk">暴击 44% / 暴伤 216%</div>
+      </div>
+      <div class="kt-realm-item highlight">
+        <div class="kt-realm-lvl">Lv.9 终极突破</div>
+        <div class="kt-realm-name">时代导师</div>
+        <div class="kt-realm-perk">★ 终极天赋3选1</div>
+      </div>
+      <div class="kt-realm-item highlight" style="border-color: #ff007b;">
+        <div class="kt-realm-lvl" style="color: #ff007b;">Lv.10 巅峰大圆满</div>
+        <div class="kt-realm-name" style="color: #ff007b;">坤之巅峰</div>
+        <div class="kt-realm-perk">暴击77% / 满级金币转化</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. INTERACTIVE DAMAGE CALCULATOR -->
+  <div id="kt-calculator" class="kt-widget-box">
+    <div style="text-align: center; margin-bottom: 20px;">
+      <h3 style="color: #ffd700; font-size: 1.65em; font-weight: 900; margin: 0;">
+        <i class="fa fa-calculator"></i> “保持荔枝” 战网损耗即时推演计算器
+      </h3>
+      <p style="color: #94a3b8; font-size: 0.9em; margin-top: 5px;">模拟与魔塔黑粉魔物的战斗数值对决，助你规划精妙破防路线</p>
+    </div>
+
+    <!-- Monster Avatar Showcase -->
+    <div class="kt-calc-monster-preview">
+      <img id="kt-monster-icon" src="/images/kuntower/orc.png" alt="Monster" class="kt-calc-monster-img">
+      <div class="kt-calc-monster-info">
+        <div id="kt-monster-display-name" style="font-size: 1.25em; font-weight: 800; color: #ffd700;">兽人武士 (Orc Warrior)</div>
+        <div id="kt-monster-display-stats" style="font-size: 0.9em; color: #cbd5e1; margin-top: 4px;">
+          生命值: 340 | 攻击力: 122 | 防御力: 18
+        </div>
+        <div id="kt-monster-display-note" style="font-size: 0.82em; color: #38bdf8; margin-top: 2px;">
+          普通魔物：标准物理攻防对决
+        </div>
+      </div>
+    </div>
+
+    <div class="kt-calc-inputs">
+      <!-- Player Stats -->
+      <div class="kt-input-group">
+        <label><i class="fa fa-user"></i> 练习生攻击力 (ATK)</label>
+        <input type="number" id="kt-player-atk" value="130" min="1">
+      </div>
+      <div class="kt-input-group">
+        <label><i class="fa fa-shield"></i> 练习生防御力 (DEF)</label>
+        <input type="number" id="kt-player-def" value="100" min="0">
+      </div>
+      <div class="kt-input-group">
+        <label><i class="fa fa-heart"></i> 当前生命值 (HP)</label>
+        <input type="number" id="kt-player-hp" value="1200" min="1">
+      </div>
+
+      <!-- Enemy Selector -->
+      <div class="kt-input-group">
+        <label><i class="fa fa-optin-monster"></i> 选择目标黑粉 / 守塔魔王</label>
+        <select id="kt-enemy-select">
+          <option value="skeleton">1-10F 骷髅战士 (Atk: 52, Def: 12, HP: 55)</option>
+          <option value="skeletonCaptain">10F 骷髅队长 (Atk: 150, Def: 90, HP: 400)</option>
+          <option value="orc" selected>11-20F 兽人武士 (Atk: 122, Def: 18, HP: 340)</option>
+          <option value="bigBat">15F 嗜血大飞蝠 (Atk: 230, Def: 70, HP: 450)</option>
+          <option value="vampire">20F 吸血鬼领主 (Atk: 340, Def: 95, HP: 700)</option>
+          <option value="brownWizard">21-30F 麻衣电击巫师 (Atk: 370, Def: 110, HP: 220)</option>
+          <option value="magicDragon">24F 远古远古魔龙 (Atk: 500, Def: 250, HP: 1200)</option>
+          <option value="bossYellow">30F 黄金魔王 (Atk: 450, Def: 180, HP: 1000)</option>
+          <option value="octopus">35F 深海八爪鱼 (Atk: 520, Def: 210, HP: 1400)</option>
+          <option value="redWizard">31-40F 魔音大魔导 (Atk: 380, Def: 130, HP: 200)</option>
+          <option value="bossTwin">40F 双子大魔导 (Atk: 560, Def: 280, HP: 1800)</option>
+          <option value="darkKnight">41-48F 黑暗骑士 (Atk: 580, Def: 320, HP: 2000)</option>
+          <option value="bossRed">49F 假魔王 (Atk: 620, Def: 350, HP: 2600)</option>
+          <option value="demonKing">50F 终极黑粉魔王 (Atk: 680, Def: 420, HP: 3800)</option>
+          <option value="shadowDevourer">狂野变异 沙包练习生 (Atk: 450, Def: 300, HP: 2500)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Quick Equipment Buttons -->
+    <div style="font-size: 0.85em; color: #94a3b8; margin-bottom: 8px; font-weight: 600;">一键加持神装与道具：</div>
+    <div class="kt-calc-gear-btns">
+      <button class="kt-gear-btn" onclick="ktAddGear(10, 0)">🏀 木质篮球 (+10 攻)</button>
+      <button class="kt-gear-btn" onclick="ktAddGear(0, 10)">👖 见习背带裤 (+10 防)</button>
+      <button class="kt-gear-btn" onclick="ktAddGear(40, 40)">⚔️ 骑士打歌神装 (+40 攻防)</button>
+      <button class="kt-gear-btn" onclick="ktAddGear(100, 100)">👑 神圣篮球与背带裤 (+100 攻防)</button>
+      <button class="kt-gear-btn" style="border-color: #ff007b; color: #ff007b;" onclick="ktResetStats()">🔄 重置基础战力</button>
+    </div>
+
+    <!-- Calculation Output -->
+    <div class="kt-calc-result">
+      <div id="kt-result-status" class="kt-result-status" style="color: #00e676;">
+        <i class="fa fa-check-circle"></i> 可以轻松战胜，毫无压力！
+      </div>
+
+      <div class="kt-hp-bar-wrap">
+        <div id="kt-hp-bar" class="kt-hp-bar-inner"></div>
+      </div>
+
+      <div class="kt-result-details">
+        <div class="kt-stat-badge">
+          <div class="kt-stat-val" id="kt-res-damage">0</div>
+          <div class="kt-stat-lbl">预计损耗生命 (HP)</div>
+        </div>
+        <div class="kt-stat-badge">
+          <div class="kt-stat-val" id="kt-res-rounds" style="color: #ffd700;">3</div>
+          <div class="kt-stat-lbl">交锋回合数</div>
+        </div>
+        <div class="kt-stat-badge">
+          <div class="kt-stat-val" id="kt-res-remain-hp" style="color: #00e5ff;">1200</div>
+          <div class="kt-stat-lbl">战后剩余生命</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. WILD LEGEND ARTIFACTS SHOWCASE -->
+  <div id="kt-artifacts" class="kt-section-header">
     <h2 class="kt-section-title">绝世秘宝 & 狂野神器库</h2>
-    <div class="kt-section-subtitle">搜罗全塔珍稀装备，展现极致梗力</div>
+    <div class="kt-section-subtitle">搜罗全塔珍稀装备道具，展现极致羁绊梗力</div>
   </div>
 
   <div class="kt-artifact-grid">
-    <!-- Item 1 -->
     <div class="kt-artifact-card">
-      <img src="/images/kuntower/god_basketball.png" alt="神圣篮球" class="kt-artifact-img">
-      <div class="kt-artifact-name">神圣篮球</div>
+      <img src="/images/kuntower/god_basketball.png" alt="神圣钛合金篮球" class="kt-artifact-img">
+      <div class="kt-artifact-name">神圣钛合金篮球</div>
       <div class="kt-artifact-desc">练习生顶峰本命武器！蕴含至高音浪神力，攻击力狂飙 +100 点！</div>
     </div>
 
-    <!-- Item 2 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/god_suspenders.png" alt="神级背带裤" class="kt-artifact-img">
       <div class="kt-artifact-name">神级背带裤</div>
-      <div class="kt-artifact-desc">金光闪耀的战袍防具！背带紧绷防护，防御力永久飙升 +100 点！</div>
+      <div class="kt-artifact-desc">金光闪耀的战袍防具！双带紧绷卸力，防御力永久飙升 +100 点！</div>
     </div>
 
-    <!-- Item 3 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/coffin_horn.png" alt="欢庆音响" class="kt-artifact-img">
       <div class="kt-artifact-name">欢庆音响</div>
-      <div class="kt-artifact-desc">狂野主动宝物！激活后下场战斗怪物攻防强制互换（高防低攻怪克星）！</div>
+      <div class="kt-artifact-desc">狂野主动秘宝！激活后下场战斗怪物攻防数值强制互换（高防怪克星）！</div>
     </div>
 
-    <!-- Item 4 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/jiege_bread.png" alt="杰哥的面包" class="kt-artifact-img">
       <div class="kt-artifact-name">杰哥的面包</div>
-      <div class="kt-artifact-desc">绝世禁物！食用大幅回血且下场战斗 100% 暴击且攻击+30%（超勇）！</div>
+      <div class="kt-artifact-desc">绝世禁物！食用大幅回血且下场战斗 100% 必定暴击且攻击提升 30%（超勇）！</div>
     </div>
 
-    <!-- Item 5 -->
     <div class="kt-artifact-card">
-      <img src="/images/kuntower/ripe_watermelon.png" alt="保熟西瓜" class="kt-artifact-img">
+      <img src="/images/kuntower/ripe_watermelon.png" alt="华强保熟西瓜" class="kt-artifact-img">
       <div class="kt-artifact-name">华强保熟西瓜</div>
-      <div class="kt-artifact-desc">从 16F 瓜摊购买！切开有概率开出生瓜蛋子，熟瓜大口吃瓜恢复巨量生命！</div>
+      <div class="kt-artifact-desc">从 16F 瓜摊大口吃瓜！切开不仅保熟还能瞬间恢复大量生命值！</div>
     </div>
 
-    <!-- Item 6 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/kun_boots.png" alt="坤步疾行靴" class="kt-artifact-img">
       <div class="kt-artifact-name">坤步疾行靴</div>
       <div class="kt-artifact-desc">隐藏密室稀世神器！穿戴后身法如风，永久免疫所有史莱姆粘滞负面！</div>
     </div>
 
-    <!-- Item 7 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/dodge_amulet.png" alt="闪避护符" class="kt-artifact-img">
       <div class="kt-artifact-name">闪避护符</div>
-      <div class="kt-artifact-desc">击败 40F 领主获得！常驻提升 15% 基础闪避率，化身残影避开伤害（MISS）！</div>
+      <div class="kt-artifact-desc">斩杀 40F 双子大魔导获得！常驻提升 15% 基础闪避率，化身残影规避重击！</div>
     </div>
 
-    <!-- Item 8 -->
     <div class="kt-artifact-card">
       <img src="/images/kuntower/shadow_devourer.png" alt="沙包练习生" class="kt-artifact-img">
       <div class="kt-artifact-name">沙包练习生</div>
-      <div class="kt-artifact-desc">全塔共 15 只共生进化魔物！击杀气血反哺，全歼解锁 Google Play 15 步成就！</div>
+      <div class="kt-artifact-desc">全塔共 15 只共生进化魔物！击杀气血反哺，全歼解锁 Google Play 15 步隐藏成就！</div>
     </div>
   </div>
 
-  <!-- 4. ROGUE TALENTS SIX SCHOOLS -->
-  <div class="kt-section-header">
+  <!-- 5. ROGUE TALENTS SIX SCHOOLS -->
+  <div id="kt-talents" class="kt-section-header">
     <h2 class="kt-section-title">坤门六艺 · 六大肉鸽流派</h2>
-    <div class="kt-section-subtitle">Lv.3 / Lv.6 / Lv.9 三阶突破，自由搭配最强 Build</div>
+    <div class="kt-section-subtitle">Lv.3 / Lv.6 / Lv.9 三阶突破，自由组建最强 Build</div>
   </div>
 
   <div class="kt-school-grid">
@@ -841,7 +1203,7 @@
         <span class="kt-school-icon">🥋</span>
         <div class="kt-school-title">铁山靠流（灵动身法）</div>
       </div>
-      <div class="kt-school-desc">【侧身靠步】提升闪避率，【靠势回旋】闪避后下击必暴，【乾坤铁山靠】闪避触发 50% 攻击反击！</div>
+      <div class="kt-school-desc">【侧身靠步】提升闪避率，【靠势回旋】闪避后下击必暴，【乾坤铁山靠】闪避触发 50% 攻击强力反击！</div>
     </div>
 
     <div class="kt-school-card">
@@ -849,7 +1211,7 @@
         <span class="kt-school-icon">📢</span>
         <div class="kt-school-title">唱 / 破甲流（穿透特攻）</div>
       </div>
-      <div class="kt-school-desc">【开麦音浪】无视 6% 防御，【全开麦真唱】对防御特性怪 1.1x 增伤，【绝对领域】降伤 40%！</div>
+      <div class="kt-school-desc">【开麦音浪】无视 6% 防御，【全开麦真唱】对防御特性怪 1.1x 增伤，【绝对领域】巫师领域降伤 40%！</div>
     </div>
 
     <div class="kt-school-card">
@@ -857,7 +1219,7 @@
         <span class="kt-school-icon">🎙️</span>
         <div class="kt-school-title">Rap / 连击流（单押追击）</div>
       </div>
-      <div class="kt-school-desc">【单押快攻】20% 触发 50% 追击，【双押连打】追击带暴击吸血，【暴风押韵】连击触发攻击提升 12%！</div>
+      <div class="kt-school-desc">【单押快攻】20% 概率触发 50% 追击，【双押连打】追击附带吸血，【暴风押韵】连击触发攻击提升 12%！</div>
     </div>
 
     <div class="kt-school-card">
@@ -865,111 +1227,119 @@
         <span class="kt-school-icon">🥚</span>
         <div class="kt-school-title">篮球 / 续航流（理财发育）</div>
       </div>
-      <div class="kt-school-desc">【运球捡蛋】金币+10%与吸血+3%，【双黄绝技】击杀掉落金蛋，【百万IKUN应援】商店打折与金币加攻！</div>
+      <div class="kt-school-desc">【运球捡蛋】金币+10%与吸血+3%，【双黄绝技】击杀掉落金蛋，【百万应援】魔塔商店打折与金币加攻！</div>
     </div>
   </div>
 
-  <!-- 5. INTERACTIVE DAMAGE CALCULATOR -->
-  <div id="kt-calculator" class="kt-widget-box">
-    <div style="text-align: center; margin-bottom: 22px;">
-      <h3 style="color: #ffd700; font-size: 1.7em; font-weight: 900; margin: 0;">
-        <i class="fa fa-calculator"></i> “保持荔枝” 战网损耗即时计算器
-      </h3>
-      <p style="color: #94a3b8; font-size: 0.92em; margin-top: 6px;">模拟与魔塔黑粉怪物的战斗结果，规划你的最强突破线路</p>
-    </div>
+  <!-- 6. GOOGLE PLAY ACHIEVEMENTS & CLOUD SAVE -->
+  <div id="kt-achievements" class="kt-section-header">
+    <h2 class="kt-section-title">Google Play 荣誉成就与名人堂</h2>
+    <div class="kt-section-subtitle">支持跨设备云存档与全网排行榜，向全宇宙玩家证明最强算力</div>
+  </div>
 
-    <div class="kt-calc-inputs">
-      <!-- Player Stats -->
-      <div class="kt-input-group">
-        <label><i class="fa fa-user"></i> 练习生攻击力 (ATK)</label>
-        <input type="number" id="kt-player-atk" value="120" min="1">
-      </div>
-      <div class="kt-input-group">
-        <label><i class="fa fa-shield"></i> 练习生防御力 (DEF)</label>
-        <input type="number" id="kt-player-def" value="100" min="0">
-      </div>
-      <div class="kt-input-group">
-        <label><i class="fa fa-heart"></i> 当前生命值 (HP)</label>
-        <input type="number" id="kt-player-hp" value="1000" min="1">
-      </div>
-
-      <!-- Enemy Selector -->
-      <div class="kt-input-group">
-        <label><i class="fa fa-optin-monster"></i> 选择目标黑粉/怪物</label>
-        <select id="kt-enemy-select">
-          <option value="skeleton">1-10F 骷髅战士 (Atk: 52, Def: 12, HP: 55)</option>
-          <option value="orc" selected>11-20F 兽人武士 (Atk: 122, Def: 18, HP: 340)</option>
-          <option value="brownWizard">21-30F 麻衣电击巫师 (Atk: 370, Def: 110, HP: 220)</option>
-          <option value="redWizard">31-40F 魔音大魔导 (Atk: 380, Def: 130, HP: 200)</option>
-          <option value="demonKing">49F/50F 终极黑粉魔王 (Atk: 600, Def: 400, HP: 3500)</option>
-        </select>
+  <div class="kt-achieve-grid">
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/51f_debut.png" alt="51F VIP 出道" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">51F 总统套房出道庆典</div>
+        <div class="kt-achieve-desc">突破传统 50 层魔塔界限，登顶隐藏总统套房，解救鸡妹妹并达成全员和解！</div>
       </div>
     </div>
 
-    <!-- Quick Equipment Buttons -->
-    <div style="font-size: 0.85em; color: #94a3b8; margin-bottom: 8px; font-weight: 600;">一键加持练习生打歌神装：</div>
-    <div class="kt-calc-gear-btns">
-      <button class="kt-gear-btn" onclick="ktAddGear(10, 0)">🏀 木质篮球 (+10 攻)</button>
-      <button class="kt-gear-btn" onclick="ktAddGear(0, 10)">👖 见习背带裤 (+10 防)</button>
-      <button class="kt-gear-btn" onclick="ktAddGear(40, 0)">🏀 骑士篮球 (+40 攻)</button>
-      <button class="kt-gear-btn" onclick="ktAddGear(0, 40)">👖 骑士背带裤 (+40 防)</button>
-      <button class="kt-gear-btn" onclick="ktAddGear(100, 100)">👑 神圣篮球 & 背带裤 (+100 攻防)</button>
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/50f_demon_king.png" alt="终极黑粉魔王陨落" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">50F 终极黑粉魔王斩落</div>
+        <div class="kt-achieve-desc">破解 49F 封魔十字阵，以真爱之力斩杀 50F 黑粉主宰，赢得尊严之战！</div>
+      </div>
     </div>
 
-    <!-- Calculation Output -->
-    <div class="kt-calc-result">
-      <div id="kt-result-status" class="kt-result-status" style="color: #00e676;">
-        <i class="fa fa-check-circle"></i> 可以轻松战胜，毫无压力！
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/all_sandbags.png" alt="全灭沙包练习生" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">全歼 15 只沙包练习生</div>
+        <div class="kt-achieve-desc">狂野模式专属！击败全塔所有共生进化的变异沙包练习生，解锁隐藏荣耀！</div>
       </div>
-      <div class="kt-result-details">
-        <div class="kt-stat-badge">
-          <div class="kt-stat-val" id="kt-res-damage">0</div>
-          <div class="kt-stat-lbl">预计战损生命 (HP)</div>
-        </div>
-        <div class="kt-stat-badge">
-          <div class="kt-stat-val" id="kt-res-rounds" style="color: #ffd700;">3</div>
-          <div class="kt-stat-lbl">回合数</div>
-        </div>
-        <div class="kt-stat-badge">
-          <div class="kt-stat-val" id="kt-res-remain-hp" style="color: #ff007b;">1000</div>
-          <div class="kt-stat-lbl">战斗后剩余生命</div>
-        </div>
+    </div>
+
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/jinitai.png" alt="姬霓太美金曲认证" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">姬霓太美金曲认证</div>
+        <div class="kt-achieve-desc">收集全塔隐藏黑胶唱片，在 51 层留声机解锁全部高燃名曲！</div>
+      </div>
+    </div>
+
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/trainee_2_5_years.png" alt="练习时长两年半" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">练习时长两年半</div>
+        <div class="kt-achieve-desc">坚持不懈修炼至满级「坤之巅峰」，达成 77% 暴击与 300% 暴伤至尊神王！</div>
+      </div>
+    </div>
+
+    <div class="kt-achieve-card">
+      <img src="/images/kuntower/achievements/god_gear.png" alt="满神装全能偶像" class="kt-achieve-icon">
+      <div>
+        <div class="kt-achieve-title">神圣战袍大成</div>
+        <div class="kt-achieve-desc">同时装备神圣钛合金篮球与神级背带裤，攻击防御双双突破天际！</div>
       </div>
     </div>
   </div>
 
-  <!-- 6. SOUNDBOARD SECTION -->
-  <div id="kt-sound-section" class="kt-section-header">
-    <h2 class="kt-section-title">爆梗音效 & 热血 BGM 试听</h2>
-    <div class="kt-section-subtitle">点击按钮，即刻聆听只因魔塔经典名场面原音</div>
+  <!-- 7. NPC & CHARACTER LORE -->
+  <div id="kt-npcs" class="kt-section-header">
+    <h2 class="kt-section-title">艾坤大陆经典人物群像</h2>
+    <div class="kt-section-subtitle">魔塔不仅有怪物，还有与你一路相伴的奇趣伙伴</div>
   </div>
 
-  <div class="kt-soundboard">
-    <div class="kt-sound-btn" onclick="ktPlaySound('niganma')">
-      <span class="kt-sound-icon">🐔</span>
-      <span class="kt-sound-text">“你干嘛~~ 哎哟！”</span>
-      <span class="kt-sound-sub">受击/灵魂名场面</span>
+  <div class="kt-npc-grid">
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/princess.png" alt="鸡妹妹" class="kt-npc-img">
+      <div class="kt-npc-name">鸡妹妹</div>
+      <div class="kt-npc-role">全球后援会会长</div>
+      <div class="kt-npc-quote">“坤坤，我就知道你一定会穿上背带裤杀穿 50 层来救我！”</div>
     </div>
-    <div class="kt-sound-btn" onclick="ktPlaySound('jinitai')">
-      <span class="kt-sound-icon">🎵</span>
-      <span class="kt-sound-text">“姬霓太美”</span>
-      <span class="kt-sound-sub">专属高燃游戏 BGM</span>
+
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/watermelon_vendor.png" alt="华强瓜摊主" class="kt-npc-img">
+      <div class="kt-npc-name">华强瓜摊主</div>
+      <div class="kt-npc-role">16F 西瓜特供商</div>
+      <div class="kt-npc-quote">“我开瓜摊的，能卖给你生瓜蛋子？这瓜保熟，吃了回大血！”</div>
     </div>
-    <div class="kt-sound-btn" onclick="ktPlaySound('youbing')">
-      <span class="kt-sound-icon">🥞</span>
-      <span class="kt-sound-text">“食不食油饼！”</span>
-      <span class="kt-sound-sub">遭遇黑粉经典质问</span>
+
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/taoist_kun.png" alt="坤道人" class="kt-npc-img">
+      <div class="kt-npc-name">坤道人</div>
+      <div class="kt-npc-role">世外修仙导师</div>
+      <div class="kt-npc-quote">“少年，我看你骨骼惊奇，这本《铁山靠修仙口诀》就赠予你了。”</div>
     </div>
-    <div class="kt-sound-btn" onclick="ktPlaySound('jiege')">
-      <span class="kt-sound-icon">🍞</span>
-      <span class="kt-sound-text">“我超勇的好不好！”</span>
-      <span class="kt-sound-sub">杰哥的面包爆发</span>
+
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/fairy.png" alt="圣光仙子" class="kt-npc-img">
+      <div class="kt-npc-name">圣光仙子</div>
+      <div class="kt-npc-role">魔塔守护之神</div>
+      <div class="kt-npc-quote">“收下这枚圣光十字架吧，它能在面对吸血鬼魔王时发挥奇效。”</div>
+    </div>
+
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/business.png" alt="神秘黑市商人" class="kt-npc-img">
+      <div class="kt-npc-name">神秘黑市商人</div>
+      <div class="kt-npc-role">资源交易中介</div>
+      <div class="kt-npc-quote">“只要金币给够，钥匙、血瓶和神级宝物任你挑选，绝不还价！”</div>
+    </div>
+
+    <div class="kt-npc-card">
+      <img src="/images/kuntower/npc/wise.png" alt="通天智者" class="kt-npc-img">
+      <div class="kt-npc-name">通天智者</div>
+      <div class="kt-npc-role">卡防指引导师</div>
+      <div class="kt-npc-quote">“记住：防御高于怪物的攻击才能无伤，保持荔枝，勿贪刀！”</div>
     </div>
   </div>
 
-  <!-- 7. SPIRE FLOOR TIMELINE -->
-  <div class="kt-section-header">
-    <h2 class="kt-section-title">50 层魔塔关卡路线图</h2>
+  <!-- 8. SPIRE FLOOR TIMELINE -->
+  <div id="kt-spire-route" class="kt-section-header">
+    <h2 class="kt-section-title">50 层魔塔征程关卡路线图</h2>
     <div class="kt-section-subtitle">从 1 层见习救粉到 51 层 VIP 套房的史诗征程</div>
   </div>
 
@@ -983,35 +1353,36 @@
       <div class="kt-floor-tag">11F - 20F</div>
       <div class="kt-floor-tag" style="color: #00e5ff;">中层穿梭</div>
       <div class="kt-floor-name">大飞蝠与青衣魔王</div>
-      <div class="kt-floor-desc">在 15F 斩杀大飞蝠，16F 瓜摊大口吃瓜，持有圣光十字架决战 20F 魔王！</div>
+      <div class="kt-floor-desc">在 15F 斩杀大飞蝠，16F 瓜摊大口吃瓜，持有圣光十字架决战 20F 吸血鬼魔王！</div>
     </div>
     <div class="kt-timeline-item">
       <div class="kt-floor-tag">21F - 30F</div>
       <div class="kt-floor-tag" style="color: #a855f7;">迷魂破局</div>
-      <div class="kt-floor-name">假公主识破与 24F 传送门</div>
-      <div class="kt-floor-desc">识破 26F 假公主陷阱，开启 24F 直通传送阵与 30F 黄金魔王决战！</div>
+      <div class="kt-floor-name">假公主识破与 24F 直达阵</div>
+      <div class="kt-floor-desc">识破 26F 假公主陷阱，开启 24F 直通传送阵，迎战 30F 黄金魔王！</div>
     </div>
     <div class="kt-timeline-item">
       <div class="kt-floor-tag">31F - 50F</div>
       <div class="kt-floor-tag" style="color: #ff007b;">终极巅峰</div>
       <div class="kt-floor-name">49F 假魔王 & 50F 黑粉主宰</div>
-      <div class="kt-floor-desc">用十字步破解 49F 封魔阵，登上 50F 决战终极黑粉魔王，拯救鸡妹妹！</div>
+      <div class="kt-floor-desc">用十字步破解 49F 封魔阵，登上 50F 决战终极黑粉魔王，救出鸡妹妹！</div>
     </div>
     <div class="kt-timeline-item">
       <div class="kt-floor-tag">51F VIP</div>
       <div class="kt-floor-tag" style="color: #ffd700;">顶峰庆典</div>
-      <div class="kt-floor-name">鸡妹妹 VIP 套房与 C 位出道</div>
-      <div class="kt-floor-desc">与鸡妹妹相聚！品尝特调生椰冰拿铁与油饼，登上领奖台荣耀 C 位出道！</div>
+      <div class="kt-floor-name">鸡妹妹 VIP 套房与全员和解</div>
+      <div class="kt-floor-desc">与鸡妹妹相聚！品尝特调生椰冰拿铁，聆听名曲旋律，荣耀 C 位出道！</div>
     </div>
   </div>
 
-  <!-- 8. FOOTER SECTION -->
-  <div class="kt-footer-promise">
+  <!-- 9. FOOTER SECTION -->
+  <div class="kt-footer-banner">
     <h3 style="color: #ffd700; font-size: 1.5em; font-weight: 800; margin: 0 0 10px 0;">
-      🎮 绿色纯净·无强制广告·永久免费
+      🎮 经典像素魔塔 · 纯粹策略 RPG · 全新升级
     </h3>
-    <p style="color: #cbd5e1; font-size: 0.95em; max-width: 680px; margin: 0 auto; line-height: 1.6;">
-      《kun塔50层》支持多平台数据云同步与排行榜。开发团队承诺游戏无任何强制弹窗广告与氪金数值，保持最纯粹的 RPG 策略游戏乐趣！
+    <p style="color: #cbd5e1; font-size: 0.95em; max-width: 720px; margin: 0 auto; line-height: 1.65;">
+      《只因魔塔50层》现已全面上线 Google Play！支持跨设备云存档、全球战力排行榜与通关大捷长图海报分享。<br>
+      坚守严密数值推导与自由肉鸽构筑，无内购数值壁垒，全凭策略、算力与梗力勇闯 50 层巅峰！
     </p>
 
     <div class="kt-legal-links">
@@ -1025,10 +1396,10 @@
   </div>
 </div>
 
-<!-- JavaScript Logic for Damage Calculator & Audio Player -->
+<!-- JavaScript Engine for Live Calculator & QR Code -->
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
-  // QR Code Generation
+  // 1. QR Code Generation
   window.addEventListener('DOMContentLoaded', function() {
     var qrContainer = document.getElementById('store-qrcode-kuntower');
     if (qrContainer && typeof QRCode !== 'undefined') {
@@ -1046,24 +1417,41 @@
     ktCalculate();
   });
 
-  // Enemy Database
+  // 2. Comprehensive Enemy Database
   var ktEnemies = {
-    skeleton: { atk: 52, def: 12, hp: 55 },
-    orc: { atk: 122, def: 18, hp: 340 },
-    brownWizard: { atk: 370, def: 110, hp: 220 },
-    redWizard: { atk: 380, def: 130, hp: 200 },
-    demonKing: { atk: 600, def: 400, hp: 3500 }
+    skeleton: { name: '骷髅战士 (Skeleton)', atk: 52, def: 12, hp: 55, img: '/images/kuntower/skeleton.png', note: '1-10F 基础近战魔物' },
+    skeletonCaptain: { name: '骷髅队长 (Skeleton Captain)', atk: 150, def: 90, hp: 400, img: '/images/kuntower/skeleton_captain.png', note: '10F 小头目，卡防门槛怪' },
+    orc: { name: '兽人武士 (Orc Warrior)', atk: 122, def: 18, hp: 340, img: '/images/kuntower/orc.png', note: '11-20F 常见物理战士' },
+    bigBat: { name: '嗜血大飞蝠 (Big Bat)', atk: 230, def: 70, hp: 450, img: '/images/kuntower/big_bat.png', note: '15F 飞蝠领主，需优先堆防' },
+    vampire: { name: '吸血鬼领主 (Vampire Boss)', atk: 340, def: 95, hp: 700, img: '/images/kuntower/vampire.png', note: '20F 霸主，持有圣光十字架可翻倍破防' },
+    brownWizard: { name: '麻衣电击巫师 (Brown Wizard)', atk: 370, def: 110, hp: 220, img: '/images/kuntower/brown_wizard.png', note: '进场扣除 100 点固定领域电击伤害' },
+    magicDragon: { name: '远古魔龙 (Ancient Dragon)', atk: 500, def: 250, hp: 1200, img: '/images/kuntower/magic_dragon.png', note: '24F 守门恶龙，高攻高防需持有屠龙剑' },
+    bossYellow: { name: '黄金魔王 (Yellow King)', atk: 450, def: 180, hp: 1000, img: '/images/kuntower/boss_yellow.png', note: '30F 黄金宫殿主宰' },
+    octopus: { name: '深海八爪鱼 (Octopus)', atk: 520, def: 210, hp: 1400, img: '/images/kuntower/octopus.png', note: '35F 深渊触手魔物' },
+    redWizard: { name: '魔音大魔导 (Red Wizard)', atk: 380, def: 130, hp: 200, img: '/images/kuntower/red_wizard.png', note: '进场扣除 200 点固定领域音波伤害' },
+    bossTwin: { name: '双子大魔导 (Twin Archmages)', atk: 560, def: 280, hp: 1800, img: '/images/kuntower/boss_twin.png', note: '40F 领主，击败后可得闪避护符' },
+    darkKnight: { name: '黑暗骑士 (Dark Knight)', atk: 580, def: 320, hp: 2000, img: '/images/kuntower/dark_knight.png', note: '41-48F 精锐重装骑士' },
+    bossRed: { name: '49F 假魔王 (Crimson Impostor)', atk: 620, def: 350, hp: 2600, img: '/images/kuntower/boss_red.png', note: '封魔阵假领主，破除后开启 50F 密道' },
+    demonKing: { name: '50F 终极黑粉魔王 (Demon King)', atk: 680, def: 420, hp: 3800, img: '/images/kuntower/demon_king.png', note: '终极黑粉头目，决战巅峰！' },
+    shadowDevourer: { name: '变异沙包练习生 (Trainee)', atk: 450, def: 300, hp: 2500, img: '/images/kuntower/shadow_devourer.png', note: '狂野模式变异共生魔物' }
   };
 
-  // Add Equipment
+  // Quick Stat Modifiers
   function ktAddGear(atkAdd, defAdd) {
     var atkEl = document.getElementById('kt-player-atk');
     var defEl = document.getElementById('kt-player-def');
     if (atkEl && defEl) {
-      atkEl.value = parseInt(atkEl.value || 0) + atkAdd;
-      defEl.value = parseInt(defEl.value || 0) + defAdd;
+      atkEl.value = Math.max(1, parseInt(atkEl.value || 0) + atkAdd);
+      defEl.value = Math.max(0, parseInt(defEl.value || 0) + defAdd);
       ktCalculate();
     }
+  }
+
+  function ktResetStats() {
+    document.getElementById('kt-player-atk').value = 130;
+    document.getElementById('kt-player-def').value = 100;
+    document.getElementById('kt-player-hp').value = 1200;
+    ktCalculate();
   }
 
   // Live Calculator Engine
@@ -1073,20 +1461,36 @@
     var heroHp = parseInt(document.getElementById('kt-player-hp').value || 0);
     var enemyKey = document.getElementById('kt-enemy-select').value;
 
-    var enemy = ktEnemies[enemyKey] || { atk: 122, def: 18, hp: 340 };
+    var enemy = ktEnemies[enemyKey] || ktEnemies.orc;
+
+    // Update enemy display badge
+    var monsterImg = document.getElementById('kt-monster-icon');
+    var monsterName = document.getElementById('kt-monster-display-name');
+    var monsterStats = document.getElementById('kt-monster-display-stats');
+    var monsterNote = document.getElementById('kt-monster-display-note');
+
+    if (monsterImg) monsterImg.src = enemy.img;
+    if (monsterName) monsterName.innerText = enemy.name;
+    if (monsterStats) monsterStats.innerText = '生命值: ' + enemy.hp + ' | 攻击力: ' + enemy.atk + ' | 防御力: ' + enemy.def;
+    if (monsterNote) monsterNote.innerText = enemy.note;
 
     var statusEl = document.getElementById('kt-result-status');
     var dmgEl = document.getElementById('kt-res-damage');
     var roundsEl = document.getElementById('kt-res-rounds');
-    var remainHpEl = document.getElementById('kt-result-remain-hp') || document.getElementById('kt-res-remain-hp');
+    var remainHpEl = document.getElementById('kt-res-remain-hp');
+    var hpBar = document.getElementById('kt-hp-bar');
 
     // Can hero break enemy defense?
     if (heroAtk <= enemy.def) {
-      statusEl.innerHTML = '<i class="fa fa-times-circle"></i> 无法破防！无法对目标造成伤害！';
+      statusEl.innerHTML = '<i class="fa fa-times-circle"></i> 无法破防！攻击力低于敌方防御，无法造成有效伤害！';
       statusEl.style.color = '#ff1744';
       dmgEl.innerText = '999999';
       roundsEl.innerText = '∞';
       remainHpEl.innerText = '0';
+      if (hpBar) {
+        hpBar.style.width = '0%';
+        hpBar.style.background = '#ff1744';
+      }
       return;
     }
 
@@ -1096,14 +1500,32 @@
     var enemyDmgPerHit = Math.max(0, enemy.atk - heroDef);
     var totalDmgTaken = (rounds - 1) * enemyDmgPerHit;
 
+    // Special field damage: brownWizard 100, redWizard 200
+    if (enemyKey === 'brownWizard') totalDmgTaken += 100;
+    if (enemyKey === 'redWizard') totalDmgTaken += 200;
+
     var remainHp = heroHp - totalDmgTaken;
+    var hpPercent = Math.max(0, Math.min(100, Math.round((remainHp / heroHp) * 100)));
 
     if (remainHp <= 0) {
-      statusEl.innerHTML = '<i class="fa fa-exclamation-triangle"></i> 战力不足！你将在战斗中战败！';
+      statusEl.innerHTML = '<i class="fa fa-exclamation-triangle"></i> 战力不足！你将在第 ' + rounds + ' 回合战斗中力竭战败！';
       statusEl.style.color = '#ff9100';
+      if (hpBar) {
+        hpBar.style.width = '0%';
+        hpBar.style.background = '#ff9100';
+      }
     } else {
-      statusEl.innerHTML = '<i class="fa fa-check-circle"></i> 可以战胜！胜券在握！';
-      statusEl.style.color = '#00e676';
+      if (totalDmgTaken === 0) {
+        statusEl.innerHTML = '<i class="fa fa-check-circle"></i> 绝对卡防！完美无伤破敌，零生命损耗！';
+        statusEl.style.color = '#00e676';
+      } else {
+        statusEl.innerHTML = '<i class="fa fa-check-circle"></i> 可以战胜！稳操胜券，仅损耗 ' + totalDmgTaken + ' 生命值！';
+        statusEl.style.color = '#00e5ff';
+      }
+      if (hpBar) {
+        hpBar.style.width = hpPercent + '%';
+        hpBar.style.background = hpPercent > 50 ? 'linear-gradient(90deg, #00e676, #ffd700)' : 'linear-gradient(90deg, #ff9100, #ff007b)';
+      }
     }
 
     dmgEl.innerText = totalDmgTaken;
@@ -1116,48 +1538,4 @@
   document.getElementById('kt-player-def').addEventListener('input', ktCalculate);
   document.getElementById('kt-player-hp').addEventListener('input', ktCalculate);
   document.getElementById('kt-enemy-select').addEventListener('change', ktCalculate);
-
-  // Sound Player Engine
-  var ktCurrentAudio = null;
-  function ktPlaySound(soundType) {
-    if (ktCurrentAudio) {
-      ktCurrentAudio.pause();
-      ktCurrentAudio = null;
-    }
-
-    // Web Audio Synthesis fallback for funny meme sounds
-    try {
-      var ctx = new (window.AudioContext || window.webkitAudioContext)();
-      var osc = ctx.createOscillator();
-      var gain = ctx.createGain();
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      if (soundType === 'niganma') {
-        osc.frequency.setValueAtTime(440, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.3);
-        gain.gain.setValueAtTime(0.3, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.35);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.35);
-      } else if (soundType === 'jinitai') {
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-        osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.15);
-        osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.3);
-        gain.gain.setValueAtTime(0.25, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.5);
-      } else {
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(300, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.25);
-        gain.gain.setValueAtTime(0.3, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.28);
-        osc.start();
-        osc.stop(ctx.currentTime + 0.28);
-      }
-    } catch (e) {}
-  }
 </script>
