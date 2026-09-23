@@ -46,6 +46,20 @@ description: "隐私权政策"
 ## 我们如何存储您的信息
 应用信息保存在 Firebase 中，由 Google 托管。
 
+## PicPic 智能相册清理
+
+如果您是 **PicPic** 的用户，请参阅专门针对该应用的法律文档：
+
+*   [PicPic 隐私政策](/legal/picpic_privacy.html)
+*   [PicPic 用户协议](/legal/picpic_terms_of_use.html)
+
+## 坤塔50层 (kuntower)
+
+如果您是 **坤塔50层 (kuntower)** 的用户，请参阅专门针对该应用的法律文档：
+
+*   [坤塔50层 隐私政策](/legal/kuntower_privacy.html)
+*   [坤塔50层 用户协议](/legal/kuntower_terms_of_use.html)
+
 ## OmniHub 应用
 
 如果您是 **OmniHub** 的用户，请参阅专门针对该应用的法律文档：
