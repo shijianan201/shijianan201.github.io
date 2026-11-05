@@ -57,7 +57,8 @@
           </button>
           <div class="collapse navbar-collapse" id="mNavbar">
   					<ul class="nav navbar-nav">
-              <li{% if page.url == "/index.html" or page.url == "/" %} class="active"{% endif %}><a href="/">{{ t.omnihub }}</a></li>
+              <li{% if page.url == "/index.html" or page.url == "/" or page.url == "/picpic.html" %} class="active"{% endif %}><a href="/">{{ t.picpic | default: "PicPic" }}</a></li>
+              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="/omnihub.html">{{ t.omnihub | default: "OmniHub" }}</a></li>
               <li{% if page.url == "/kuntower.html" %} class="active"{% endif %}><a href="/kuntower.html">{{ t.kuntower | default: "Kun Tower" }}</a></li>
               <li{% if page.url == "/z-about.html" %} class="active"{% endif %}><a href="/z-about.html">{{ t.about | default: "About" }}</a></li>
   						{% assign pages_list = site.pages %}
