@@ -1,8 +1,11 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_TW, zh_HK, es, de, fr, ja, ko, pt, it, id, th, vi, tr, ru]
 app: kuntower
 title: Kun Tower Terms of Use
 ---
+
+<a id="language-en"></a>
 
 # Terms of Use for kuntower (Chikun Tower)
 
@@ -69,6 +72,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 <br><hr><br>
 
+<a id="language-zh"></a>
+
 # 坤塔50层 用户协议 (简体中文)
 
 **最后更新日期: 2026-09-16**
@@ -100,6 +105,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-zh_TW"></a>
+
 # 坤塔50层 用戶協議 (繁體中文 - 台灣)
 
 **最後更新日期: 2026-09-16**
@@ -124,6 +131,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **5. 聯絡我們**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-zh_HK"></a>
 
 # 坤塔50层 用戶協議 (繁體中文 - 香港)
 
@@ -150,6 +159,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-es"></a>
+
 # Términos de Uso de kuntower (Español)
 
 **Última actualización: 16-09-2026**
@@ -160,6 +171,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. Contacto**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-de"></a>
 
 # Nutzungsbedingungen für kuntower (Deutsch)
 
@@ -172,6 +185,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-fr"></a>
+
 # Conditions d'Utilisation kuntower (Français)
 
 **Dernière mise à jour : 16/09/2026**
@@ -182,6 +197,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. Contact** : **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-ja"></a>
 
 # 坤塔50层 利用規約 (日本語)
 
@@ -194,6 +211,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-ko"></a>
+
 # kuntower 이용 약관 (한국어)
 
 **최종 업데이트: 2026-09-16**
@@ -204,6 +223,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. 문의하기**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-pt"></a>
 
 # Termos de Uso kuntower (Português)
 
@@ -216,6 +237,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-it"></a>
+
 # Termini di Utilizzo di kuntower (Italiano)
 
 **Ultimo aggiornamento: 16/09/2026**
@@ -226,6 +249,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. Contatti**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-id"></a>
 
 # Syarat Penggunaan kuntower (Indonesian)
 
@@ -238,6 +263,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-th"></a>
+
 # เงื่อนไขการใช้งาน kuntower (Thai)
 
 **อัปเดตล่าสุด: 16-09-2026**
@@ -248,6 +275,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. ติดต่อ**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-vi"></a>
 
 # Điều khoản Sử dụng kuntower (Vietnamese)
 
@@ -260,6 +289,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-tr"></a>
+
 # kuntower Kullanım Koşulları (Turkish)
 
 **Son Güncelleme: 16.09.2026**
@@ -270,6 +301,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **4. İletişim**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-ru"></a>
 
 # Условия использования kuntower (Russian)
 

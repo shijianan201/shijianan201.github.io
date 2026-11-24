@@ -1,0 +1,221 @@
+---
+hero:
+  title: 只因魔塔
+  highlight: 50 层
+  description: 穿上背带裤，握紧元气篮球。挑战经典魔塔和狂野肉鸽模式，用策略闯到塔顶，救出鸡妹妹。
+  image_alt: 被紫色魔力环绕的魔塔与塔下的冒险者
+nav_label: 游戏攻略
+nav:
+  kt-modes: 玩法模式
+  kt-cultivation: 修仙境界
+  kt-calculator: 战力计算器
+  kt-artifacts: 绝世神器
+  kt-talents: 坤门六艺
+  kt-achievements: 荣誉成就
+  kt-npcs: 人物图鉴
+  kt-spire-route: 关卡路线
+  download: 扫码下载
+story:
+  title: 游戏背景
+  paragraphs:
+  - 在神秘的<strong>「艾坤大陆」</strong>上，练习时长两年半的见习练习生坤坤，正一边唱跳一边练习他的纯金元气篮球。不料，嫉妒坤坤才华的邪恶黑粉魔王掳走了<strong>「鸡妹妹」</strong>，将这位全球后援会会长囚禁在 50 层魔塔的顶端。
+  - 作为练习生的你，穿上标志性战袍背带裤，手持出道篮球，只身勇闯这片被黑粉与魔物占领的魔塔。
+modes:
+  title: 三大核心模式 · 算力与肉鸽并存
+  description: 满足严谨卡防数值党、爽快暴击肉鸽党与登顶挑战极限党
+  items:
+  - badge: 经典模式
+    title: 1:1 魔塔经典算法
+    description: 严格遵从 50 层经典魔塔原版逻辑！无随机波动、零闪避暴击，100% 确定性路线规划，考验你每一步的卡防决策与钥匙资源配置。
+    notes:
+    - 纯物理与领域损耗：麻衣电击巫师(100)与红衣魔音大魔导(200)固定领域扣血
+    - 准确损耗角标预演：所见即所得，拒绝随机性误伤
+    - 经典道具与机关解密：圣光十字架、神圣剑盾与 24F 传送门
+  - badge: 狂野模式
+    title: 肉鸽暴击与修仙突破
+    description: 打破传统数值束缚！怪物属性动态浮动，体验 11 阶修仙境界突破、18 项流派天赋自由组合与金光圣盾破防！
+    notes:
+    - 11 阶修仙境界突破（Lv.0 个人练习生 ~ Lv.10 坤之巅峰·至尊神王）
+    - 六大肉鸽流派天赋（背带裤/跳/铁山靠/唱/Rap/篮球）
+    - 全塔 15 只【沙包练习生】共生进化全歼隐藏成就
+    - 狂野精英变异词缀（狂怒/铁壁/迅捷/宝藏）与金光圣盾抗伤
+  - badge: 无尽幻境 & 51F
+    title: 终极套房与极限挑战
+    description: 突破传统 50 层魔塔界限！通关 50 层解锁神秘隐藏第 51 层 VIP 总统套房大结局与全宇宙无尽幻境榜单！
+    notes:
+    - 51F 全塔魔王和解毕业册：魔龙、红衣巫师、大章鱼集体“黑转粉”感人留言
+    - 鸡妹妹常驻互动：喝生椰拿铁、吃华强保熟西瓜，揭晓最终出道大反转
+    - 坤界无尽幻境：随机层数与遗物构筑，冲击全球极简步数榜
+cultivation:
+  title: 狂野模式 · 11 阶修仙境界
+  description: 经验满级时可以手动选择突破时机，升级时会等量恢复生命值。
+  items:
+  - level: Lv.0 / 1
+    name: 个人练习生
+    perk: 初始暴击 11%
+  - level: Lv.2
+    name: 资深爱坤
+    perk: HP上限 +20
+  - level: Lv.3 阶段突破
+    name: 舞台霸主
+    perk: "★ 初级天赋3选1"
+  - level: Lv.4 / 5
+    name: 全能偶像
+    perk: HP上限 +60
+  - level: Lv.6 进阶突破
+    name: 顶流大咖
+    perk: "★ 进阶天赋3选1"
+  - level: Lv.7 / 8
+    name: 篮球巨星
+    perk: 暴击 44% / 暴伤 216%
+  - level: Lv.9 终极突破
+    name: 时代导师
+    perk: "★ 终极天赋3选1"
+  - level: Lv.10 巅峰大圆满
+    name: 坤之巅峰
+    perk: 暴击77% / 满级金币转化
+calculator:
+  title: 战力计算器
+  description: 输入当前属性并选择对手，即可预估交锋回合和生命损耗。
+  attack: 攻击力
+  defense: 防御力
+  health: 当前生命
+  enemy: 选择对手
+  gear_label: 道具加成
+  gear:
+  - 木质篮球 (+10 攻)
+  - 见习背带裤 (+10 防)
+  - 骑士打歌神装 (+40 攻防)
+  - 神圣篮球与背带裤 (+100 攻防)
+  reset: 重置属性
+  totals:
+  - 预计损耗
+  - 交锋回合
+  - 剩余生命
+  messages:
+    stats: 生命值 %hp% · 攻击力 %atk% · 防御力 %def%
+    blocked: 无法破防，攻击力需要高于对手防御力。
+    lost: 战力不足。预计需要 %rounds% 回合，当前生命值不足以撑完。
+    safe: 可以无伤击败对手。
+    win: 可以战胜，预计损耗 %damage% 点生命值。
+artifacts:
+  title: 绝世秘宝 & 狂野神器库
+  description: 搜罗全塔珍稀装备道具，展现极致羁绊梗力
+  items:
+    god_basketball:
+      title: 神圣钛合金篮球
+      description: 练习生顶峰本命武器！蕴含至高音浪神力，攻击力狂飙 +100 点！
+    god_suspenders:
+      title: 神级背带裤
+      description: 金光闪耀的战袍防具！双带紧绷卸力，防御力永久飙升 +100 点！
+    coffin_horn:
+      title: 欢庆音响
+      description: 狂野主动秘宝！激活后下场战斗怪物攻防数值强制互换（高防怪克星）！
+    jiege_bread:
+      title: 杰哥的面包
+      description: 绝世禁物！食用大幅回血且下场战斗 100% 必定暴击且攻击提升 30%（超勇）！
+    ripe_watermelon:
+      title: 华强保熟西瓜
+      description: 从 16F 瓜摊大口吃瓜！切开不仅保熟还能瞬间恢复大量生命值！
+    kun_boots:
+      title: 坤步疾行靴
+      description: 隐藏密室稀世神器！穿戴后身法如风，永久免疫所有史莱姆粘滞负面！
+    dodge_amulet:
+      title: 闪避护符
+      description: 斩杀 40F 双子大魔导获得！常驻提升 15% 基础闪避率，化身残影规避重击！
+    shadow_devourer:
+      title: 沙包练习生
+      description: 全塔共 15 只共生进化魔物！击杀气血反哺，全歼解锁 Google Play 15 步隐藏成就！
+talents:
+  title: 坤门六艺 · 六大肉鸽流派
+  description: Lv.3 / Lv.6 / Lv.9 三阶突破，自由组建最强 Build
+  items:
+  - title: 背带裤流（防反抗伤）
+    description: "【背带紧绷】下调免暴门槛，【双带卸力】固定减伤，【至尊金身不灭】致死免死 1 次并防御+30%！"
+  - title: 跳 / 暴扣流（极致暴击）
+    description: "【战术起跳】提升暴击率，【空中连扣】暴击叠暴伤，【雷霆万钧】暴击追加 20% 真实伤害！"
+  - title: 铁山靠流（灵动身法）
+    description: "【侧身靠步】提升闪避率，【靠势回旋】闪避后下击必暴，【乾坤铁山靠】闪避触发 50% 攻击强力反击！"
+  - title: 唱 / 破甲流（穿透特攻）
+    description: "【开麦音浪】无视 6% 防御，【全开麦真唱】对防御特性怪 1.1x 增伤，【绝对领域】巫师领域降伤 40%！"
+  - title: Rap / 连击流（单押追击）
+    description: "【单押快攻】20% 概率触发 50% 追击，【双押连打】追击附带吸血，【暴风押韵】连击触发攻击提升 12%！"
+  - title: 篮球 / 续航流（理财发育）
+    description: "【运球捡蛋】金币+10%与吸血+3%，【双黄绝技】击杀掉落金蛋，【百万应援】魔塔商店打折与金币加攻！"
+achievements:
+  title: Google Play 荣誉成就与名人堂
+  description: 支持跨设备云存档与全网排行榜，向全宇宙玩家证明最强算力
+  items:
+    51f_debut:
+      title: 51F 总统套房出道庆典
+      description: 突破传统 50 层魔塔界限，登顶隐藏总统套房，解救鸡妹妹并达成全员和解！
+    50f_demon_king:
+      title: 50F 终极黑粉魔王斩落
+      description: 破解 49F 封魔十字阵，以真爱之力斩杀 50F 黑粉主宰，赢得尊严之战！
+    all_sandbags:
+      title: 全歼 15 只沙包练习生
+      description: 狂野模式专属！击败全塔所有共生进化的变异沙包练习生，解锁隐藏荣耀！
+    jinitai:
+      title: 姬霓太美金曲认证
+      description: 收集全塔隐藏黑胶唱片，在 51 层留声机解锁全部高燃名曲！
+    trainee_2_5_years:
+      title: 练习时长两年半
+      description: 坚持不懈修炼至满级「坤之巅峰」，达成 77% 暴击与 300% 暴伤至尊神王！
+    god_gear:
+      title: 神圣战袍大成
+      description: 同时装备神圣钛合金篮球与神级背带裤，攻击防御双双突破天际！
+characters:
+  title: 艾坤大陆经典人物群像
+  description: 魔塔不仅有怪物，还有与你一路相伴的奇趣伙伴
+  items:
+    princess:
+      title: 鸡妹妹
+      role: 全球后援会会长
+      quote: "“坤坤，我就知道你一定会穿上背带裤杀穿 50 层来救我！”"
+    watermelon_vendor:
+      title: 华强瓜摊主
+      role: 16F 西瓜特供商
+      quote: "“我开瓜摊的，能卖给你生瓜蛋子？这瓜保熟，吃了回大血！”"
+    taoist_kun:
+      title: 坤道人
+      role: 世外修仙导师
+      quote: "“少年，我看你骨骼惊奇，这本《铁山靠修仙口诀》就赠予你了。”"
+    fairy:
+      title: 圣光仙子
+      role: 魔塔守护之神
+      quote: "“收下这枚圣光十字架吧，它能在面对吸血鬼魔王时发挥奇效。”"
+    business:
+      title: 神秘黑市商人
+      role: 资源交易中介
+      quote: "“只要金币给够，钥匙、血瓶和神级宝物任你挑选，绝不还价！”"
+    wise:
+      title: 通天智者
+      role: 卡防指引导师
+      quote: "“记住：防御高于怪物的攻击才能无伤，保持荔枝，勿贪刀！”"
+route:
+  title: 50 层魔塔征程关卡路线图
+  description: 从 1 层见习救粉到 51 层 VIP 套房的史诗征程
+  items:
+  - floors: 1F - 10F
+    tag: ''
+    title: 初级试炼与老粉救出
+    description: 在 2 层解救老粉小黑，拾取木质篮球与背带裤，破开 10F 骷髅队长包围网！
+  - floors: 11F - 20F
+    tag: 中层穿梭
+    title: 大飞蝠与青衣魔王
+    description: 在 15F 斩杀大飞蝠，16F 瓜摊大口吃瓜，持有圣光十字架决战 20F 吸血鬼魔王！
+  - floors: 21F - 30F
+    tag: 迷魂破局
+    title: 假公主识破与 24F 直达阵
+    description: 识破 26F 假公主陷阱，开启 24F 直通传送阵，迎战 30F 黄金魔王！
+  - floors: 31F - 50F
+    tag: 终极巅峰
+    title: 49F 假魔王 & 50F 黑粉主宰
+    description: 用十字步破解 49F 封魔阵，登上 50F 决战终极黑粉魔王，救出鸡妹妹！
+  - floors: 51F VIP
+    tag: 顶峰庆典
+    title: 鸡妹妹 VIP 套房与全员和解
+    description: 与鸡妹妹相聚！品尝特调生椰冰拿铁，聆听名曲旋律，荣耀 C 位出道！
+download_title: 下载只因魔塔
+download_hint: 用手机扫描二维码，打开 Google Play。游戏支持跨设备云存档、排行榜和通关战报分享。
+qr_label: 只因魔塔的 Google Play 二维码

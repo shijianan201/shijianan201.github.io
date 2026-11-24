@@ -1,0 +1,48 @@
+en:
+  title: Less clutter.
+  highlight: Better photos.
+  description: Find duplicate shots, similar bursts, and blurry photos. Clean up your library and restore detail directly on your phone.
+  scan: Scan to download
+  photo_alt: A portrait lit in blue and purple
+  clear: Enhanced preview
+  blurry: Blurry preview
+  slider_label: Photo comparison, adjust how much of the clearer image is shown
+  slider_hint: Drag the slider to compare image clarity.
+  photo_credit: Sample photo from Unsplash
+  features_title: Clean up and restore
+  features:
+    - title: Similar photos
+      description: Group duplicate screenshots and similar burst shots so you can choose which ones to keep.
+    - title: Blurry photos
+      description: Find out-of-focus shots, blurry images, and closed eyes without checking photos one at a time.
+    - title: AI enhancement
+      description: Restore detail in low-resolution or older photos with 4× Real-ESRGAN upscaling.
+    - title: On-device processing
+      description: Photo analysis and enhancement run on your phone. Your photos stay on your device.
+  download_title: Get PicCleanUp
+  download_hint: Scan with your phone to open Google Play.
+  qr_label: Google Play QR code for PicCleanUp
+zh:
+  title: 相册轻一点，
+  highlight: 回忆清晰一点。
+  description: 找出重复照片、相似连拍和模糊废片。用 AI 增强照片细节，整理和修复都在手机本地完成。
+  scan: 扫码下载
+  photo_alt: 用蓝紫色灯光拍摄的人像示例
+  clear: 增强示意
+  blurry: 低清示意
+  slider_label: 画质对比，调整清晰示例所占比例
+  slider_hint: 拖动滑块查看画质变化示意。
+  photo_credit: Unsplash 示例照片
+  features_title: 整理与修复
+  features:
+    - title: 相似照片去重
+      description: 将重复截图和相似连拍自动分组，方便选出值得保留的照片。
+    - title: 模糊废片筛查
+      description: 快速筛出失焦、拍糊和闭眼的照片，减少逐张翻找的时间。
+    - title: AI 画质增强
+      description: 使用 Real-ESRGAN 进行 4 倍超分辨率重构，为低清或老旧照片补充细节。
+    - title: 本地处理
+      description: 相册分析和画质增强均在设备上运行，照片无需上传。
+  download_title: 下载 PicCleanUp
+  download_hint: 用手机扫描二维码，打开 Google Play。
+  qr_label: PicCleanUp 的 Google Play 二维码

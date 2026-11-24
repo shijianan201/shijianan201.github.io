@@ -12,6 +12,36 @@
   --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
+/* Subset of Font Awesome 4.4.0. License in site-icons-OFL.txt. */
+@font-face {
+  font-family: "Jannix Site Icons";
+  src: url("site-icons.woff2") format("woff2");
+  font-display: block;
+}
+
+.app-site .fa {
+  display: inline-block;
+  font: normal 1em/1 "Jannix Site Icons";
+}
+
+.fa-arrows-h::before { content: "\f07e"; }
+.fa-balance-scale::before { content: "\f24e"; }
+.fa-calculator::before { content: "\f1ec"; }
+.fa-clock-o::before { content: "\f017"; }
+.fa-clone::before { content: "\f24d"; }
+.fa-commenting-o::before { content: "\f27b"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-eye::before { content: "\f06e"; }
+.fa-flask::before { content: "\f0c3"; }
+.fa-globe::before { content: "\f0ac"; }
+.fa-lock::before { content: "\f023"; }
+.fa-magic::before { content: "\f0d0"; }
+.fa-map-marker::before { content: "\f041"; }
+.fa-paint-brush::before { content: "\f1fc"; }
+.fa-play::before { content: "\f04b"; }
+.fa-qrcode::before { content: "\f029"; }
+.fa-th-large::before { content: "\f009"; }
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -135,7 +165,8 @@
 }
 
 .app-nav a,
-.app-blog-link {
+.app-blog-link,
+.app-language summary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +182,9 @@
 
 .app-nav a:hover,
 .app-nav a.app-nav__active,
-.app-blog-link:hover {
+.app-blog-link:hover,
+.app-language summary:hover,
+.app-language[open] summary {
   background: var(--surface-raised);
   color: var(--ink);
 }
@@ -160,8 +193,70 @@
   color: var(--accent);
 }
 
-.app-blog-link {
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
   justify-self: end;
+}
+
+.app-language {
+  position: relative;
+}
+
+.app-language summary {
+  gap: .42rem;
+  padding-inline: .7rem;
+  white-space: nowrap;
+  list-style: none;
+  cursor: pointer;
+}
+
+.app-language summary::-webkit-details-marker {
+  display: none;
+}
+
+.app-language__options {
+  position: absolute;
+  z-index: 4;
+  inset-block-start: calc(100% + .35rem);
+  inset-inline-end: 0;
+  min-width: 12.5rem;
+  padding: .35rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+}
+
+.app-language__options a,
+.app-language__options button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 44px;
+  padding: .45rem .65rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--muted);
+  font-size: .9rem;
+  text-align: start;
+  text-decoration: none;
+}
+
+.app-language__options button {
+  cursor: pointer;
+}
+
+.app-language__options button[hidden] {
+  display: none;
+}
+
+.app-language__options :is(a, button):hover,
+.app-language__options a[aria-current] {
+  background: var(--surface-raised);
+  color: var(--accent);
 }
 
 .app-main {
@@ -433,7 +528,7 @@
   }
 
   .app-blog-link {
-    padding-inline: .7rem;
+    padding-inline: .55rem;
   }
 
   .app-download {

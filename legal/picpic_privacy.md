@@ -1,5 +1,6 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_Hant, ja, ko]
 app: picpic
 title: PicCleanUp Privacy Policy
 ---
@@ -12,7 +13,7 @@ Language: [English](#english) | [简体中文](#简体中文) | [繁體中文](#
 
 ---
 
-<a name="english"></a>
+<a id="language-en" name="english"></a>
 ## 1. English (Default)
 
 This Privacy Policy describes how **PicPic (PicLite)** (package identifier: `com.jannix.picpic`) handles your information.
@@ -35,7 +36,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="简体中文"></a>
+<a id="language-zh" name="简体中文"></a>
 ## 2. 简体中文
 
 ### 核心原则：100% 端侧本地处理
@@ -56,7 +57,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="繁體中文"></a>
+<a id="language-zh_Hant" name="繁體中文"></a>
 ## 3. 繁體中文
 
 ### 核心原則：100% 端側本地處理
@@ -73,7 +74,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="日本語"></a>
+<a id="language-ja" name="日本語"></a>
 ## 4. 日本語
 
 ### コア原則：100% 端末内（ローカル）処理
@@ -89,7 +90,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="한국어"></a>
+<a id="language-ko" name="한국어"></a>
 ## 5. 한국어
 
 ### 핵심 원칙: 100% 온디바이스(로컬) 처리

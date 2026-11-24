@@ -1,9 +1,12 @@
 ---
 layout: app_document
+document_languages: [en, zh]
 app: omnihub
 title: "Data Deletion Request"
 description: "Instructions on how to request the deletion of your OmniHub account and associated data."
 ---
+
+<a id="language-en"></a>
 
 # OmniHub Data Deletion Request
 
@@ -47,6 +50,8 @@ Fill out the details below to generate a pre-formatted email to our support team
 </div>
 
 <hr>
+
+<a id="language-zh"></a>
 
 # OmniHub 数据删除请求 (简体中文)
 

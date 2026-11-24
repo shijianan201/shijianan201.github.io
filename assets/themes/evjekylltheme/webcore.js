@@ -7,11 +7,10 @@
       }
     });
     $("iframe[src*='youtube.com']").wrap('<div class="videowrapper" />');
-		anchors.options = {
-			visible: 'always',
-			icon: '¶'
-		}
-		anchors.add('.post-content h2, .post-content h3');
+    if (typeof anchors !== 'undefined') {
+      anchors.options = { visible: 'always', icon: '¶' };
+      anchors.add('.post-content h2, .post-content h3');
+    }
   });
 
   /* site search */

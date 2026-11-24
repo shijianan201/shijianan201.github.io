@@ -7,5 +7,15 @@ layout: app
     <img src="{{ product.icon | relative_url }}" width="32" height="32" alt="">
     {{ product.name }}
   </a>
+  {% if page.document_languages %}
+  <details class="app-document__languages">
+    <summary>Language / 语言</summary>
+    <nav aria-label="Document language">
+      {% for locale in page.document_languages %}
+      <a href="#language-{{ locale }}">{{ site.data.i18n[locale].name | default: '繁體中文' }}</a>
+      {% endfor %}
+    </nav>
+  </details>
+  {% endif %}
   {{ content }}
 </article>

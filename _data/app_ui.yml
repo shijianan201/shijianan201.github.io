@@ -1,0 +1,28 @@
+en:
+  apps: Apps
+  blog: Blog
+  blog_path: /en/
+  about: About
+  language: Website language
+  automatic: Follow browser language
+  skip: Skip to content
+  support: Support and policies
+  privacy: Privacy
+  terms: Terms
+  help: Help Center
+  deletion: Data Deletion
+  download: View on Google Play
+zh:
+  apps: 应用
+  blog: 博客
+  blog_path: /zh/
+  about: 关于
+  language: 网站语言
+  automatic: 跟随浏览器语言
+  skip: 跳到正文
+  support: 支持与政策
+  privacy: 隐私政策
+  terms: 用户协议
+  help: 帮助中心
+  deletion: 删除数据
+  download: 在 Google Play 查看

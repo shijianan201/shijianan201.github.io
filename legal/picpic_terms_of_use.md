@@ -1,5 +1,6 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_Hant, ja, ko]
 app: picpic
 title: PicCleanUp Terms of Use
 ---
@@ -12,7 +13,7 @@ Language: [English](#english) | [简体中文](#简体中文) | [繁體中文](#
 
 ---
 
-<a name="english"></a>
+<a id="language-en" name="english"></a>
 ## 1. English (Default)
 
 Please read these Terms of Use ("Terms") carefully before using **PicPic (PicLite)** (package identifier: `com.jannix.picpic`). By downloading or using the App, you agree to these Terms.
@@ -35,7 +36,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="简体中文"></a>
+<a id="language-zh" name="简体中文"></a>
 ## 2. 简体中文
 
 ### 服务与授权
@@ -52,7 +53,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="繁體中文"></a>
+<a id="language-zh_Hant" name="繁體中文"></a>
 ## 3. 繁體中文
 
 ### 服務與授權
@@ -69,7 +70,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="日本語"></a>
+<a id="language-ja" name="日本語"></a>
 ## 4. 日本語
 
 ### 利用規約とライセンス
@@ -86,7 +87,7 @@ Email: `xiaojiangagaga@gmail.com`
 
 ---
 
-<a name="한국어"></a>
+<a id="language-ko" name="한국어"></a>
 ## 5. 한국어
 
 ### 서비스 이용 및 라이선스

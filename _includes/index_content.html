@@ -98,13 +98,14 @@
 </style>
 
 {% assign t = site.data.i18n[page.lang] %}
+{% assign app_locale = page.lang | slice: 0, 2 %}
 
 <div class="hero-section">
   <h1>{{ t.hi_im }}</h1>
   <p style="font-weight: 600; margin-bottom: 10px;">{{ t.hero_tagline }}</p>
   <p>{{ t.hero_welcome }}</p>
   <div style="margin-top: 20px;">
-    <a href="/omnihub.html" class="btn btn-link" style="color: white; font-size: 1.1em;">{{ t.discover_my_work }} <i class="fa fa-chevron-right"></i></a>
+    <a href="{{ site.data.apps.omnihub.locales[app_locale] | default: site.data.apps.omnihub.path | relative_url }}" class="btn btn-link" style="color: white; font-size: 1.1em;">{{ t.discover_my_work }} <i class="fa fa-chevron-right"></i></a>
   </div>
 </div>
 

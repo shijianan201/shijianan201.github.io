@@ -1,5 +1,17 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.data.i18n[lang] %}
+{% assign app_locale = lang | slice: 0, 2 %}
+{% assign language_tag = lang | replace: '_', '-' %}
+{% assign article_page = false %}
+{% assign has_code = false %}
+{% assign has_images = false %}
+{% assign has_math = false %}
+{% if page.layout == 'post' %}{% assign article_page = true %}{% endif %}
+{% if content contains '<pre' %}{% assign has_code = true %}{% endif %}
+{% if content contains '<img' %}{% assign has_images = true %}{% endif %}
+{% if page.mathjax or content contains 'math/tex' or content contains '$$' or content contains '\(' or content contains '\[' %}{% assign has_math = true %}{% endif %}
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/Blog">
+<html lang="{{ language_tag }}" itemscope itemtype="http://schema.org/Blog">
   <head>
     <meta charset="utf-8">
 
@@ -11,20 +23,18 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#2196F3">
-		<link rel="author" href="https://plus.google.com/+{{ site.author.google }}"/>
+    <link rel="author" href="https://github.com/{{ site.author.github }}">
 
 	{% if page.url == "/404.html" %}
 		<meta http-equiv = "refresh" content = "3;url=/">
 	{% endif %}
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
-    <![endif]-->
-	<script type="text/javascript" src="{{ ASSET_PATH }}/jquery-2.1.3.min.js"></script>
-
-	<link href="{{ ASSET_PATH }}/google-code-prettify/desert.css" type="text/css" rel="stylesheet" />
-	<!-- Add fancyBox -->
-	<link rel="stylesheet" href="{{ ASSET_PATH }}/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script defer src="{{ ASSET_PATH }}/jquery-2.1.3.min.js"></script>
+    {% if has_code %}
+    <link href="{{ ASSET_PATH }}/google-code-prettify/desert.css" rel="stylesheet">
+    {% endif %}
+    {% if has_images %}
+    <link href="{{ ASSET_PATH }}/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet">
+    {% endif %}
 
     <!-- Le styles -->
     <link href="{{ ASSET_PATH }}/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +42,7 @@
 		<!--<link href="/css/syntax.css" rel="stylesheet" type="text/css" media="all">-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="{{ BASE_PATH }}/images/favicon.ico">
+    <link rel="icon" href="{{ '/assets/app-site/developer-avatar.webp' | relative_url }}">
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.feed_path }}" type="application/atom+xml" rel="alternate" title="Jekyll auto generate ATOM Feed">
@@ -40,12 +50,10 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Site RSS Feed">
 	<link rel="stylesheet" href="{{ ASSET_PATH }}/font-awesome-4.4.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    {% if article_page %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">{% endif %}
   </head>
 
   <body>
-    {% assign lang = page.lang | default: site.default_lang %}
-    {% assign t = site.data.i18n[lang] %}
     <div class="navbar navbar-default navbar-fixed-top">
 				<div class="container">
           <div class="row mobilepadding">
@@ -57,9 +65,9 @@
           </button>
           <div class="collapse navbar-collapse" id="mNavbar">
   					<ul class="nav navbar-nav">
-              <li{% if page.url == "/index.html" or page.url == "/" or page.url == "/picpic.html" %} class="active"{% endif %}><a href="/">{{ site.data.apps.picpic.name }}</a></li>
-              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="/omnihub.html">{{ t.omnihub | default: "OmniHub" }}</a></li>
-              <li{% if page.url == "/kuntower.html" %} class="active"{% endif %}><a href="/kuntower.html">{{ t.kuntower | default: "Kun Tower" }}</a></li>
+              <li{% if page.url == "/index.html" or page.url == "/" or page.url == "/picpic.html" %} class="active"{% endif %}><a href="{{ site.data.apps.picpic.locales[app_locale] | default: site.data.apps.picpic.path | relative_url }}">{{ site.data.apps.picpic.name }}</a></li>
+              <li{% if page.url == "/omnihub.html" %} class="active"{% endif %}><a href="{{ site.data.apps.omnihub.locales[app_locale] | default: site.data.apps.omnihub.path | relative_url }}">{{ t.omnihub | default: "OmniHub" }}</a></li>
+              <li{% if page.url == "/kuntower.html" %} class="active"{% endif %}><a href="{{ site.data.apps.kuntower.locales[app_locale] | default: site.data.apps.kuntower.path | relative_url }}">{{ t.kuntower | default: "Kun Tower" }}</a></li>
               <li{% if page.url == "/z-about.html" %} class="active"{% endif %}><a href="/z-about.html">{{ t.about | default: "About" }}</a></li>
   						{% assign pages_list = site.pages %}
   						{% assign group = 'navigation' %}
@@ -72,7 +80,7 @@
                 <ul class="dropdown-menu" style="max-height: 400px; overflow-y: auto;">
                   {% for l in site.languages %}
                   <li{% if l == lang %} class="active"{% endif %}>
-                    <a href="{% if l == site.default_lang %}/{% else %}/{{ l }}/{% endif %}">
+                    <a href="{{ '/' | append: l | append: '/' | relative_url }}">
                       {{ site.data.i18n[l].name }}
                     </a>
                   </li>
@@ -118,66 +126,62 @@
     </div>
     </footer>
 
+    {% if site.JB.analytics.provider != 'google' or site.JB.analytics.google.tracking_id %}
     {% include JB/analytics %}
+    {% endif %}
 
-	<script type="text/javascript" src="{{ ASSET_PATH }}/google-code-prettify/prettify.js?skin=desert"></script>
-	<script async type="text/javascript">
-		$(function(){
-    	$("pre").addClass("prettyprint");
-    	prettyPrint();
-      $('table').addClass('table table-hover');
-      $('.navbar').click(function(){
-        $('html, body').animate({scrollTop:0}, 'slow');
-      })
-  	});
-	</script>
-	<!-- Add mousewheel plugin (this is optional) -->
-	<script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-	<script type="text/javascript" src="{{ ASSET_PATH }}/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-	<script async type="text/javascript" src="{{ ASSET_PATH }}/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<script async type="text/javascript" src="{{ ASSET_PATH }}/webcore.js"></script>
-	<script type="text/javascript" src="{{ ASSET_PATH }}/jquery.bootstrap-autohidingnavbar.min.js"></script>
-	<script type="text/javascript" src="{{ ASSET_PATH }}/anchor.min.js"></script>
-	<script type="text/javascript" src="{{ ASSET_PATH }}/jquery.qrcode.min.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
-
-  <!-- MathJax -->
-  <script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			tex2jax: {
-				inlineMath: [['$','$'], ['\\(','\\)']],
-				displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-				processEscapes: true
-			}
-		});
-	</script>
-  <script async type="text/javascript" src="{{ ASSET_PATH }}/MathJax-2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-	<script type="text/javascript" async>
-		window.___gcfg = {lang: 'zh-CN'};
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/platform.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-	</script>
-	<script async>
-		$(document).ready(function() {
-			$("p img").each(function(){
-				var strA = "<a class='fancybox' rel='gallery' href='" + this.src + "'></a>";
-				$(this).wrapAll(strA);
-			});
-			$(".fancybox").fancybox({
-				padding: 0,
-				beforeShow: function(){
-					var alt = this.element.find('img').attr('alt');
-					this.inner.find('img').attr('alt', alt);
-					this.title = alt;
-				}
-			});
-			$(".navbar-fixed-top").autoHidingNavbar({
-				'animationDuration': 300
-			});
-		});
-	</script>
+    <script defer src="{{ ASSET_PATH }}/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script defer src="{{ ASSET_PATH }}/jquery.bootstrap-autohidingnavbar.min.js"></script>
+    {% if article_page %}
+    <script defer src="{{ ASSET_PATH }}/anchor.min.js"></script>
+    <script defer src="{{ ASSET_PATH }}/jquery.qrcode.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+    {% endif %}
+    <script defer src="{{ ASSET_PATH }}/webcore.js?v=2"></script>
+    {% if has_code %}
+    <script defer src="{{ ASSET_PATH }}/google-code-prettify/prettify.js?skin=desert"></script>
+    {% endif %}
+    {% if has_images %}
+    <script defer src="{{ ASSET_PATH }}/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script defer src="{{ ASSET_PATH }}/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    {% endif %}
+    {% if has_math %}
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script async src="{{ ASSET_PATH }}/MathJax-2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    {% endif %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        {% if has_code %}
+        $('pre').addClass('prettyprint');
+        prettyPrint();
+        {% endif %}
+        $('table').addClass('table table-hover');
+        $('.navbar').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+        {% if has_images %}
+        $('p img').each(function () {
+          $(this).wrap($('<a>', { class: 'fancybox', rel: 'gallery', href: this.src }));
+        });
+        $('.fancybox').fancybox({
+          padding: 0,
+          beforeShow: function () {
+            var alt = this.element.find('img').attr('alt');
+            this.inner.find('img').attr('alt', alt);
+            this.title = alt;
+          }
+        });
+        {% endif %}
+        $('.navbar-fixed-top').autoHidingNavbar({ animationDuration: 300 });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,212 @@
+hero:
+  title: Kun Tower
+  highlight: 50 floors.
+  description: Grab your basketball, put on your suspenders, and climb the tower to rescue Kun's biggest fan. Play by the classic rules or take on the Wild roguelike mode.
+  image_alt: The tower surrounded by purple magic, with adventurers at its base
+nav_label: Game guide
+nav:
+  kt-modes: Game modes
+  kt-cultivation: Ranks
+  kt-calculator: Battle calculator
+  kt-artifacts: Artifacts
+  kt-talents: Talents
+  kt-achievements: Achievements
+  kt-npcs: Characters
+  kt-spire-route: Floor guide
+  download: Scan to download
+story:
+  title: The story
+  paragraphs:
+    - Kun has trained for two and a half years in Aikun, honing his dance moves and basketball skills. When a jealous Demon King kidnaps <strong>his fan-club president</strong>, Kun discovers she is being held at the top of a 50-floor tower.
+    - With his signature suspenders and a basketball, Kun must face the monsters who stand between him and his biggest fan.
+modes:
+  title: Three ways to play
+  description: Plan a run in Classic, build around random upgrades in Wild, or keep climbing in Endless.
+  items:
+    - badge: Classic
+      title: Classic Magic Tower rules
+      description: Enemy stats and damage are deterministic, with no random critical hits or dodges. Plan your route, your Defense, and how you spend your keys.
+      notes:
+        - The Brown and Red Wizards deal 100 and 200 fixed field damage, respectively.
+        - Damage previews show what each fight will cost.
+        - Use classic items and puzzles such as the Holy Cross, Sacred Sword and Shield, and floor 24 portal.
+    - badge: Wild
+      title: Roguelike builds and critical hits
+      description: Enemy stats vary. Advance through 11 ranks, combine 18 talents, and learn how to break Golden Shields.
+      notes:
+        - Rise from Solo Trainee at level 0 to Supreme Idol at level 10.
+        - Build around Suspenders, Jump, Shoulder Strike, Singing, Rap, or Basketball.
+        - Defeat all 15 symbiotic Sandbag Trainees to unlock a hidden achievement.
+        - Watch for elite modifiers such as Rage, Iron Wall, Swift, and Treasure.
+    - badge: Endless and 51F
+      title: A hidden suite and endless runs
+      description: Clear floor 50 to discover the presidential suite on floor 51 and unlock the Endless Realm leaderboard.
+      notes:
+        - Read farewell messages from former enemies including the Ancient Dragon, Red Wizard, and Octopus.
+        - Share a coconut latte or a slice of watermelon with Kun's fan-club president.
+        - Build around relics on randomized floors and compete to finish in fewer steps.
+cultivation:
+  title: Wild mode ranks
+  description: Once your experience bar is full, you can choose when to rank up and recover health at a useful moment.
+  items:
+    - level: Lv. 0–1
+      name: Solo Trainee
+      perk: 11% starting critical chance
+    - level: Lv. 2
+      name: Seasoned Fan
+      perk: +20 maximum HP
+    - level: Lv. 3 breakthrough
+      name: Stage Champion
+      perk: Choose one of three beginner talents
+    - level: Lv. 4–5
+      name: All-Round Idol
+      perk: +60 maximum HP
+    - level: Lv. 6 breakthrough
+      name: Headliner
+      perk: Choose one of three advanced talents
+    - level: Lv. 7–8
+      name: Basketball Superstar
+      perk: 44% critical chance and 216% critical damage
+    - level: Lv. 9 breakthrough
+      name: Mentor of the Era
+      perk: Choose one of three ultimate talents
+    - level: Lv. 10
+      name: Supreme Idol
+      perk: 77% critical chance and max-level coin conversion
+calculator:
+  title: Battle calculator
+  description: Enter your stats and choose an opponent to estimate rounds and health lost.
+  attack: Attack
+  defense: Defense
+  health: Health
+  enemy: Opponent
+  gear_label: Gear bonuses
+  gear: [Wooden Basketball (+10 ATK), Trainee Suspenders (+10 DEF), Knight Outfit (+40 ATK and DEF), Sacred Gear (+100 ATK and DEF)]
+  reset: Reset stats
+  totals: [Health lost, Rounds, Health left]
+  messages:
+    stats: HP %hp% · ATK %atk% · DEF %def%
+    blocked: Your Attack must exceed the opponent's Defense to deal damage.
+    lost: You need %rounds% rounds, and your current health will run out before then.
+    safe: You can defeat this opponent without losing health.
+    win: You can win with an estimated loss of %damage% health.
+artifacts:
+  title: Rare artifacts
+  description: Collect weapons, gear, and items that open up new strategies.
+  items:
+    god_basketball:
+      title: Sacred Titanium Basketball
+      description: Kun's signature endgame weapon adds 100 Attack.
+    god_suspenders:
+      title: Divine Suspenders
+      description: The gold suspenders add 100 Defense permanently.
+    coffin_horn:
+      title: Celebration Speaker
+      description: In Wild mode, activate it to swap the next enemy's Attack and Defense.
+    jiege_bread:
+      title: Jie's Bread
+      description: Restores a large amount of health and grants guaranteed critical hits and 30% more Attack in the next battle.
+    ripe_watermelon:
+      title: Huaqiang's Ripe Watermelon
+      description: Buy it on floor 16 for a large instant heal.
+    kun_boots:
+      title: Kun Step Boots
+      description: Hidden boots that grant permanent immunity to slowing effects from slimes.
+    dodge_amulet:
+      title: Dodge Amulet
+      description: Beat the Twin Archmages on floor 40 to gain 15% base dodge chance.
+    shadow_devourer:
+      title: Sandbag Trainee
+      description: Each defeat restores health. Defeat all 15 to unlock a hidden Google Play achievement.
+talents:
+  title: Six Wild mode builds
+  description: Choose talents at levels 3, 6, and 9 to develop your build.
+  items:
+    - title: Suspenders · Defense and counters
+      description: Reduce incoming damage, survive one lethal hit, and gain 30% Defense with the ultimate talent.
+    - title: Jump · Critical hits
+      description: Raise critical chance, stack critical damage with dunks, and add 20% true damage on critical hits.
+    - title: Shoulder Strike · Dodge
+      description: Raise dodge chance, guarantee a critical hit after a dodge, and trigger a counterattack for 50% of Attack.
+    - title: Singing · Armor penetration
+      description: Ignore 6% of Defense, deal 1.1× damage to defensive enemies, and reduce Wizard field damage by 40%.
+    - title: Rap · Follow-up attacks
+      description: Gain a 20% chance of a half-damage follow-up, add life steal, and raise Attack by 12% when a combo triggers.
+    - title: Basketball · Sustain and gold
+      description: Gain 10% more gold and 3% life steal, earn golden eggs from defeated enemies, and unlock shop discounts.
+achievements:
+  title: Google Play achievements
+  description: Sync saves across devices and compare your runs on the leaderboard.
+  items:
+    51f_debut:
+      title: The 51F Debut
+      description: Reach the hidden presidential suite, rescue Kun's biggest fan, and bring everyone together.
+    50f_demon_king:
+      title: The Demon King Falls
+      description: Break the floor 49 seal and defeat the Demon King on floor 50.
+    all_sandbags:
+      title: All 15 Sandbag Trainees
+      description: Find and defeat every mutated Sandbag Trainee in Wild mode.
+    jinitai:
+      title: The Complete Record Collection
+      description: Find the hidden vinyl records and play them on the floor 51 gramophone.
+    trainee_2_5_years:
+      title: Two and a Half Years of Training
+      description: Reach Supreme Idol with 77% critical chance and 300% critical damage.
+    god_gear:
+      title: Sacred Outfit Complete
+      description: Equip the Sacred Titanium Basketball and Divine Suspenders together.
+characters:
+  title: Characters of Aikun
+  description: Meet the guides, merchants, and allies who help Kun on his way up.
+  items:
+    princess:
+      title: Kun's Biggest Fan
+      role: Fan-club president
+      quote: “Kun, I knew you'd put on those suspenders and climb all 50 floors for me!”
+    watermelon_vendor:
+      title: Huaqiang
+      role: Watermelon vendor on floor 16
+      quote: “Of course it's ripe. Have a slice and get your health back!”
+    taoist_kun:
+      title: Master Kun
+      role: Cultivation mentor
+      quote: “You've got potential. Take this book and learn the Shoulder Strike.”
+    fairy:
+      title: Holy Light Fairy
+      role: Guardian of the tower
+      quote: “Take this Holy Cross. It'll come in handy against the Vampire Boss.”
+    business:
+      title: Black Market Merchant
+      role: Trader
+      quote: “Keys, potions, rare gear. Bring enough gold and take your pick!”
+    wise:
+      title: The Sage
+      role: Defense mentor
+      quote: “Raise your Defense to the enemy's Attack and you'll take no damage. Pick your fights carefully.”
+route:
+  title: Floor guide
+  description: From the first trial to the hidden VIP suite on floor 51.
+  items:
+    - floors: 1F–10F
+      title: First trials and a familiar fan
+      description: Rescue Xiaohei on floor 2, pick up the Wooden Basketball and Suspenders, and beat the Skeleton Captain on floor 10.
+    - floors: 11F–20F
+      tag: Middle floors
+      title: The Big Bat and the Vampire
+      description: Beat the Big Bat on floor 15, visit the watermelon stand on floor 16, and bring the Holy Cross to the floor 20 fight.
+    - floors: 21F–30F
+      tag: The impostor's trap
+      title: The false princess and the 24F portal
+      description: Expose the trap on floor 26, unlock the floor 24 portal, and face the Yellow King on floor 30.
+    - floors: 31F–50F
+      tag: The final ascent
+      title: The Crimson Impostor and the Demon King
+      description: Break the seal on floor 49 with the cross-step route, then rescue Kun's biggest fan on floor 50.
+    - floors: 51F VIP
+      tag: The celebration
+      title: A reunion in the VIP suite
+      description: Share a coconut latte, play your favorite records, and celebrate Kun's debut together.
+download_title: Get Kun Tower
+download_hint: Scan with your phone to open Google Play. Kun Tower supports cloud saves, leaderboards, and shareable victory reports.
+qr_label: Google Play QR code for Kun Tower

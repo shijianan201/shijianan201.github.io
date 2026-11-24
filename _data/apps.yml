@@ -1,6 +1,9 @@
 picpic:
   name: PicCleanUp
   path: /
+  locales:
+    en: /en/picpic.html
+    zh: /zh/picpic.html
   icon: /assets/app-site/piccleanup-icon.webp
   google_play: https://play.google.com/store/apps/details?id=com.jannix.picpic
   qr: /assets/app-site/piccleanup-google-play.png
@@ -9,6 +12,9 @@ picpic:
 omnihub:
   name: OmniHub
   path: /omnihub.html
+  locales:
+    en: /en/omnihub.html
+    zh: /zh/omnihub.html
   icon: /assets/app-site/omnihub-icon.webp
   google_play: https://play.google.com/store/apps/details?id=com.jannix.omnihub
   qr: /assets/app-site/omnihub-google-play.png
@@ -20,7 +26,10 @@ kuntower:
   name: Kun Tower
   name_zh: 只因魔塔
   path: /kuntower.html
-  icon: /images/kuntower_icon.png
+  locales:
+    en: /en/kuntower.html
+    zh: /zh/kuntower.html
+  icon: /assets/app-site/kuntower-icon.webp
   google_play: https://play.google.com/store/apps/details?id=com.jannix.kuntower
   qr: /assets/app-site/kuntower-google-play.png
   privacy: /legal/kuntower_privacy.html

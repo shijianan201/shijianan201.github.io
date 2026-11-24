@@ -1,4 +1,8 @@
-{% assign product = site.data.apps[page.app] %}
+{% assign app_locale = page.lang | slice: 0, 2 %}
+{% assign copy = site.data.app_copy.omnihub[app_locale] %}
+{% assign product = site.data.apps.omnihub %}
+{% assign tile_icons = 'commenting-o,clock-o,qrcode,balance-scale' | split: ',' %}
+{% assign feature_icons = 'flask,paint-brush,th-large,map-marker' | split: ',' %}
 
 <section class="app-hero" aria-labelledby="omnihub-title">
   <div>
@@ -6,86 +10,63 @@
       <img class="app-hero__icon" src="{{ product.icon | relative_url }}" alt="" width="48" height="48">
       {{ product.name }}
     </div>
-    <h1 class="app-hero__title" id="omnihub-title">One app.<br><span>40+ daily tools.</span></h1>
-    <p class="app-hero__description">Extract text from photos, find the perfect color, and get daily tasks done with an AI-powered toolbox.</p>
+    <h1 class="app-hero__title" id="omnihub-title">{{ copy.title }}<br><span>{{ copy.highlight }}</span></h1>
+    <p class="app-hero__description">{{ copy.description }}</p>
     <div class="app-actions">
       <a class="app-button app-button--primary" href="{{ product.google_play }}">
         <i class="fa fa-play" aria-hidden="true"></i> Google Play
       </a>
-      <a class="app-button" href="#tools">Explore tools</a>
+      <a class="app-button" href="#tools">{{ copy.explore }}</a>
     </div>
   </div>
 
-  <div class="omni-board app-panel" aria-label="A selection of OmniHub tools">
-    <div class="omni-board__heading"><i class="fa fa-th-large" aria-hidden="true"></i> Toolbox</div>
+  <div class="omni-board app-panel" aria-label="{{ copy.toolbox_label | escape }}">
+    <div class="omni-board__heading"><i class="fa fa-th-large" aria-hidden="true"></i> {{ copy.toolbox }}</div>
     <div class="omni-board__grid">
       <div class="omni-tile">
         <div class="omni-scan" aria-hidden="true">
           <div class="omni-scan__sheet"><span></span><span></span><span></span></div>
         </div>
-        <span>Smart OCR</span>
+        <span>{{ copy.ocr }}</span>
       </div>
       <div class="omni-tile">
         <div class="omni-swatches" aria-hidden="true">
           <span></span><span></span><span></span><span></span>
         </div>
-        <span>Color Studio</span>
+        <span>{{ copy.colors }}</span>
       </div>
+      {% for tile in copy.tiles %}
       <div class="omni-tile omni-tile--small">
-        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-commenting-o"></i></span>
-        <span>AI Assistant</span>
+        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-{{ tile_icons[forloop.index0] }}"></i></span>
+        <span>{{ tile }}</span>
       </div>
-      <div class="omni-tile omni-tile--small">
-        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-clock-o"></i></span>
-        <span>Flip Clock</span>
-      </div>
-      <div class="omni-tile omni-tile--small">
-        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-qrcode"></i></span>
-        <span>QR Tools</span>
-      </div>
-      <div class="omni-tile omni-tile--small">
-        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-balance-scale"></i></span>
-        <span>Converters</span>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <section id="tools" aria-labelledby="omni-tools-title">
   <header class="app-section__header">
-    <h2 id="omni-tools-title">Explore the toolbox</h2>
+    <h2 id="omni-tools-title">{{ copy.explore }}</h2>
   </header>
   <div class="app-feature-grid">
+    {% for feature in copy.features %}
     <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-flask"></i></span>
-      <h3>AI Lab</h3>
-      <p>Extract text from photos, run name draws, draft with the AI assistant, and explore 3D Tarot, palm, or face readings.</p>
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-{{ feature_icons[forloop.index0] }}"></i></span>
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.description }}</p>
     </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-paint-brush"></i></span>
-      <h3>Color Studio</h3>
-      <p>Explore traditional Chinese colors and pick exact HEX, RGB, or CMYK values from an image.</p>
-    </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-th-large"></i></span>
-      <h3>Daily Utilities</h3>
-      <p>Use the salary calculator, unit converters, flip clock, and developer toolkit from the same app.</p>
-    </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-map-marker"></i></span>
-      <h3>Fishing Log</h3>
-      <p>Save fishing spots with GPS and record your catches. OmniHub removes location metadata when sharing photos.</p>
-    </article>
+    {% endfor %}
   </div>
 </section>
 
 <aside class="app-section omni-privacy app-panel" aria-labelledby="omni-privacy-title">
   <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-lock"></i></span>
   <div>
-    <h2 id="omni-privacy-title">Privacy by design</h2>
-    <p>Most utilities work offline. Sensitive data such as saved passwords is encrypted on your device.</p>
-    <a href="{{ product.privacy | relative_url }}">Read the privacy policy</a>
+    <h2 id="omni-privacy-title">{{ copy.privacy_title }}</h2>
+    <p>{{ copy.privacy_description }}</p>
+    <a href="{{ product.privacy | relative_url }}{% if app_locale == 'zh' %}#language-zh{% endif %}">{{ copy.privacy_link }}</a>
   </div>
 </aside>
 
-{% include app_download.html title="Get OmniHub" description="Scan with your phone to open Google Play." button="View on Google Play" qr_label="Google Play QR code for OmniHub" %}
+{% include app_download.html title=copy.download_title description=copy.download_hint qr_label=copy.qr_label %}

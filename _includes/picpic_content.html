@@ -1,4 +1,7 @@
-{% assign product = site.data.apps[page.app] %}
+{% assign app_locale = page.lang | slice: 0, 2 %}
+{% assign copy = site.data.app_copy.picpic[app_locale] %}
+{% assign product = site.data.apps.picpic %}
+{% assign feature_icons = 'clone,eye,magic,lock' | split: ',' %}
 
 <section class="app-hero" aria-labelledby="picpic-title">
   <div>
@@ -6,60 +9,47 @@
       <img class="app-hero__icon" src="{{ product.icon | relative_url }}" alt="" width="48" height="48">
       {{ product.name }}
     </div>
-    <h1 class="app-hero__title" id="picpic-title">相册轻一点，<br><span>回忆清晰一点。</span></h1>
-    <p class="app-hero__description">找出重复照片、相似连拍和模糊废片。用 AI 增强照片细节，整理和修复都在手机本地完成。</p>
+    <h1 class="app-hero__title" id="picpic-title">{{ copy.title }}<br><span>{{ copy.highlight }}</span></h1>
+    <p class="app-hero__description">{{ copy.description }}</p>
     <div class="app-actions">
       <a class="app-button app-button--primary" href="{{ product.google_play }}">
         <i class="fa fa-play" aria-hidden="true"></i> Google Play
       </a>
-      <a class="app-button" href="#download"><i class="fa fa-qrcode" aria-hidden="true"></i> 扫码下载</a>
+      <a class="app-button" href="#download"><i class="fa fa-qrcode" aria-hidden="true"></i> {{ copy.scan }}</a>
     </div>
   </div>
 
   <figure class="pic-comparison app-panel">
     <div class="pic-comparison__stage" id="baSlider">
-      <img class="pic-comparison__blurred" src="{{ '/assets/app-site/photo-demo.webp' | relative_url }}" alt="用蓝紫色灯光拍摄的人像示例" width="1000" height="1250" fetchpriority="high">
+      <img class="pic-comparison__blurred" src="{{ '/assets/app-site/photo-demo.webp' | relative_url }}" alt="{{ copy.photo_alt | escape }}" width="1000" height="1250" fetchpriority="high">
       <img class="pic-comparison__clear" src="{{ '/assets/app-site/photo-demo.webp' | relative_url }}" alt="" width="1000" height="1250">
-      <span class="pic-comparison__label pic-comparison__label--clear" aria-hidden="true">增强示意</span>
-      <span class="pic-comparison__label pic-comparison__label--blurred" aria-hidden="true">低清示意</span>
+      <span class="pic-comparison__label pic-comparison__label--clear" aria-hidden="true">{{ copy.clear }}</span>
+      <span class="pic-comparison__label pic-comparison__label--blurred" aria-hidden="true">{{ copy.blurry }}</span>
       <span class="pic-comparison__divider" aria-hidden="true">
         <span class="pic-comparison__handle"><i class="fa fa-arrows-h"></i></span>
       </span>
-      <input id="baSliderInput" class="pic-comparison__input" type="range" min="0" max="100" value="50" aria-label="画质对比，调整清晰示例所占比例" aria-describedby="pic-comparison-caption">
+      <input id="baSliderInput" class="pic-comparison__input" type="range" min="0" max="100" value="50" aria-label="{{ copy.slider_label | escape }}" aria-describedby="pic-comparison-caption">
     </div>
-    <figcaption class="pic-comparison__caption" id="pic-comparison-caption">拖动滑块查看画质变化示意。<span>Unsplash 示例照片</span></figcaption>
+    <figcaption class="pic-comparison__caption" id="pic-comparison-caption">{{ copy.slider_hint }}<span>{{ copy.photo_credit }}</span></figcaption>
   </figure>
 </section>
 
 <section class="pic-features" id="features" aria-labelledby="pic-features-title">
   <div class="app-section__header">
-    <h2 id="pic-features-title">整理与修复</h2>
+    <h2 id="pic-features-title">{{ copy.features_title }}</h2>
   </div>
   <div class="app-feature-grid">
+    {% for feature in copy.features %}
     <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-clone"></i></span>
-      <h3>相似照片去重</h3>
-      <p>将重复截图和相似连拍自动分组，方便选出值得保留的照片。</p>
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-{{ feature_icons[forloop.index0] }}"></i></span>
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.description }}</p>
     </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-eye"></i></span>
-      <h3>模糊废片筛查</h3>
-      <p>快速筛出失焦、拍糊和闭眼的照片，减少逐张翻找的时间。</p>
-    </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-magic"></i></span>
-      <h3>AI 画质增强</h3>
-      <p>使用 Real-ESRGAN 进行 4 倍超分辨率重构，为低清或老旧照片补充细节。</p>
-    </article>
-    <article class="app-feature app-panel">
-      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-lock"></i></span>
-      <h3>本地处理</h3>
-      <p>相册分析和画质增强均在设备上运行，照片无需上传。</p>
-    </article>
+    {% endfor %}
   </div>
 </section>
 
-{% include app_download.html title="下载 PicCleanUp" description="用手机扫描二维码，打开 Google Play。" button="在 Google Play 查看" qr_label="PicCleanUp 的 Google Play 二维码" %}
+{% include app_download.html title=copy.download_title description=copy.download_hint qr_label=copy.qr_label %}
 
 <script>
   const comparison = document.getElementById('baSlider');

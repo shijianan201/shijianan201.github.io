@@ -1,6 +1,7 @@
 {% assign product = site.data.apps[page.app] %}
 {% assign language = page.lang | default: 'en' %}
 {% assign language_base = language | slice: 0, 2 %}
+{% assign ui = site.data.app_ui[language_base] %}
 <!doctype html>
 <html lang="{{ language | escape }}">
 <head>
@@ -9,30 +10,56 @@
   <meta name="theme-color" content="#0c1018">
   <title>{{ page.title | escape }}</title>
   {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+  {% if page.layout == 'app' %}
+  <link rel="canonical" href="{{ product.locales[language_base] | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ product.locales.en | absolute_url }}">
+  <link rel="alternate" hreflang="zh-Hans" href="{{ product.locales.zh | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ product.path | absolute_url }}">
+  {% include app_language_script.html %}
+  {% endif %}
   <link rel="icon" href="{{ product.icon | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/themes/evjekylltheme/font-awesome-4.4.0/css/font-awesome.min.css' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/assets/app-site/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/app-site/base.css' | relative_url }}?v=2">
   {% if page.layout == 'app_document' %}
-  <link rel="stylesheet" href="{{ '/assets/app-site/documents.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/app-site/documents.css' | relative_url }}?v=2">
   {% else %}
   <link rel="stylesheet" href="{{ '/assets/app-site/' | append: page.app | append: '.css' | relative_url }}">
   {% endif %}
 </head>
 <body class="app-site app-site--{{ page.app }}">
-  <a class="app-skip-link" href="#main-content">{% if language_base == 'zh' %}跳到正文{% else %}Skip to content{% endif %}</a>
+  <a class="app-skip-link" href="#main-content">{{ ui.skip }}</a>
   <header class="app-header">
     <div class="app-shell app-header__inner">
-      <a class="app-brand" href="{{ '/' | relative_url }}">
+      {% assign brand_link = '/' %}
+      {% if page.layout == 'app' %}{% assign brand_link = site.data.apps.picpic.locales[language_base] %}{% endif %}
+      <a class="app-brand" href="{{ brand_link | relative_url }}">
         <img class="app-brand__avatar" src="{{ '/assets/app-site/developer-avatar.webp' | relative_url }}" alt="" width="36" height="36">
         <span>Jannix</span>
       </a>
-      <nav class="app-nav" aria-label="{% if language_base == 'zh' %}应用{% else %}Apps{% endif %}">
+      <nav class="app-nav" aria-label="{{ ui.apps }}">
         {% for entry in site.data.apps %}
           {% assign item = entry[1] %}
-          <a href="{{ item.path | relative_url }}"{% if page.app == entry[0] %} class="app-nav__active"{% if page.layout == 'app' %} aria-current="page"{% endif %}{% endif %}>{% if language_base == 'zh' %}{{ item.name_zh | default: item.name }}{% else %}{{ item.name }}{% endif %}</a>
+          {% assign app_link = item.path %}
+          {% if page.layout == 'app' %}{% assign app_link = item.locales[language_base] %}{% endif %}
+          <a href="{{ app_link | relative_url }}"{% if page.app == entry[0] %} class="app-nav__active"{% if page.layout == 'app' %} aria-current="page"{% endif %}{% endif %}>{% if language_base == 'zh' %}{{ item.name_zh | default: item.name }}{% else %}{{ item.name }}{% endif %}</a>
         {% endfor %}
       </nav>
-      <a class="app-blog-link" href="{{ '/archive.html' | relative_url }}">{% if language_base == 'zh' %}博客{% else %}Blog{% endif %}</a>
+      <div class="app-header__actions">
+        <a class="app-blog-link" href="{{ ui.blog_path | relative_url }}">{{ ui.blog }}</a>
+        {% if page.layout == 'app' %}
+        <details class="app-language">
+          <summary aria-label="{{ ui.language }}"><i class="fa fa-globe" aria-hidden="true"></i> {{ site.data.i18n[language_base].name }}</summary>
+          <div class="app-language__options">
+            {% for locale in product.locales %}
+              {% assign locale_code = locale[0] %}
+              {% assign locale_tag = 'en' %}
+              {% if locale_code == 'zh' %}{% assign locale_tag = 'zh-Hans' %}{% endif %}
+              <a href="{{ locale[1] | relative_url }}" lang="{{ locale_tag }}" hreflang="{{ locale_tag }}" data-app-language="{{ locale_code }}"{% if locale_code == language_base %} aria-current="true"{% endif %}>{{ site.data.i18n[locale_code].name }}</a>
+            {% endfor %}
+            <button type="button" data-language-auto hidden>{{ ui.automatic }}</button>
+          </div>
+        </details>
+        {% endif %}
+      </div>
     </div>
   </header>
 
@@ -43,14 +70,16 @@
   <footer class="app-footer">
     <div class="app-shell app-footer__inner">
       <span>© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
-      <nav aria-label="{% if language_base == 'zh' %}支持与政策{% else %}Support and policies{% endif %}">
-        <a href="{{ product.privacy | relative_url }}"{% if page.url == product.privacy %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}隐私政策{% else %}Privacy{% endif %}</a>
-        <a href="{{ product.terms | relative_url }}"{% if page.url == product.terms %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}用户协议{% else %}Terms{% endif %}</a>
+      <nav aria-label="{{ ui.support }}">
+        {% assign policy_language = '' %}
+        {% if language_base == 'zh' and page.layout == 'app' %}{% assign policy_language = '#language-zh' %}{% endif %}
+        <a href="{{ product.privacy | relative_url }}{{ policy_language }}"{% if page.url == product.privacy %} aria-current="page"{% endif %}>{{ ui.privacy }}</a>
+        <a href="{{ product.terms | relative_url }}{{ policy_language }}"{% if page.url == product.terms %} aria-current="page"{% endif %}>{{ ui.terms }}</a>
         {% if product.help %}
-        <a href="{{ product.help | relative_url }}"{% if page.url == product.help %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}帮助中心{% else %}Help Center{% endif %}</a>
-        <a href="{{ product.deletion | relative_url }}"{% if page.url == product.deletion %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}删除数据{% else %}Data Deletion{% endif %}</a>
+        <a href="{{ product.help | relative_url }}"{% if page.url == product.help %} aria-current="page"{% endif %}>{{ ui.help }}</a>
+        <a href="{{ product.deletion | relative_url }}{{ policy_language }}"{% if page.url == product.deletion %} aria-current="page"{% endif %}>{{ ui.deletion }}</a>
         {% endif %}
-        <a href="{{ '/z-about.html' | relative_url }}">{% if language_base == 'zh' %}关于{% else %}About{% endif %}</a>
+        <a href="{{ '/z-about.html' | relative_url }}">{{ ui.about }}</a>
       </nav>
     </div>
   </footer>

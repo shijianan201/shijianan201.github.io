@@ -1,8 +1,11 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_TW, zh_HK, es, de, fr, ja, ko, pt, it, id, th, vi, tr, ru]
 app: omnihub
 title: OmniHub Terms of Use
 ---
+
+<a id="language-en"></a>
 
 # Terms of Use for OmniHub
 
@@ -71,6 +74,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 <br><hr><br>
 
+<a id="language-zh"></a>
+
 # OmniHub 用户协议 (简体中文)
 
 **最后更新日期: 2026-04-29**
@@ -83,6 +88,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   所有交易由 Apple/Google 处理，遵循其退款政策政策。
 
 ---
+
+<a id="language-zh_TW"></a>
 
 # OmniHub 用戶協議 (繁體中文 - 台灣)
 
@@ -97,6 +104,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-zh_HK"></a>
+
 # OmniHub 用戶協議 (繁體中文 - 香港)
 
 **最後更新日期: 2026-04-29**
@@ -110,6 +119,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-es"></a>
+
 # Términos de Uso de OmniHub (Español)
 
 **Última actualización: 29-04-2026**
@@ -119,6 +130,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   **Contenido de Aniversario**: Usted es el único responsable de todo el contenido registrado en la función "Aniversario", incluidos, entre otros, imágenes, asociaciones de contactos e información de ubicación.
 
 ---
+
+<a id="language-de"></a>
 
 # Nutzungsbedingungen für OmniHub (Deutsch)
 
@@ -130,6 +143,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-fr"></a>
+
 # Conditions d'Utilisation OmniHub (Français)
 
 **Dernière mise à jour : 29/04/2026**
@@ -139,6 +154,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   **Contenu de l'anniversaire** : Vous êtes seul responsable de tout le contenu enregistré dans la fonction "Anniversaire", y compris, mais sans s'y limiter, les images, les associations de contacts et les informations de localisation.
 
 ---
+
+<a id="language-ja"></a>
 
 # OmniHub 利用規約 (日本語)
 
@@ -150,6 +167,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-ko"></a>
+
 # OmniHub 이용 약관 (한국어)
 
 **최종 업데이트: 2026-04-29**
@@ -159,6 +178,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   **기념일 콘텐츠**: 귀하는 이미지, 연락처 연결 및 위치 정보를 포함하되 이에 국한되지 않는 "기념일" 기능에 기록된 모든 콘텐츠에 대해 전적인 법적 책임을 집니다.
 
 ---
+
+<a id="language-pt"></a>
 
 # Termos de Uso OmniHub (Português)
 
@@ -170,6 +191,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-it"></a>
+
 # Termini di Utilizzo di OmniHub (Italiano)
 
 **Ultimo aggiornamento: 29/04/2026**
@@ -179,6 +202,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   **Contenuto dell'anniversario**: Sei l'unico responsabile di tutti i contenuti registrati nella funzione "Anniversario", inclusi, a titolo esemplificativo ma non esaustivo, immagini, associazioni di contatti e informazioni sulla posizione.
 
 ---
+
+<a id="language-id"></a>
 
 # Syarat Penggunaan OmniHub (Indonesian)
 
@@ -190,6 +215,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-th"></a>
+
 # เงื่อนไขการใช้งาน OmniHub (Thai)
 
 **อัปเดตล่าสุด: 29-04-2026**
@@ -200,6 +227,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 
 ---
 
+<a id="language-vi"></a>
+
 # Điều khoản Sử dụng OmniHub (Vietnamese)
 
 **Cập nhật lần cuối: 29-04-2026**
@@ -207,6 +236,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 **1. Tính năng và Nội dung**
 -   Kết quả từ AI (**Google Gemini**) có thể không chính xác. Bạn chịu trách nhiệm về các hình ảnh đã tải lên. **Kết quả AI chỉ dành cho mục đích giải trí hoặc tham khảo.**
 -   **Nội dung kỷ niệm**: Bạn hoàn toàn chịu trách nhiệm pháp lý đối với tất cả nội dung được ghi lại trong tính năng "Kỷ niệm", bao gồm nhưng không giới hạn ở hình ảnh, liên kết danh bạ và thông tin vị trí.
+
+<a id="language-tr"></a>
 
 # OmniHub Kullanım Koşulları (Turkish)
 
@@ -217,6 +248,8 @@ If you have any questions about these Terms, please contact us at: **xiaojiangag
 -   **Yıldönümü İçeriği**: "Yıldönümü" özelliğine kaydedilen resimler, kişi ilişkileri ve konum bilgileri dahil ancak bunlarla sınırlı olmamak üzere tüm içerikten tamamen siz sorumlusunuz.
 
 ---
+
+<a id="language-ru"></a>
 
 # Условия использования OmniHub (Russian)
 

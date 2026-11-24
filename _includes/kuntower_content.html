@@ -1,221 +1,156 @@
-{% assign product = site.data.apps[page.app] %}
+{% assign app_locale = page.lang | slice: 0, 2 %}
+{% assign copy = site.data.app_copy.kuntower[app_locale] %}
+{% assign product = site.data.apps.kuntower %}
+{% assign calculator = copy.calculator %}
+{% assign default_enemy = site.data.kuntower_enemies | where: 'id', 'orc' | first %}
+{% assign banner = '/assets/app-site/kuntower-banner.webp' | relative_url %}
+{% assign banner_small = '/assets/app-site/kuntower-banner-small.webp' | relative_url %}
 
 <section class="app-hero kt-hero" aria-labelledby="kt-title">
   <div>
     <div class="app-hero__identity">
       <img class="app-hero__icon" src="{{ product.icon | relative_url }}" alt="" width="48" height="48">
-      Kun Tower
+      {{ product.name }}
     </div>
-    <h1 class="app-hero__title" id="kt-title">只因魔塔<span> 50 层</span></h1>
-    <p class="app-hero__description">穿上背带裤，握紧元气篮球。挑战经典魔塔和狂野肉鸽模式，用策略闯到塔顶，救出鸡妹妹。</p>
+    <h1 class="app-hero__title" id="kt-title">{{ copy.hero.title }}<span>{{ copy.hero.highlight }}</span></h1>
+    <p class="app-hero__description">{{ copy.hero.description }}</p>
     <div class="app-actions">
       <a class="app-button app-button--primary" href="{{ product.google_play }}"><i class="fa fa-play" aria-hidden="true"></i> Google Play</a>
-      <a class="app-button" href="#kt-calculator"><i class="fa fa-calculator" aria-hidden="true"></i> 战力计算器</a>
+      <a class="app-button" href="#kt-calculator"><i class="fa fa-calculator" aria-hidden="true"></i> {{ calculator.title }}</a>
     </div>
   </div>
   <figure class="kt-hero-art app-panel">
-    <img src="{{ '/assets/app-site/kuntower-banner.webp' | relative_url }}" alt="被紫色魔力环绕的魔塔与塔下的冒险者" width="1376" height="768" fetchpriority="high">
+    <img src="{{ banner }}?v=2" srcset="{{ banner_small }} 640w, {{ banner }}?v=2 1100w"
+         sizes="(max-width: 740px) calc(100vw - 2rem), (max-width: 1300px) 48vw, 610px"
+         alt="{{ copy.hero.image_alt | escape }}" width="1100" height="614" fetchpriority="high">
   </figure>
 </section>
 
-<nav class="kt-nav-bar" aria-label="游戏攻略">
-  <a href="#kt-modes">玩法模式</a>
-  <a href="#kt-cultivation">修仙境界</a>
-  <a href="#kt-calculator">战力计算器</a>
-  <a href="#kt-artifacts">绝世神器</a>
-  <a href="#kt-talents">坤门六艺</a>
-  <a href="#kt-achievements">荣誉成就</a>
-  <a href="#kt-npcs">人物图鉴</a>
-  <a href="#kt-spire-route">关卡路线</a>
-  <a href="#download">扫码下载</a>
+<nav class="kt-nav-bar" aria-label="{{ copy.nav_label }}">
+  {% for link in copy.nav %}
+  <a href="#{{ link[0] }}">{{ link[1] }}</a>
+  {% endfor %}
 </nav>
 
 <details class="kt-story app-panel">
-  <summary>游戏背景</summary>
-  <p>在神秘的<strong>「艾坤大陆」</strong>上，练习时长两年半的见习练习生坤坤，正一边唱跳一边练习他的纯金元气篮球。不料，嫉妒坤坤才华的邪恶黑粉魔王掳走了<strong>「鸡妹妹」</strong>，将这位全球后援会会长囚禁在 50 层魔塔的顶端。</p>
-  <p>作为练习生的你，穿上标志性战袍背带裤，手持出道篮球，只身勇闯这片被黑粉与魔物占领的魔塔。</p>
+  <summary>{{ copy.story.title }}</summary>
+  {% for paragraph in copy.story.paragraphs %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
 </details>
 
 <section id="kt-modes" class="app-section" aria-labelledby="kt-modes-title">
   <header class="app-section__header">
-    <h2 id="kt-modes-title">三大核心模式 · 算力与肉鸽并存</h2>
-    <p>满足严谨卡防数值党、爽快暴击肉鸽党与登顶挑战极限党</p>
+    <h2 id="kt-modes-title">{{ copy.modes.title }}</h2>
+    <p>{{ copy.modes.description }}</p>
   </header>
   <div class="kt-mode-grid">
+    {% for mode in copy.modes.items %}
     <div class="kt-mode-card app-panel">
       <div class="kt-mode-header">
-        <span class="kt-mode-badge">经典模式</span>
-        <h3 class="kt-mode-title">1:1 魔塔经典算法</h3>
+        <span class="kt-mode-badge">{{ mode.badge | escape }}</span>
+        <h3 class="kt-mode-title">{{ mode.title }}</h3>
       </div>
-      <p>
-        严格遵从 50 层经典魔塔原版逻辑！无随机波动、零闪避暴击，100% 确定性路线规划，考验你每一步的卡防决策与钥匙资源配置。
-      </p>
+      <p>{{ mode.description }}</p>
       <ul class="kt-mode-list">
-        <li>纯物理与领域损耗：麻衣电击巫师(100)与红衣魔音大魔导(200)固定领域扣血</li>
-        <li>准确损耗角标预演：所见即所得，拒绝随机性误伤</li>
-        <li>经典道具与机关解密：圣光十字架、神圣剑盾与 24F 传送门</li>
+        {% for note in mode.notes %}
+        <li>{{ note }}</li>
+        {% endfor %}
       </ul>
     </div>
-    <div class="kt-mode-card app-panel">
-      <div class="kt-mode-header">
-        <span class="kt-mode-badge">狂野模式</span>
-        <h3 class="kt-mode-title">肉鸽暴击与修仙突破</h3>
-      </div>
-      <p>
-        打破传统数值束缚！怪物属性动态浮动，体验 11 阶修仙境界突破、18 项流派天赋自由组合与金光圣盾破防！
-      </p>
-      <ul class="kt-mode-list">
-        <li>11 阶修仙境界突破（Lv.0 个人练习生 ~ Lv.10 坤之巅峰·至尊神王）</li>
-        <li>六大肉鸽流派天赋（背带裤/跳/铁山靠/唱/Rap/篮球）</li>
-        <li>全塔 15 只【沙包练习生】共生进化全歼隐藏成就</li>
-        <li>狂野精英变异词缀（狂怒/铁壁/迅捷/宝藏）与金光圣盾抗伤</li>
-      </ul>
-    </div>
-    <div class="kt-mode-card app-panel">
-      <div class="kt-mode-header">
-        <span class="kt-mode-badge">无尽幻境 &amp; 51F</span>
-        <h3 class="kt-mode-title">终极套房与极限挑战</h3>
-      </div>
-      <p>
-        突破传统 50 层魔塔界限！通关 50 层解锁神秘隐藏第 51 层 VIP 总统套房大结局与全宇宙无尽幻境榜单！
-      </p>
-      <ul class="kt-mode-list">
-        <li>51F 全塔魔王和解毕业册：魔龙、红衣巫师、大章鱼集体“黑转粉”感人留言</li>
-        <li>鸡妹妹常驻互动：喝生椰拿铁、吃华强保熟西瓜，揭晓最终出道大反转</li>
-        <li>坤界无尽幻境：随机层数与遗物构筑，冲击全球极简步数榜</li>
-      </ul>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="kt-cultivation" class="app-section" aria-labelledby="kt-cultivation-title">
   <header class="app-section__header">
-    <h2 id="kt-cultivation-title">狂野模式 · 11 阶修仙境界</h2>
-    <p>经验满级时可以手动选择突破时机，升级时会等量恢复生命值。</p>
+    <h2 id="kt-cultivation-title">{{ copy.cultivation.title }}</h2>
+    <p>{{ copy.cultivation.description }}</p>
   </header>
   <div class="kt-cultivation-flow app-panel">
     <div class="kt-realm-tags">
-      <div class="kt-realm-item">
-        <div class="kt-realm-lvl">Lv.0 / 1</div>
-        <div class="kt-realm-name">个人练习生</div>
-        <div class="kt-realm-perk">初始暴击 11%</div>
+      {% for realm in copy.cultivation.items %}
+      <div class="kt-realm-item{% if forloop.last %} kt-realm-item--final{% elsif forloop.index == 3 or forloop.index == 5 or forloop.index == 7 %} highlight{% endif %}">
+        <div class="kt-realm-lvl">{{ realm.level }}</div>
+        <div class="kt-realm-name">{{ realm.name }}</div>
+        <div class="kt-realm-perk">{{ realm.perk }}</div>
       </div>
-      <div class="kt-realm-item">
-        <div class="kt-realm-lvl">Lv.2</div>
-        <div class="kt-realm-name">资深爱坤</div>
-        <div class="kt-realm-perk">HP上限 +20</div>
-      </div>
-      <div class="kt-realm-item highlight">
-        <div class="kt-realm-lvl">Lv.3 阶段突破</div>
-        <div class="kt-realm-name">舞台霸主</div>
-        <div class="kt-realm-perk">★ 初级天赋3选1</div>
-      </div>
-      <div class="kt-realm-item">
-        <div class="kt-realm-lvl">Lv.4 / 5</div>
-        <div class="kt-realm-name">全能偶像</div>
-        <div class="kt-realm-perk">HP上限 +60</div>
-      </div>
-      <div class="kt-realm-item highlight">
-        <div class="kt-realm-lvl">Lv.6 进阶突破</div>
-        <div class="kt-realm-name">顶流大咖</div>
-        <div class="kt-realm-perk">★ 进阶天赋3选1</div>
-      </div>
-      <div class="kt-realm-item">
-        <div class="kt-realm-lvl">Lv.7 / 8</div>
-        <div class="kt-realm-name">篮球巨星</div>
-        <div class="kt-realm-perk">暴击 44% / 暴伤 216%</div>
-      </div>
-      <div class="kt-realm-item highlight">
-        <div class="kt-realm-lvl">Lv.9 终极突破</div>
-        <div class="kt-realm-name">时代导师</div>
-        <div class="kt-realm-perk">★ 终极天赋3选1</div>
-      </div>
-      <div class="kt-realm-item kt-realm-item--final">
-        <div class="kt-realm-lvl">Lv.10 巅峰大圆满</div>
-        <div class="kt-realm-name">坤之巅峰</div>
-        <div class="kt-realm-perk">暴击77% / 满级金币转化</div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
-<section id="kt-calculator" class="app-section" aria-labelledby="kt-calculator-title">
+<section id="kt-calculator" class="app-section" aria-labelledby="kt-calculator-title" data-messages="{{ calculator.messages | jsonify | escape }}">
   <header class="app-section__header">
-    <h2 id="kt-calculator-title">战力计算器</h2>
-    <p>输入当前属性并选择对手，即可预估交锋回合和生命损耗。</p>
+    <h2 id="kt-calculator-title">{{ calculator.title }}</h2>
+    <p>{{ calculator.description }}</p>
   </header>
 
   <div class="kt-widget-box app-panel">
     <div>
       <div class="kt-calc-inputs">
         <div class="kt-input-group">
-          <label for="kt-player-atk">攻击力 <span>ATK</span></label>
+          <label for="kt-player-atk">{{ calculator.attack }} <span>ATK</span></label>
           <input type="number" id="kt-player-atk" value="130" min="1" inputmode="numeric">
         </div>
         <div class="kt-input-group">
-          <label for="kt-player-def">防御力 <span>DEF</span></label>
+          <label for="kt-player-def">{{ calculator.defense }} <span>DEF</span></label>
           <input type="number" id="kt-player-def" value="100" min="0" inputmode="numeric">
         </div>
         <div class="kt-input-group">
-          <label for="kt-player-hp">当前生命 <span>HP</span></label>
+          <label for="kt-player-hp">{{ calculator.health }} <span>HP</span></label>
           <input type="number" id="kt-player-hp" value="1200" min="1" inputmode="numeric">
         </div>
         <div class="kt-input-group kt-input-group--enemy">
-          <label for="kt-enemy-select">选择对手</label>
+          <label for="kt-enemy-select">{{ calculator.enemy }}</label>
           <select id="kt-enemy-select">
-            <option value="skeleton">1-10F 骷髅战士 (Atk: 52, Def: 12, HP: 55)</option>
-            <option value="skeletonCaptain">10F 骷髅队长 (Atk: 150, Def: 90, HP: 400)</option>
-            <option value="orc" selected>11-20F 兽人武士 (Atk: 122, Def: 18, HP: 340)</option>
-            <option value="bigBat">15F 嗜血大飞蝠 (Atk: 230, Def: 70, HP: 450)</option>
-            <option value="vampire">20F 吸血鬼领主 (Atk: 340, Def: 95, HP: 700)</option>
-            <option value="brownWizard">21-30F 麻衣电击巫师 (Atk: 370, Def: 110, HP: 220)</option>
-            <option value="magicDragon">24F 远古魔龙 (Atk: 500, Def: 250, HP: 1200)</option>
-            <option value="bossYellow">30F 黄金魔王 (Atk: 450, Def: 180, HP: 1000)</option>
-            <option value="octopus">35F 深海八爪鱼 (Atk: 520, Def: 210, HP: 1400)</option>
-            <option value="redWizard">31-40F 魔音大魔导 (Atk: 380, Def: 130, HP: 200)</option>
-            <option value="bossTwin">40F 双子大魔导 (Atk: 560, Def: 280, HP: 1800)</option>
-            <option value="darkKnight">41-48F 黑暗骑士 (Atk: 580, Def: 320, HP: 2000)</option>
-            <option value="bossRed">49F 假魔王 (Atk: 620, Def: 350, HP: 2600)</option>
-            <option value="demonKing">50F 终极黑粉魔王 (Atk: 680, Def: 420, HP: 3800)</option>
-            <option value="shadowDevourer">狂野变异 沙包练习生 (Atk: 450, Def: 300, HP: 2500)</option>
+            {% for enemy in site.data.kuntower_enemies %}
+            {% assign enemy_name = enemy.name[app_locale] %}
+            <option value="{{ enemy.id }}"{% if enemy.id == default_enemy.id %} selected{% endif %}
+                    data-name="{{ enemy_name | escape }}" data-note="{{ enemy.note[app_locale] | escape }}"
+                    data-sprite="{{ '/images/kuntower/' | append: enemy.sprite | relative_url }}"
+                    data-atk="{{ enemy.atk }}" data-defense="{{ enemy.defense }}" data-hp="{{ enemy.hp }}"
+                    {% if enemy.field_damage %}data-field-damage="{{ enemy.field_damage }}"{% endif %}>{% if enemy.floor != '' %}{{ enemy.floor }} {% endif %}{{ enemy_name }} (ATK {{ enemy.atk }}, DEF {{ enemy.defense }}, HP {{ enemy.hp }})</option>
+            {% endfor %}
           </select>
         </div>
       </div>
 
-      <p class="kt-gear-label">道具加成</p>
+      {% assign attack_bonuses = '10,0,40,100' | split: ',' %}
+      {% assign defense_bonuses = '0,10,40,100' | split: ',' %}
+      <p class="kt-gear-label">{{ calculator.gear_label }}</p>
       <div class="kt-calc-gear-btns">
-        <button type="button" class="kt-gear-btn" data-attack-bonus="10" data-defense-bonus="0">木质篮球 (+10 攻)</button>
-        <button type="button" class="kt-gear-btn" data-attack-bonus="0" data-defense-bonus="10">见习背带裤 (+10 防)</button>
-        <button type="button" class="kt-gear-btn" data-attack-bonus="40" data-defense-bonus="40">骑士打歌神装 (+40 攻防)</button>
-        <button type="button" class="kt-gear-btn" data-attack-bonus="100" data-defense-bonus="100">神圣篮球与背带裤 (+100 攻防)</button>
-        <button type="button" class="kt-gear-btn kt-gear-btn--reset" id="kt-reset-stats">重置属性</button>
+        {% for gear in calculator.gear %}
+        <button type="button" class="kt-gear-btn" data-attack-bonus="{{ attack_bonuses[forloop.index0] }}" data-defense-bonus="{{ defense_bonuses[forloop.index0] }}">{{ gear }}</button>
+        {% endfor %}
+        <button type="button" class="kt-gear-btn kt-gear-btn--reset" id="kt-reset-stats">{{ calculator.reset }}</button>
       </div>
     </div>
 
     <div class="kt-calc-preview">
       <div class="kt-calc-monster-preview">
-        <img id="kt-monster-icon" src="{{ '/images/kuntower/orc.png' | relative_url }}" alt="" width="48" height="48" class="kt-calc-monster-img">
+        <img id="kt-monster-icon" src="{{ '/images/kuntower/' | append: default_enemy.sprite | relative_url }}" alt="" width="48" height="48" class="kt-calc-monster-img" loading="lazy">
         <div class="kt-calc-monster-info">
-          <h3 id="kt-monster-display-name">兽人武士 (Orc Warrior)</h3>
-          <p id="kt-monster-display-stats">生命值 340 · 攻击力 122 · 防御力 18</p>
-          <p id="kt-monster-display-note">11-20F 常见物理战士</p>
+          <h3 id="kt-monster-display-name">{{ default_enemy.name[app_locale] }}</h3>
+          <p id="kt-monster-display-stats">{{ calculator.messages.stats | replace: '%hp%', default_enemy.hp | replace: '%atk%', default_enemy.atk | replace: '%def%', default_enemy.defense }}</p>
+          <p id="kt-monster-display-note">{{ default_enemy.note[app_locale] }}</p>
         </div>
       </div>
 
       <div class="kt-calc-result" data-state="win">
-        <p id="kt-result-status" class="kt-result-status" role="status">可以战胜，预计损耗 66 点生命值。</p>
+        <p id="kt-result-status" class="kt-result-status" role="status">{{ calculator.messages.win | replace: '%damage%', '66' }}</p>
         <div class="kt-hp-bar-wrap" aria-hidden="true"><div id="kt-hp-bar" class="kt-hp-bar-inner"></div></div>
         <dl class="kt-result-details">
           <div>
-            <dt>预计损耗</dt>
+            <dt>{{ calculator.totals[0] }}</dt>
             <dd id="kt-res-damage">66</dd>
           </div>
           <div>
-            <dt>交锋回合</dt>
+            <dt>{{ calculator.totals[1] }}</dt>
             <dd id="kt-res-rounds">4</dd>
           </div>
           <div>
-            <dt>剩余生命</dt>
+            <dt>{{ calculator.totals[2] }}</dt>
             <dd id="kt-res-remain-hp">1134</dd>
           </div>
         </dl>
@@ -226,260 +161,91 @@
 
 <section id="kt-artifacts" class="app-section" aria-labelledby="kt-artifacts-title">
   <header class="app-section__header">
-    <h2 id="kt-artifacts-title">绝世秘宝 &amp; 狂野神器库</h2>
-    <p>搜罗全塔珍稀装备道具，展现极致羁绊梗力</p>
+    <h2 id="kt-artifacts-title">{{ copy.artifacts.title | escape }}</h2>
+    <p>{{ copy.artifacts.description }}</p>
   </header>
   <div class="kt-artifact-grid">
+    {% for artifact in copy.artifacts.items %}
     <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/god_basketball.png' | relative_url }}" alt="神圣钛合金篮球" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">神圣钛合金篮球</h3>
-      <div class="kt-artifact-desc">练习生顶峰本命武器！蕴含至高音浪神力，攻击力狂飙 +100 点！</div>
+      <img src="{{ '/images/kuntower/' | append: artifact[0] | append: '.png' | relative_url }}" alt="" width="54" height="54" class="kt-artifact-img" loading="lazy">
+      <h3 class="kt-artifact-name">{{ artifact[1].title }}</h3>
+      <div class="kt-artifact-desc">{{ artifact[1].description }}</div>
     </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/god_suspenders.png' | relative_url }}" alt="神级背带裤" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">神级背带裤</h3>
-      <div class="kt-artifact-desc">金光闪耀的战袍防具！双带紧绷卸力，防御力永久飙升 +100 点！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/coffin_horn.png' | relative_url }}" alt="欢庆音响" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">欢庆音响</h3>
-      <div class="kt-artifact-desc">狂野主动秘宝！激活后下场战斗怪物攻防数值强制互换（高防怪克星）！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/jiege_bread.png' | relative_url }}" alt="杰哥的面包" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">杰哥的面包</h3>
-      <div class="kt-artifact-desc">绝世禁物！食用大幅回血且下场战斗 100% 必定暴击且攻击提升 30%（超勇）！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/ripe_watermelon.png' | relative_url }}" alt="华强保熟西瓜" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">华强保熟西瓜</h3>
-      <div class="kt-artifact-desc">从 16F 瓜摊大口吃瓜！切开不仅保熟还能瞬间恢复大量生命值！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/kun_boots.png' | relative_url }}" alt="坤步疾行靴" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">坤步疾行靴</h3>
-      <div class="kt-artifact-desc">隐藏密室稀世神器！穿戴后身法如风，永久免疫所有史莱姆粘滞负面！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/dodge_amulet.png' | relative_url }}" alt="闪避护符" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">闪避护符</h3>
-      <div class="kt-artifact-desc">斩杀 40F 双子大魔导获得！常驻提升 15% 基础闪避率，化身残影规避重击！</div>
-    </div>
-
-    <div class="kt-artifact-card app-panel">
-      <img src="{{ '/images/kuntower/shadow_devourer.png' | relative_url }}" alt="沙包练习生" class="kt-artifact-img" loading="lazy">
-      <h3 class="kt-artifact-name">沙包练习生</h3>
-      <div class="kt-artifact-desc">全塔共 15 只共生进化魔物！击杀气血反哺，全歼解锁 Google Play 15 步隐藏成就！</div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="kt-talents" class="app-section" aria-labelledby="kt-talents-title">
   <header class="app-section__header">
-    <h2 id="kt-talents-title">坤门六艺 · 六大肉鸽流派</h2>
-    <p>Lv.3 / Lv.6 / Lv.9 三阶突破，自由组建最强 Build</p>
+    <h2 id="kt-talents-title">{{ copy.talents.title }}</h2>
+    <p>{{ copy.talents.description }}</p>
   </header>
+  {% assign talent_icons = '👖|🦘|🥋|📢|🎙️|🥚' | split: '|' %}
   <div class="kt-school-grid">
+    {% for talent in copy.talents.items %}
     <div class="kt-school-card app-panel">
       <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">👖</span>
-        <h3 class="kt-school-title">背带裤流（防反抗伤）</h3>
+        <span class="kt-school-icon" aria-hidden="true">{{ talent_icons[forloop.index0] }}</span>
+        <h3 class="kt-school-title">{{ talent.title }}</h3>
       </div>
-      <div class="kt-school-desc">【背带紧绷】下调免暴门槛，【双带卸力】固定减伤，【至尊金身不灭】致死免死 1 次并防御+30%！</div>
+      <div class="kt-school-desc">{{ talent.description }}</div>
     </div>
-
-    <div class="kt-school-card app-panel">
-      <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">🦘</span>
-        <h3 class="kt-school-title">跳 / 暴扣流（极致暴击）</h3>
-      </div>
-      <div class="kt-school-desc">【战术起跳】提升暴击率，【空中连扣】暴击叠暴伤，【雷霆万钧】暴击追加 20% 真实伤害！</div>
-    </div>
-
-    <div class="kt-school-card app-panel">
-      <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">🥋</span>
-        <h3 class="kt-school-title">铁山靠流（灵动身法）</h3>
-      </div>
-      <div class="kt-school-desc">【侧身靠步】提升闪避率，【靠势回旋】闪避后下击必暴，【乾坤铁山靠】闪避触发 50% 攻击强力反击！</div>
-    </div>
-
-    <div class="kt-school-card app-panel">
-      <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">📢</span>
-        <h3 class="kt-school-title">唱 / 破甲流（穿透特攻）</h3>
-      </div>
-      <div class="kt-school-desc">【开麦音浪】无视 6% 防御，【全开麦真唱】对防御特性怪 1.1x 增伤，【绝对领域】巫师领域降伤 40%！</div>
-    </div>
-
-    <div class="kt-school-card app-panel">
-      <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">🎙️</span>
-        <h3 class="kt-school-title">Rap / 连击流（单押追击）</h3>
-      </div>
-      <div class="kt-school-desc">【单押快攻】20% 概率触发 50% 追击，【双押连打】追击附带吸血，【暴风押韵】连击触发攻击提升 12%！</div>
-    </div>
-
-    <div class="kt-school-card app-panel">
-      <div class="kt-school-header">
-        <span class="kt-school-icon" aria-hidden="true">🥚</span>
-        <h3 class="kt-school-title">篮球 / 续航流（理财发育）</h3>
-      </div>
-      <div class="kt-school-desc">【运球捡蛋】金币+10%与吸血+3%，【双黄绝技】击杀掉落金蛋，【百万应援】魔塔商店打折与金币加攻！</div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="kt-achievements" class="app-section" aria-labelledby="kt-achievements-title">
   <header class="app-section__header">
-    <h2 id="kt-achievements-title">Google Play 荣誉成就与名人堂</h2>
-    <p>支持跨设备云存档与全网排行榜，向全宇宙玩家证明最强算力</p>
+    <h2 id="kt-achievements-title">{{ copy.achievements.title }}</h2>
+    <p>{{ copy.achievements.description }}</p>
   </header>
   <div class="kt-achieve-grid">
+    {% for achievement in copy.achievements.items %}
     <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/51f_debut.png' | relative_url }}" alt="51F VIP 出道" class="kt-achieve-icon" loading="lazy">
+      <img src="{{ '/images/kuntower/achievements/' | append: achievement[0] | append: '.png' | relative_url }}" alt="" width="52" height="52" class="kt-achieve-icon" loading="lazy">
       <div>
-        <h3 class="kt-achieve-title">51F 总统套房出道庆典</h3>
-        <div class="kt-achieve-desc">突破传统 50 层魔塔界限，登顶隐藏总统套房，解救鸡妹妹并达成全员和解！</div>
+        <h3 class="kt-achieve-title">{{ achievement[1].title }}</h3>
+        <div class="kt-achieve-desc">{{ achievement[1].description }}</div>
       </div>
     </div>
-
-    <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/50f_demon_king.png' | relative_url }}" alt="终极黑粉魔王陨落" class="kt-achieve-icon" loading="lazy">
-      <div>
-        <h3 class="kt-achieve-title">50F 终极黑粉魔王斩落</h3>
-        <div class="kt-achieve-desc">破解 49F 封魔十字阵，以真爱之力斩杀 50F 黑粉主宰，赢得尊严之战！</div>
-      </div>
-    </div>
-
-    <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/all_sandbags.png' | relative_url }}" alt="全灭沙包练习生" class="kt-achieve-icon" loading="lazy">
-      <div>
-        <h3 class="kt-achieve-title">全歼 15 只沙包练习生</h3>
-        <div class="kt-achieve-desc">狂野模式专属！击败全塔所有共生进化的变异沙包练习生，解锁隐藏荣耀！</div>
-      </div>
-    </div>
-
-    <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/jinitai.png' | relative_url }}" alt="姬霓太美金曲认证" class="kt-achieve-icon" loading="lazy">
-      <div>
-        <h3 class="kt-achieve-title">姬霓太美金曲认证</h3>
-        <div class="kt-achieve-desc">收集全塔隐藏黑胶唱片，在 51 层留声机解锁全部高燃名曲！</div>
-      </div>
-    </div>
-
-    <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/trainee_2_5_years.png' | relative_url }}" alt="练习时长两年半" class="kt-achieve-icon" loading="lazy">
-      <div>
-        <h3 class="kt-achieve-title">练习时长两年半</h3>
-        <div class="kt-achieve-desc">坚持不懈修炼至满级「坤之巅峰」，达成 77% 暴击与 300% 暴伤至尊神王！</div>
-      </div>
-    </div>
-
-    <div class="kt-achieve-card app-panel">
-      <img src="{{ '/images/kuntower/achievements/god_gear.png' | relative_url }}" alt="满神装全能偶像" class="kt-achieve-icon" loading="lazy">
-      <div>
-        <h3 class="kt-achieve-title">神圣战袍大成</h3>
-        <div class="kt-achieve-desc">同时装备神圣钛合金篮球与神级背带裤，攻击防御双双突破天际！</div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="kt-npcs" class="app-section" aria-labelledby="kt-npcs-title">
   <header class="app-section__header">
-    <h2 id="kt-npcs-title">艾坤大陆经典人物群像</h2>
-    <p>魔塔不仅有怪物，还有与你一路相伴的奇趣伙伴</p>
+    <h2 id="kt-npcs-title">{{ copy.characters.title }}</h2>
+    <p>{{ copy.characters.description }}</p>
   </header>
   <div class="kt-npc-grid">
+    {% for npc in copy.characters.items %}
     <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/princess.png' | relative_url }}" alt="鸡妹妹" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">鸡妹妹</h3>
-      <div class="kt-npc-role">全球后援会会长</div>
-      <div class="kt-npc-quote">“坤坤，我就知道你一定会穿上背带裤杀穿 50 层来救我！”</div>
+      <img src="{{ '/images/kuntower/npc/' | append: npc[0] | append: '.png' | relative_url }}" alt="" width="54" height="54" class="kt-npc-img" loading="lazy">
+      <h3 class="kt-npc-name">{{ npc[1].title }}</h3>
+      <div class="kt-npc-role">{{ npc[1].role }}</div>
+      <div class="kt-npc-quote">{{ npc[1].quote | escape }}</div>
     </div>
-
-    <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/watermelon_vendor.png' | relative_url }}" alt="华强瓜摊主" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">华强瓜摊主</h3>
-      <div class="kt-npc-role">16F 西瓜特供商</div>
-      <div class="kt-npc-quote">“我开瓜摊的，能卖给你生瓜蛋子？这瓜保熟，吃了回大血！”</div>
-    </div>
-
-    <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/taoist_kun.png' | relative_url }}" alt="坤道人" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">坤道人</h3>
-      <div class="kt-npc-role">世外修仙导师</div>
-      <div class="kt-npc-quote">“少年，我看你骨骼惊奇，这本《铁山靠修仙口诀》就赠予你了。”</div>
-    </div>
-
-    <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/fairy.png' | relative_url }}" alt="圣光仙子" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">圣光仙子</h3>
-      <div class="kt-npc-role">魔塔守护之神</div>
-      <div class="kt-npc-quote">“收下这枚圣光十字架吧，它能在面对吸血鬼魔王时发挥奇效。”</div>
-    </div>
-
-    <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/business.png' | relative_url }}" alt="神秘黑市商人" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">神秘黑市商人</h3>
-      <div class="kt-npc-role">资源交易中介</div>
-      <div class="kt-npc-quote">“只要金币给够，钥匙、血瓶和神级宝物任你挑选，绝不还价！”</div>
-    </div>
-
-    <div class="kt-npc-card app-panel">
-      <img src="{{ '/images/kuntower/npc/wise.png' | relative_url }}" alt="通天智者" class="kt-npc-img" loading="lazy">
-      <h3 class="kt-npc-name">通天智者</h3>
-      <div class="kt-npc-role">卡防指引导师</div>
-      <div class="kt-npc-quote">“记住：防御高于怪物的攻击才能无伤，保持荔枝，勿贪刀！”</div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <section id="kt-spire-route" class="app-section" aria-labelledby="kt-spire-route-title">
   <header class="app-section__header">
-    <h2 id="kt-spire-route-title">50 层魔塔征程关卡路线图</h2>
-    <p>从 1 层见习救粉到 51 层 VIP 套房的史诗征程</p>
+    <h2 id="kt-spire-route-title">{{ copy.route.title }}</h2>
+    <p>{{ copy.route.description }}</p>
   </header>
   <div class="kt-timeline">
+    {% for floor in copy.route.items %}
     <div class="kt-timeline-item">
-      <div class="kt-floor-tag">1F - 10F</div>
-      <h3 class="kt-floor-name">初级试炼与老粉救出</h3>
-      <div class="kt-floor-desc">在 2 层解救老粉小黑，拾取木质篮球与背带裤，破开 10F 骷髅队长包围网！</div>
+      <div class="kt-floor-tag">{{ floor.floors }}</div>
+      {% if floor.tag and floor.tag != '' %}<div class="kt-floor-tag">{{ floor.tag }}</div>{% endif %}
+      <h3 class="kt-floor-name">{{ floor.title | escape }}</h3>
+      <div class="kt-floor-desc">{{ floor.description }}</div>
     </div>
-    <div class="kt-timeline-item">
-      <div class="kt-floor-tag">11F - 20F</div>
-      <div class="kt-floor-tag">中层穿梭</div>
-      <h3 class="kt-floor-name">大飞蝠与青衣魔王</h3>
-      <div class="kt-floor-desc">在 15F 斩杀大飞蝠，16F 瓜摊大口吃瓜，持有圣光十字架决战 20F 吸血鬼魔王！</div>
-    </div>
-    <div class="kt-timeline-item">
-      <div class="kt-floor-tag">21F - 30F</div>
-      <div class="kt-floor-tag">迷魂破局</div>
-      <h3 class="kt-floor-name">假公主识破与 24F 直达阵</h3>
-      <div class="kt-floor-desc">识破 26F 假公主陷阱，开启 24F 直通传送阵，迎战 30F 黄金魔王！</div>
-    </div>
-    <div class="kt-timeline-item">
-      <div class="kt-floor-tag">31F - 50F</div>
-      <div class="kt-floor-tag">终极巅峰</div>
-      <h3 class="kt-floor-name">49F 假魔王 &amp; 50F 黑粉主宰</h3>
-      <div class="kt-floor-desc">用十字步破解 49F 封魔阵，登上 50F 决战终极黑粉魔王，救出鸡妹妹！</div>
-    </div>
-    <div class="kt-timeline-item">
-      <div class="kt-floor-tag">51F VIP</div>
-      <div class="kt-floor-tag">顶峰庆典</div>
-      <h3 class="kt-floor-name">鸡妹妹 VIP 套房与全员和解</h3>
-      <div class="kt-floor-desc">与鸡妹妹相聚！品尝特调生椰冰拿铁，聆听名曲旋律，荣耀 C 位出道！</div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
-{% include app_download.html title="下载只因魔塔" description="用手机扫描二维码，打开 Google Play。游戏支持跨设备云存档、排行榜和通关战报分享。" button="在 Google Play 查看" qr_label="只因魔塔的 Google Play 二维码" %}
+{% include app_download.html title=copy.download_title description=copy.download_hint qr_label=copy.qr_label %}
 
-<script src="{{ '/assets/app-site/kuntower.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/app-site/kuntower.js' | relative_url }}?v=2" defer></script>

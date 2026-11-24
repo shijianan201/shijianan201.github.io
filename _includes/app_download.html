@@ -1,11 +1,13 @@
 {% assign product = site.data.apps[page.app] %}
+{% assign app_locale = page.lang | slice: 0, 2 %}
+{% assign download_ui = site.data.app_ui[app_locale] %}
 <section class="app-download app-panel" id="download" aria-labelledby="download-title">
   <div class="app-download__copy">
     <h2 id="download-title">{{ include.title }}</h2>
     <p>{{ include.description }}</p>
     <a class="app-button app-button--primary" href="{{ product.google_play }}">
       <i class="fa fa-play" aria-hidden="true"></i>
-      {{ include.button }}
+      {{ download_ui.download }}
     </a>
   </div>
   <img class="app-download__qr" src="{{ product.qr | relative_url }}" alt="{{ include.qr_label }}" width="144" height="144" loading="lazy">

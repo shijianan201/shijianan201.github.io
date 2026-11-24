@@ -1,0 +1,183 @@
+---
+- id: skeleton
+  name:
+    zh: 骷髅战士
+    en: Skeleton
+  floor: 1-10F
+  atk: 52
+  defense: 12
+  hp: 55
+  sprite: skeleton.png
+  note:
+    zh: 1-10F 基础近战魔物
+    en: A basic melee enemy on floors 1–10.
+- id: skeletonCaptain
+  name:
+    zh: 骷髅队长
+    en: Skeleton Captain
+  floor: 10F
+  atk: 150
+  defense: 90
+  hp: 400
+  sprite: skeleton_captain.png
+  note:
+    zh: 10F 小头目，卡防门槛怪
+    en: The floor 10 miniboss tests your Defense.
+- id: orc
+  name:
+    zh: 兽人武士
+    en: Orc Warrior
+  floor: 11-20F
+  atk: 122
+  defense: 18
+  hp: 340
+  sprite: orc.png
+  note:
+    zh: 11-20F 常见物理战士
+    en: A common physical attacker on floors 11–20.
+- id: bigBat
+  name:
+    zh: 嗜血大飞蝠
+    en: Big Bat
+  floor: 15F
+  atk: 230
+  defense: 70
+  hp: 450
+  sprite: big_bat.png
+  note:
+    zh: 15F 飞蝠领主，需优先堆防
+    en: The floor 15 bat boss is easier with high Defense.
+- id: vampire
+  name:
+    zh: 吸血鬼领主
+    en: Vampire Boss
+  floor: 20F
+  atk: 340
+  defense: 95
+  hp: 700
+  sprite: vampire.png
+  note:
+    zh: 20F 霸主，持有圣光十字架可翻倍破防
+    en: Floor 20 boss. The Holy Cross doubles armor penetration.
+- id: brownWizard
+  name:
+    zh: 麻衣电击巫师
+    en: Brown Wizard
+  floor: 21-30F
+  atk: 370
+  defense: 110
+  hp: 220
+  sprite: brown_wizard.png
+  note:
+    zh: 进场扣除 100 点固定领域电击伤害
+    en: Deals 100 fixed lightning damage at the start of battle.
+  field_damage: 100
+- id: magicDragon
+  name:
+    zh: 远古魔龙
+    en: Ancient Dragon
+  floor: 24F
+  atk: 500
+  defense: 250
+  hp: 1200
+  sprite: magic_dragon.png
+  note:
+    zh: 24F 守门恶龙，高攻高防需持有屠龙剑
+    en: Guards the floor 24 gate. Bring the Dragon Slayer.
+- id: bossYellow
+  name:
+    zh: 黄金魔王
+    en: Yellow King
+  floor: 30F
+  atk: 450
+  defense: 180
+  hp: 1000
+  sprite: boss_yellow.png
+  note:
+    zh: 30F 黄金宫殿主宰
+    en: Ruler of the Golden Palace on floor 30.
+- id: octopus
+  name:
+    zh: 深海八爪鱼
+    en: Octopus
+  floor: 35F
+  atk: 520
+  defense: 210
+  hp: 1400
+  sprite: octopus.png
+  note:
+    zh: 35F 深渊触手魔物
+    en: A deep-sea enemy on floor 35.
+- id: redWizard
+  name:
+    zh: 魔音大魔导
+    en: Red Wizard
+  floor: 31-40F
+  atk: 380
+  defense: 130
+  hp: 200
+  sprite: red_wizard.png
+  note:
+    zh: 进场扣除 200 点固定领域音波伤害
+    en: Deals 200 fixed sonic damage at the start of battle.
+  field_damage: 200
+- id: bossTwin
+  name:
+    zh: 双子大魔导
+    en: Twin Archmages
+  floor: 40F
+  atk: 560
+  defense: 280
+  hp: 1800
+  sprite: boss_twin.png
+  note:
+    zh: 40F 领主，击败后可得闪避护符
+    en: Floor 40 bosses. Defeat them to earn the Dodge Amulet.
+- id: darkKnight
+  name:
+    zh: 黑暗骑士
+    en: Dark Knight
+  floor: 41-48F
+  atk: 580
+  defense: 320
+  hp: 2000
+  sprite: dark_knight.png
+  note:
+    zh: 41-48F 精锐重装骑士
+    en: An elite armored knight on floors 41–48.
+- id: bossRed
+  name:
+    zh: 假魔王
+    en: Crimson Impostor
+  floor: 49F
+  atk: 620
+  defense: 350
+  hp: 2600
+  sprite: boss_red.png
+  note:
+    zh: 封魔阵假领主，破除后开启 50F 密道
+    en: Defeat the impostor to unlock the route to floor 50.
+- id: demonKing
+  name:
+    zh: 终极黑粉魔王
+    en: Demon King
+  floor: 50F
+  atk: 680
+  defense: 420
+  hp: 3800
+  sprite: demon_king.png
+  note:
+    zh: 终极黑粉头目，决战巅峰！
+    en: The final boss at the top of the tower.
+- id: shadowDevourer
+  name:
+    zh: 变异沙包练习生
+    en: Trainee
+  floor: ''
+  atk: 450
+  defense: 300
+  hp: 2500
+  sprite: shadow_devourer.png
+  note:
+    zh: 狂野模式变异共生魔物
+    en: A mutated symbiotic enemy in Wild mode.

@@ -1,8 +1,11 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_TW, zh_HK, es, de, fr, ja, ko, pt, it, id, th, vi, tr, ru]
 app: kuntower
 title: Kun Tower Privacy Policy
 ---
+
+<a id="language-en"></a>
 
 # Privacy Policy for kuntower (Chikun Tower)
 
@@ -65,6 +68,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 <br><hr><br>
 
+<a id="language-zh"></a>
+
 # 坤塔50层 隐私政策 (简体中文)
 
 **最后更新日期: 2026-09-16**
@@ -95,6 +100,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-zh_TW"></a>
+
 # 坤塔50层 隱私政策 (繁體中文 - 台灣)
 
 **最後更新日期: 2026-09-16**
@@ -115,6 +122,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 -   您可以隨時透過清除應用程式本地儲存數據或卸載本應用程式來完全刪除本地保存的遊戲存檔。已購去廣告權益可透過「恢復購買」重新啟用。
 
 ---
+
+<a id="language-zh_HK"></a>
 
 # 坤塔50层 隱私政策 (繁體中文 - 香港)
 
@@ -137,6 +146,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-es"></a>
+
 # Política de Privacidad de kuntower (Español)
 
 **Última actualización: 16-09-2026**
@@ -150,6 +161,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. Permisos y Contacto**: Acceso a Internet para compras, anuncios y diagnóstico. Contacto: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-de"></a>
 
 # Datenschutzerklärung für kuntower (Deutsch)
 
@@ -165,6 +178,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-fr"></a>
+
 # Politique de Confidentialité kuntower (Français)
 
 **Dernière mise à jour : 16/09/2026**
@@ -178,6 +193,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. Autorisations & Contact** : Accès Internet pour les achats, les publicités et les rapports d'erreurs. Contact : **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-ja"></a>
 
 # 坤塔50层 プライバシーポリシー (日本語)
 
@@ -193,6 +210,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-ko"></a>
+
 # kuntower 개인정보 처리방침 (한국어)
 
 **최종 업데이트: 2026-09-16**
@@ -206,6 +225,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. 권한 및 문의**: 결제 확인, 광고, 진단을 위한 인터넷 연결. 문의: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-pt"></a>
 
 # Política de Privacidade kuntower (Português)
 
@@ -221,6 +242,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-it"></a>
+
 # Informativa sulla Privacy di kuntower (Italiano)
 
 **Ultimo aggiornamento: 16/09/2026**
@@ -234,6 +257,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. Contatti**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-id"></a>
 
 # Kebijakan Privasi kuntower (Indonesian)
 
@@ -249,6 +274,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-th"></a>
+
 # นโยบายความเป็นส่วนตัว kuntower (Thai)
 
 **อัปเดตล่าสุด: 16-09-2026**
@@ -262,6 +289,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. ติดต่อเรา**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-vi"></a>
 
 # Chính sách Bảo mật kuntower (Vietnamese)
 
@@ -277,6 +306,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 
 ---
 
+<a id="language-tr"></a>
+
 # kuntower Gizlilik Politikası (Turkish)
 
 **Son Güncelleme: 16.09.2026**
@@ -290,6 +321,8 @@ If you have any questions or feedback regarding this Privacy Policy, please cont
 **2. İletişim**: **xiaojiangagaga@gmail.com**
 
 ---
+
+<a id="language-ru"></a>
 
 # Политика конфиденциальности kuntower (Russian)
 

@@ -1,0 +1,50 @@
+en:
+  title: One app.
+  highlight: 40+ daily tools.
+  description: Extract text from photos, find the perfect color, and get daily tasks done with an AI-powered toolbox.
+  explore: Explore tools
+  toolbox_label: A selection of OmniHub tools
+  toolbox: Toolbox
+  ocr: Smart OCR
+  colors: Color Studio
+  tiles: [AI Assistant, Flip Clock, QR Tools, Converters]
+  features:
+    - title: AI Lab
+      description: Extract text from photos, run name draws, draft with the AI assistant, and explore 3D Tarot, palm, or face readings.
+    - title: Color Studio
+      description: Explore traditional Chinese colors and pick exact HEX, RGB, or CMYK values from an image.
+    - title: Daily Utilities
+      description: Use the salary calculator, unit converters, flip clock, and developer toolkit from the same app.
+    - title: Fishing Log
+      description: Save fishing spots with GPS and record your catches. OmniHub removes location metadata when sharing photos.
+  privacy_title: Privacy by design
+  privacy_description: Most utilities work offline. Sensitive data such as saved passwords is encrypted on your device.
+  privacy_link: Read the privacy policy
+  download_title: Get OmniHub
+  download_hint: Scan with your phone to open Google Play.
+  qr_label: Google Play QR code for OmniHub
+zh:
+  title: 一个应用，
+  highlight: 40+ 日常工具。
+  description: 识别照片中的文字，从图片取色，或用 AI 助手处理日常任务。
+  explore: 探索工具
+  toolbox_label: OmniHub 常用工具
+  toolbox: 工具箱
+  ocr: 智能文字识别
+  colors: 色彩工坊
+  tiles: [AI 助手, 翻页时钟, 二维码工具, 单位换算]
+  features:
+    - title: AI 实验室
+      description: 从照片提取文字，按名单抽签，用 AI 助手起草文案，或体验 3D 塔罗、手相和面相解读。
+    - title: 色彩工坊
+      description: 浏览中国传统色，从图片中提取准确的 HEX、RGB 或 CMYK 数值。
+    - title: 日常效率工具
+      description: 在同一个应用里使用工资计算器、单位换算、翻页时钟和开发者工具。
+    - title: 钓鱼日志
+      description: 用 GPS 保存钓点和渔获记录。分享照片时可移除位置元数据。
+  privacy_title: 本地加密与隐私保护
+  privacy_description: 大多数工具支持离线使用。保存的密码等敏感数据在设备上加密存储。
+  privacy_link: 阅读隐私政策
+  download_title: 下载 OmniHub
+  download_hint: 用手机扫描二维码，打开 Google Play。
+  qr_label: OmniHub 的 Google Play 二维码

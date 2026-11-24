@@ -28,6 +28,28 @@
   border-radius: 8px;
 }
 
+.app-document__languages {
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: .45rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  font-size: .9rem;
+}
+
+.app-document__languages summary {
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.app-document__languages nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem 1rem;
+  margin-top: .5rem;
+}
+
 .app-document :where(h1, h2, h3, h4, strong) {
   color: var(--ink);
 }

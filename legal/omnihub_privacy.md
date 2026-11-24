@@ -1,8 +1,11 @@
 ---
 layout: app_document
+document_languages: [en, zh, zh_TW, zh_HK, es, de, fr, ja, ko, pt, it, id, th, vi, tr, ru]
 app: omnihub
 title: OmniHub Privacy Policy
 ---
+
+<a id="language-en"></a>
 
 # Privacy Policy for OmniHub
 
@@ -71,6 +74,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 <br><hr><br>
 
+<a id="language-zh"></a>
+
 # OmniHub 隐私政策 (简体中文)
 
 **最后更新日期: 2026-04-29**
@@ -91,6 +96,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-zh_TW"></a>
+
 # OmniHub 隱私政策 (繁體中文 - 台灣)
 
 **最後更新日期: 2026-04-29**
@@ -110,6 +117,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   生物識別用於保護本地數據。
 
 ---
+
+<a id="language-zh_HK"></a>
 
 # OmniHub 隱私政策 (繁體中文 - 香港)
 
@@ -133,6 +142,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-es"></a>
+
 # Política de Privacidad de OmniHub (Español)
 
 **Última actualización: 29-04-2026**
@@ -149,6 +160,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   Biometría para proteger los datos locales.
 
 ---
+
+<a id="language-de"></a>
 
 # Datenschutzerklärung für OmniHub (Deutsch)
 
@@ -167,6 +180,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-fr"></a>
+
 # Politique de Confidentialité OmniHub (Français)
 
 **Dernière mise à jour : 29/04/2026**
@@ -183,6 +198,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   Biométrie pour protéger les données locales.
 
 ---
+
+<a id="language-ja"></a>
 
 # OmniHub プライバシーポリシー (日本語)
 
@@ -201,6 +218,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-ko"></a>
+
 # OmniHub 개인정보 처리방침 (한국어)
 
 **최종 업데이트: 2026-04-29**
@@ -217,6 +236,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   생체 인식: 로컬 데이터 보호를 위해 사용됩니다.
 
 ---
+
+<a id="language-pt"></a>
 
 # Política de Privacidade OmniHub (Português)
 
@@ -235,6 +256,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-it"></a>
+
 # Informativa sulla Privacy di OmniHub (Italiano)
 
 **Ultimo aggiornamento: 29/04/2026**
@@ -251,6 +274,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   Biometria per proteggere i dati locali.
 
 ---
+
+<a id="language-id"></a>
 
 # Kebijakan Privasi OmniHub (Indonesian)
 
@@ -269,6 +294,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-th"></a>
+
 # นโยบายความเป็นส่วนตัว OmniHub (Thai)
 
 **อัปเดตล่าสุด: 29-04-2026**
@@ -285,6 +312,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   ระบบชีวมาตร (Biometrics): เพื่อใช้ในการปกป้องข้อมูลในเครื่อง
 
 ---
+
+<a id="language-vi"></a>
 
 # Chính sách Bảo mật OmniHub (Vietnamese)
 
@@ -303,6 +332,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 
 ---
 
+<a id="language-tr"></a>
+
 # OmniHub Gizlilik Politikası (Turkish)
 
 **Son Güncelleme: 29.04.2026**
@@ -319,6 +350,8 @@ If you have any questions, contact us at: **xiaojiangagaga@gmail.com**
 -   Yerel verileri korumak için Biyometri.
 
 ---
+
+<a id="language-ru"></a>
 
 # Политика конфиденциальности OmniHub (Russian)
 
