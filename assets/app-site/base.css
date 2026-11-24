@@ -120,15 +120,12 @@
   text-decoration: none;
 }
 
-.app-brand__mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
+.app-brand__avatar {
+  flex: none;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 50%;
   background: var(--surface-raised);
-  font-size: 1rem;
+  object-fit: cover;
 }
 
 .app-nav {
