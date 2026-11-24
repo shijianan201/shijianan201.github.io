@@ -1,5 +1,7 @@
 ---
-layout: null
+layout: app_document
+app: picpic
+title: PicCleanUp Privacy Policy
 ---
 
 # Privacy Policy for PicPic (PicLite)

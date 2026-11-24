@@ -1,396 +1,75 @@
-{% include JB/setup %}
+{% assign product = site.data.apps[page.app] %}
 
-<style>
-  /* Tech Vibe Dark Cyber Styles */
-  #picpic-cyber-page {
-    background: #0A0E1A;
-    color: #E2E8F0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    padding: 30px 15px 60px 15px;
-    border-radius: 24px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 1px rgba(0, 242, 254, 0.3);
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Glowing background grid effects */
-  #picpic-cyber-page::before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, rgba(127, 0, 255, 0.08) 50%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .picpic-container {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Cyber Glassmorphism Card */
-  .cyber-card {
-    background: rgba(16, 24, 48, 0.7);
-    border: 1px solid rgba(0, 242, 254, 0.2);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 242, 254, 0.05);
-    transition: all 0.3s ease;
-  }
-
-  .cyber-card:hover {
-    border-color: rgba(0, 242, 254, 0.5);
-    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.15);
-    transform: translateY(-2px);
-  }
-
-  /* Gradient Text */
-  .gradient-title {
-    background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 50%, #9B51E0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 800;
-  }
-
-  /* App Icon Glow */
-  .app-icon-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .app-icon-wrapper img {
-    width: 100px;
-    height: 100px;
-    border-radius: 22px;
-    box-shadow: 0 8px 30px rgba(0, 242, 254, 0.4);
-    border: 2px solid rgba(0, 242, 254, 0.4);
-  }
-
-  .app-icon-wrapper::after {
-    content: "";
-    position: absolute;
-    top: -5px; left: -5px; right: -5px; bottom: -5px;
-    border-radius: 26px;
-    background: linear-gradient(135deg, #00F2FE, #7F00FF);
-    z-index: -1;
-    opacity: 0.5;
-    filter: blur(8px);
-  }
-
-  /* Store Download Badges & QR Code Cards */
-  .store-box {
-    background: rgba(10, 16, 32, 0.8);
-    border: 1px solid rgba(0, 242, 254, 0.25);
-    border-radius: 16px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .store-box:hover {
-    border-color: #00F2FE;
-    background: rgba(16, 26, 50, 0.9);
-  }
-
-  .qr-code-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 12px;
-    padding: 8px;
-    background: #FFFFFF;
-    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
-    margin: 12px auto;
-  }
-
-  .package-badge {
-    display: inline-block;
-    background: rgba(0, 242, 254, 0.1);
-    color: #00F2FE;
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    font-size: 0.85em;
-    font-family: monospace;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-top: 6px;
-  }
-
-  .download-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-size: 1.05em;
-    font-weight: 600;
-    border-radius: 30px;
-    color: #FFFFFF !important;
-    text-decoration: none !important;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .btn-google {
-    background: linear-gradient(135deg, #00C6FF 0%, #0072FF 100%);
-    box-shadow: 0 4px 15px rgba(0, 198, 255, 0.3);
-  }
-
-  .btn-apple {
-    background: linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%);
-    box-shadow: 0 4px 15px rgba(142, 45, 226, 0.3);
-  }
-
-  .download-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
-  }
-
-  /* Interactive Before / After Slider */
-  .ba-slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 650px;
-    height: 380px;
-    margin: 20px auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-  }
-
-  .ba-before-img, .ba-after-img {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .ba-before-img {
-    /* Simulated blurred low-res image via SVG canvas filter fallback */
-    background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=20');
-    filter: blur(4px) contrast(0.9);
-  }
-
-  .ba-after-img {
-    /* Crisp sharp image */
-    background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=95');
-    width: 50%; /* Initial split at 50% */
-    border-right: 3px solid #00F2FE;
-    box-shadow: 3px 0 12px rgba(0, 242, 254, 0.6);
-  }
-
-  .ba-label {
-    position: absolute;
-    bottom: 12px;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8em;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-
-  .label-before {
-    right: 12px;
-    background: rgba(0, 0, 0, 0.7);
-    color: #A0AEC0;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .label-after {
-    left: 12px;
-    background: rgba(0, 242, 254, 0.85);
-    color: #0A0E1A;
-    font-weight: 800;
-  }
-
-  .ba-slider-input {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    opacity: 0;
-    cursor: ew-resize;
-    z-index: 10;
-  }
-
-  /* Feature Grid Icons */
-  .feature-icon-box {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin-bottom: 15px;
-    background: rgba(0, 242, 254, 0.1);
-    color: #00F2FE;
-    border: 1px solid rgba(0, 242, 254, 0.2);
-  }
-</style>
-
-<div id="picpic-cyber-page">
-  <div class="container-fluid picpic-container">
-
-    <!-- Hero Section -->
-    <div class="row" style="margin-bottom: 40px; text-align: center;">
-      <div class="col-md-10 col-md-offset-1">
-        <div class="app-icon-wrapper" style="margin-bottom: 20px;">
-          <img src="/images/favicon.ico" alt="PicPic Icon" onerror="this.src='https://raw.githubusercontent.com/shijianan201/shijianan201.github.io/master/images/favicon.ico'">
-        </div>
-        <h1 class="gradient-title" style="font-size: 2.8em; margin-bottom: 12px;">PicPic · 智能相册清理与 AI 画质重构</h1>
-        <p style="font-size: 1.3em; color: #94A3B8; max-width: 780px; margin: 0 auto 25px auto; line-height: 1.6;">
-          秒级查重连拍、甄别模糊废片，无损恢复老旧与失焦照片细节。<br>
-          <strong>100% 手机本地离线处理，绝对保障个人相册隐私安全</strong>。
-        </p>
-        <div style="display: inline-block; padding: 6px 18px; border-radius: 30px; background: rgba(0, 242, 254, 0.08); border: 1px solid rgba(0, 242, 254, 0.25); color: #00F2FE; font-size: 0.95em;">
-          <i class="fa fa-shield"></i> 零数据上传 · 全功能脱机离线可用
-        </div>
-      </div>
+<section class="app-hero" aria-labelledby="picpic-title">
+  <div>
+    <div class="app-hero__identity">
+      <img class="app-hero__icon" src="{{ product.icon | relative_url }}" alt="" width="48" height="48">
+      {{ product.name }}
     </div>
-
-    <!-- Store Downloads & Direct QR Codes Section -->
-    <div class="cyber-card">
-      <h3 class="gradient-title" style="text-align: center; margin-bottom: 25px; font-size: 1.6em;">
-        <i class="fa fa-download"></i> 应用商店一键下载 / 扫码直达
-      </h3>
-      <div class="row">
-        <!-- Google Play -->
-        <div class="col-sm-6" style="margin-bottom: 20px;">
-          <div class="store-box">
-            <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 12px;">
-              <i class="fa fa-android" style="color: #00F2FE;"></i> Google Play 商店
-            </h4>
-            <div>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.jannix.picpic&color=00f2fe&bcolor=0a1020"
-                   alt="Google Play QR Code" class="qr-code-img">
-            </div>
-            <p style="font-size: 0.85em; color: #94A3B8; margin-top: 5px;">相机扫描二维码直达商店页面</p>
-            <a href="https://play.google.com/store/apps/details?id=com.jannix.picpic" target="_blank" class="download-btn btn-google">
-              <i class="fa fa-google-play"></i> 在 Google Play 获取
-            </a>
-          </div>
-        </div>
-
-        <!-- Apple App Store -->
-        <div class="col-sm-6" style="margin-bottom: 20px;">
-          <div class="store-box">
-            <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 12px;">
-              <i class="fa fa-apple" style="color: #9B51E0;"></i> Apple App Store
-            </h4>
-            <div>
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fapps.apple.com%2Fapp%2Fid6738982345&color=9b51e0&bcolor=0a1020"
-                   alt="App Store QR Code" class="qr-code-img">
-            </div>
-            <p style="font-size: 0.85em; color: #94A3B8; margin-top: 5px;">iOS 相机扫描快速安装</p>
-            <a href="https://apps.apple.com/app/id6738982345" target="_blank" class="download-btn btn-apple">
-              <i class="fa fa-apple"></i> 在 App Store 下载
-            </a>
-          </div>
-        </div>
-      </div>
+    <h1 class="app-hero__title" id="picpic-title">相册轻一点，<br><span>回忆清晰一点。</span></h1>
+    <p class="app-hero__description">找出重复照片、相似连拍和模糊废片。用 AI 增强照片细节，整理和修复都在手机本地完成。</p>
+    <div class="app-actions">
+      <a class="app-button app-button--primary" href="{{ product.google_play }}">
+        <i class="fa fa-play" aria-hidden="true"></i> Google Play
+      </a>
+      <a class="app-button" href="#download"><i class="fa fa-qrcode" aria-hidden="true"></i> 扫码下载</a>
     </div>
-
-    <!-- AI Real-ESRGAN Interactive Before / After Comparison -->
-    <div class="cyber-card">
-      <div style="text-align: center; margin-bottom: 20px;">
-        <h3 class="gradient-title" style="font-size: 1.8em; margin-bottom: 8px;">
-          <i class="fa fa-magic"></i> Real-ESRGAN 4K AI 画质超分演示
-        </h3>
-        <p style="color: #94A3B8; font-size: 1em;">拖动下方滑块，体验模糊低清老照片重获清晰纹理细节的视觉效果</p>
-      </div>
-
-      <div class="ba-slider-container" id="baSlider">
-        <div class="ba-before-img"></div>
-        <div class="ba-after-img" id="baAfterOverlay"></div>
-        <span class="ba-label label-after">PicPic AI 4K 重构</span>
-        <span class="ba-label label-before">原始低清/模糊图</span>
-        <input type="range" min="0" max="100" value="50" class="ba-slider-input" id="baSliderInput">
-      </div>
-    </div>
-
-    <!-- Core Feature Pillars -->
-    <div class="row">
-      <div class="col-sm-6" style="margin-bottom: 20px;">
-        <div class="cyber-card" style="height: 100%;">
-          <div class="feature-icon-box">
-            <i class="fa fa-bolt"></i>
-          </div>
-          <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 10px;">智能连拍与相似去重</h4>
-          <p style="color: #94A3B8; line-height: 1.6;">
-            毫秒级对比海量相册，精准归类相似连拍与重复截屏，一键选择表情最佳照片，批量清理冗余空间。
-          </p>
-        </div>
-      </div>
-
-      <div class="col-sm-6" style="margin-bottom: 20px;">
-        <div class="cyber-card" style="height: 100%;">
-          <div class="feature-icon-box" style="color: #9B51E0; border-color: rgba(155, 81, 224, 0.3); background: rgba(155, 81, 224, 0.1);">
-            <i class="fa fa-magic"></i>
-          </div>
-          <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 10px;">AI 4K 超清画质修复</h4>
-          <p style="color: #94A3B8; line-height: 1.6;">
-            针对失焦、低清或老旧照片，提供 4 倍无损超分辨率重构，自动增强细节，让模糊照片瞬间重获清晰。
-          </p>
-        </div>
-      </div>
-
-      <div class="col-sm-6" style="margin-bottom: 20px;">
-        <div class="cyber-card" style="height: 100%;">
-          <div class="feature-icon-box" style="color: #4FACFE; border-color: rgba(79, 172, 254, 0.3); background: rgba(79, 172, 254, 0.1);">
-            <i class="fa fa-eye"></i>
-          </div>
-          <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 10px;">模糊与废片智能筛查</h4>
-          <p style="color: #94A3B8; line-height: 1.6;">
-            自动扫描筛选拍糊、失焦或闭眼的无用废片，帮助您轻松整理相册，快速释放巨额手机存储空间。
-          </p>
-        </div>
-      </div>
-
-      <div class="col-sm-6" style="margin-bottom: 20px;">
-        <div class="cyber-card" style="height: 100%;">
-          <div class="feature-icon-box" style="color: #00E676; border-color: rgba(0, 230, 118, 0.3); background: rgba(0, 230, 118, 0.1);">
-            <i class="fa fa-lock"></i>
-          </div>
-          <h4 style="color: #FFFFFF; font-weight: 700; margin-bottom: 10px;">100% 本地离线隐私保护</h4>
-          <p style="color: #94A3B8; line-height: 1.6;">
-            所有照片处理与计算完全在您的手机本地进行，零照片数据上传云端，彻底保护您的个人相册隐私。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quick Footer Links -->
-    <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(0, 242, 254, 0.15);">
-      <p style="font-size: 0.9em; color: #64748B;">
-        <a href="/legal/picpic_privacy.html" style="color: #00F2FE; margin: 0 10px;">隐私政策 (Privacy Policy)</a> |
-        <a href="/legal/picpic_terms_of_use.html" style="color: #00F2FE; margin: 0 10px;">用户协议 (Terms of Use)</a>
-      </p>
-      <p style="font-size: 0.85em; color: #475569; margin-top: 8px;">
-        © {{ site.time | date: '%Y' }} PicPic Team. All rights reserved.
-      </p>
-    </div>
-
   </div>
-</div>
+
+  <figure class="pic-comparison app-panel">
+    <div class="pic-comparison__stage" id="baSlider">
+      <img class="pic-comparison__blurred" src="{{ '/assets/app-site/photo-demo.webp' | relative_url }}" alt="用蓝紫色灯光拍摄的人像示例" width="1000" height="1250" fetchpriority="high">
+      <img class="pic-comparison__clear" src="{{ '/assets/app-site/photo-demo.webp' | relative_url }}" alt="" width="1000" height="1250">
+      <span class="pic-comparison__label pic-comparison__label--clear" aria-hidden="true">增强示意</span>
+      <span class="pic-comparison__label pic-comparison__label--blurred" aria-hidden="true">低清示意</span>
+      <span class="pic-comparison__divider" aria-hidden="true">
+        <span class="pic-comparison__handle"><i class="fa fa-arrows-h"></i></span>
+      </span>
+      <input id="baSliderInput" class="pic-comparison__input" type="range" min="0" max="100" value="50" aria-label="画质对比，调整清晰示例所占比例" aria-describedby="pic-comparison-caption">
+    </div>
+    <figcaption class="pic-comparison__caption" id="pic-comparison-caption">拖动滑块查看画质变化示意。<span>Unsplash 示例照片</span></figcaption>
+  </figure>
+</section>
+
+<section class="pic-features" id="features" aria-labelledby="pic-features-title">
+  <div class="app-section__header">
+    <h2 id="pic-features-title">整理与修复</h2>
+  </div>
+  <div class="app-feature-grid">
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-clone"></i></span>
+      <h3>相似照片去重</h3>
+      <p>将重复截图和相似连拍自动分组，方便选出值得保留的照片。</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-eye"></i></span>
+      <h3>模糊废片筛查</h3>
+      <p>快速筛出失焦、拍糊和闭眼的照片，减少逐张翻找的时间。</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-magic"></i></span>
+      <h3>AI 画质增强</h3>
+      <p>使用 Real-ESRGAN 进行 4 倍超分辨率重构，为低清或老旧照片补充细节。</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-lock"></i></span>
+      <h3>本地处理</h3>
+      <p>相册分析和画质增强均在设备上运行，照片无需上传。</p>
+    </article>
+  </div>
+</section>
+
+{% include app_download.html title="下载 PicCleanUp" description="用手机扫描二维码，打开 Google Play。" button="在 Google Play 查看" qr_label="PicCleanUp 的 Google Play 二维码" %}
 
 <script>
-  // Interactive Before/After Split Slider logic
-  document.addEventListener('DOMContentLoaded', function() {
-    var sliderInput = document.getElementById('baSliderInput');
-    var afterOverlay = document.getElementById('baAfterOverlay');
+  const comparison = document.getElementById('baSlider');
+  const slider = document.getElementById('baSliderInput');
 
-    if (sliderInput && afterOverlay) {
-      sliderInput.addEventListener('input', function(e) {
-        var val = e.target.value;
-        afterOverlay.style.width = val + '%';
-      });
-    }
-  });
+  function updateComparison() {
+    comparison.style.setProperty('--split', slider.value + '%');
+  }
+
+  slider.addEventListener('input', updateComparison);
+  window.addEventListener('pageshow', updateComparison);
+  updateComparison();
 </script>

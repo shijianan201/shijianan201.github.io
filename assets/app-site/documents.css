@@ -1,0 +1,142 @@
+.app-document {
+  max-width: 53rem;
+  margin: clamp(1.5rem, 5vw, 4rem) auto 0;
+  padding: clamp(1.15rem, 5vw, 3.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--muted);
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.app-document__product {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: 1.4rem;
+  color: var(--accent);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.app-document__product:hover {
+  text-decoration: underline;
+}
+
+.app-document__product img {
+  border-radius: 8px;
+}
+
+.app-document :where(h1, h2, h3, h4, strong) {
+  color: var(--ink);
+}
+
+.app-document h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 4.25vw, 3rem);
+  letter-spacing: -.035em;
+}
+
+.app-document h1:not(:first-of-type) {
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.app-document h2 {
+  margin-block: 1.7rem .65rem;
+  font-size: 1.35rem;
+}
+
+.app-document h3,
+.app-document h4 {
+  margin-block: 1.35rem .5rem;
+  font-size: 1.1rem;
+}
+
+.app-document p + p {
+  margin-top: .85rem;
+}
+
+.app-document :where(ul, ol) {
+  padding-inline-start: 1.5rem;
+}
+
+.app-document :where(ul, ol) li + li {
+  margin-top: .32rem;
+}
+
+.app-document hr {
+  margin-block: 2rem;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.deletion-panel {
+  margin-top: 1.25rem;
+  padding: clamp(1rem, 3.5vw, 1.7rem);
+  background: var(--background);
+}
+
+.deletion-panel .form-group {
+  display: grid;
+  gap: .4rem;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  border: 0;
+}
+
+.deletion-panel :where(.form-group > label, legend) {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.deletion-panel .form-control {
+  width: 100%;
+  min-height: 46px;
+  padding: .55rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.deletion-panel .form-control::placeholder {
+  color: var(--muted);
+}
+
+.deletion-panel textarea {
+  margin-top: .45rem;
+  resize: vertical;
+}
+
+.deletion-panel .help-block {
+  font-size: .9rem;
+}
+
+.deletion-panel .checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  cursor: pointer;
+}
+
+.deletion-panel input[type="checkbox"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+  margin: .35em 0 0;
+  accent-color: var(--accent);
+}
+
+.deletion-panel .app-button {
+  margin-top: 1rem;
+  border-color: #714150;
+  background: #321f2a;
+  color: #ffc0c8;
+}
+
+.deletion-panel .app-button:hover {
+  border-color: #a66172;
+  background: #452632;
+}

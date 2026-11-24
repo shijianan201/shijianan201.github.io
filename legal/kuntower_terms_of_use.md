@@ -1,5 +1,7 @@
 ---
-layout: null
+layout: app_document
+app: kuntower
+title: Kun Tower Terms of Use
 ---
 
 # Terms of Use for kuntower (Chikun Tower)

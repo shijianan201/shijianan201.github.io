@@ -1,3 +1,10 @@
+---
+layout: app_document
+app: omnihub
+lang: zh-CN
+title: OmniHub 全能帮助中心
+---
+
 # OmniHub 全能帮助中心 (v1.8.0 全量版)
 
 欢迎使用万象枢！本手册涵盖了应用内 **40+ 项工具** 的详细使用指南及进阶交互技巧。

@@ -1,126 +1,91 @@
-{% include JB/setup %}
+{% assign product = site.data.apps[page.app] %}
 
-<div id="omnihub-page">
-  <!-- Hero Section -->
-  <div class="row" style="margin-bottom: 30px;">
-    <div class="col-md-10 col-md-offset-1 text-center">
-      <div style="margin-bottom: 20px;">
-        <img src="/images/favicon.ico" alt="OmniHub Icon" style="width: 80px; height: 80px; border-radius: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      </div>
-      <h1 style="font-weight: bold; color: #2196F3; margin-bottom: 10px;">OmniHub: AI Smart Toolbox</h1>
-      <p style="font-size: 1.4em; color: #333; font-weight: 500;">AI-Powered Easy Life, One Hub.</p>
-      <p style="font-size: 1.1em; color: #666; max-width: 800px; margin: 0 auto 30px auto; line-height: 1.6;">
-        Welcome to OmniHub—the ultimate smart multi-tool designed to make your life smarter, easier, and infinitely more colorful. 
-        Where efficiency meets elegance, and AI makes life happy and easy.
-      </p>
-      
-      <div style="margin: 40px 0; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-        <a href="https://play.google.com/store/apps/details?id=com.jannix.omnihub" target="_blank" class="btn btn-primary btn-lg" style="padding: 15px 30px; font-size: 1.2em; border-radius: 50px; background: #2196F3; border: none; box-shadow: 0 4px 15px rgba(33,150,243,0.3);">
-          <i class="fa fa-google-play"></i> Download on Google Play
-        </a>
-        <div style="text-align: center; margin-top: 20px;">
-          <div id="store-qrcode-page" style="padding: 20px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); display: inline-block;"></div>
-          <p style="font-size: 0.9em; color: #888; margin-top: 10px;">Scan to download</p>
-        </div>
-      </div>
+<section class="app-hero" aria-labelledby="omnihub-title">
+  <div>
+    <div class="app-hero__identity">
+      <img class="app-hero__icon" src="{{ product.icon | relative_url }}" alt="" width="48" height="48">
+      {{ product.name }}
+    </div>
+    <h1 class="app-hero__title" id="omnihub-title">One app.<br><span>40+ daily tools.</span></h1>
+    <p class="app-hero__description">Extract text from photos, find the perfect color, and get daily tasks done with an AI-powered toolbox.</p>
+    <div class="app-actions">
+      <a class="app-button app-button--primary" href="{{ product.google_play }}">
+        <i class="fa fa-play" aria-hidden="true"></i> Google Play
+      </a>
+      <a class="app-button" href="#tools">Explore tools</a>
     </div>
   </div>
 
-  <!-- Key Sections -->
-  <div class="row" style="margin-top: 40px;">
-    <div class="col-md-10 col-md-offset-1">
-      
-      <!-- AI Laboratory -->
-      <div style="margin-bottom: 40px;">
-        <h2 style="color: #2196F3; border-bottom: 2px solid #e3f2fd; padding-bottom: 10px; margin-bottom: 20px;">
-          <i class="fa fa-flask"></i> THE AI LABORATORY
-        </h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <h4 style="font-weight: bold;">AI Divination Hub</h4>
-            <p>Explore hidden stories with vision-AI. Capture palm or face for life insights, or try Cyber Tarot for stunning 3D animations.</p>
-          </div>
-          <div class="col-sm-6">
-            <h4 style="font-weight: bold;">Smart OCR & Extraction</h4>
-            <p>Instantly turn photos into editable text. Pick names from lists or identify faces for fair draws in seconds.</p>
-          </div>
-          <div class="col-sm-12">
-            <h4 style="font-weight: bold;">AI Assistant</h4>
-            <p>A sophisticated partner for brainstorming, drafting emails, or solving complex problems with context-aware responses.</p>
-          </div>
+  <div class="omni-board app-panel" aria-label="A selection of OmniHub tools">
+    <div class="omni-board__heading"><i class="fa fa-th-large" aria-hidden="true"></i> Toolbox</div>
+    <div class="omni-board__grid">
+      <div class="omni-tile">
+        <div class="omni-scan" aria-hidden="true">
+          <div class="omni-scan__sheet"><span></span><span></span><span></span></div>
         </div>
+        <span>Smart OCR</span>
       </div>
-
-      <!-- Outdoor & Social -->
-      <div style="margin-bottom: 40px;">
-        <h2 style="color: #4CAF50; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; margin-bottom: 20px;">
-          <i class="fa fa-map-marker"></i> OUTDOOR & SOCIAL
-        </h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <h4 style="font-weight: bold;">Fishing Spot Sharing</h4>
-            <p>The ultimate professional tool for anglers. Map secret spots with high-precision GPS and record your proudest harvests.</p>
-          </div>
-          <div class="col-sm-6">
-            <h4 style="font-weight: bold;">Privacy by Design</h4>
-            <p>We protect your secret spots. OmniHub automatically strips EXIF and GPS metadata when sharing photos.</p>
-          </div>
+      <div class="omni-tile">
+        <div class="omni-swatches" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
         </div>
+        <span>Color Studio</span>
       </div>
-
-      <!-- Efficiency & Creative -->
-      <div class="row">
-        <div class="col-sm-6">
-          <h2 style="color: #FF9800; border-bottom: 2px solid #fff3e0; padding-bottom: 10px; margin-bottom: 20px;">
-            <i class="fa fa-paint-brush"></i> COLOR STUDIO
-          </h2>
-          <p>Explore "Chinese Traditional Colors," capture hex codes with precision pickers, and master formats (HEX, RGB, CMYK).</p>
-        </div>
-        <div class="col-sm-6">
-          <h2 style="color: #E91E63; border-bottom: 2px solid #fce4ec; padding-bottom: 10px; margin-bottom: 20px;">
-            <i class="fa fa-bolt"></i> DAILY EFFICIENCY
-          </h2>
-          <p>40+ tools: Financial Suite (Salary Calculator), Universal Converters, Time Management (Flip Clock), and Developer Toolkit.</p>
-        </div>
+      <div class="omni-tile omni-tile--small">
+        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-commenting-o"></i></span>
+        <span>AI Assistant</span>
       </div>
-
-    </div>
-  </div>
-
-  <!-- Privacy Promise -->
-  <div class="row" style="margin-top: 50px; background: #f9f9f9; padding: 40px 0; border-radius: 20px;">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h2 style="margin-bottom: 20px;"><i class="fa fa-lock" style="color: #607D8B;"></i> Your Privacy, Our Promise</h2>
-      <p style="line-height: 1.8; color: #555;">
-        OmniHub is built on trust. Most of our tools work completely offline. 
-        Sensitive data is stored locally with high-strength encryption. 
-        AI photos are processed instantly and destroyed—we never store your personal images on our servers.
-      </p>
-    </div>
-  </div>
-
-  <!-- Legal Links -->
-  <div class="row" style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
-    <div class="col-md-10 col-md-offset-1 text-center">
-      <h3>Legal & Support</h3>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
-        <a href="/legal/omnihub_privacy.html" class="btn btn-default"><i class="fa fa-shield"></i> Privacy Policy</a>
-        <a href="/legal/omnihub_terms_of_use.html" class="btn btn-default"><i class="fa fa-file-text-o"></i> Terms of Use</a>
-        <a href="/legal/omnihub_data_deletion.html" class="btn btn-default"><i class="fa fa-trash"></i> Data Deletion</a>
+      <div class="omni-tile omni-tile--small">
+        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-clock-o"></i></span>
+        <span>Flip Clock</span>
+      </div>
+      <div class="omni-tile omni-tile--small">
+        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-qrcode"></i></span>
+        <span>QR Tools</span>
+      </div>
+      <div class="omni-tile omni-tile--small">
+        <span class="omni-tile__icon" aria-hidden="true"><i class="fa fa-balance-scale"></i></span>
+        <span>Converters</span>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    if (typeof $.fn.qrcode === 'function') {
-      $('#store-qrcode-page').qrcode({
-        render: "canvas",
-        width: 150,
-        height: 150,
-        text: "https://play.google.com/store/apps/details?id=com.jannix.omnihub"
-      });
-    }
-  });
-</script>
+<section id="tools" aria-labelledby="omni-tools-title">
+  <header class="app-section__header">
+    <h2 id="omni-tools-title">Explore the toolbox</h2>
+  </header>
+  <div class="app-feature-grid">
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-flask"></i></span>
+      <h3>AI Lab</h3>
+      <p>Extract text from photos, run name draws, draft with the AI assistant, and explore 3D Tarot, palm, or face readings.</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-paint-brush"></i></span>
+      <h3>Color Studio</h3>
+      <p>Explore traditional Chinese colors and pick exact HEX, RGB, or CMYK values from an image.</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-th-large"></i></span>
+      <h3>Daily Utilities</h3>
+      <p>Use the salary calculator, unit converters, flip clock, and developer toolkit from the same app.</p>
+    </article>
+    <article class="app-feature app-panel">
+      <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-map-marker"></i></span>
+      <h3>Fishing Log</h3>
+      <p>Save fishing spots with GPS and record your catches. OmniHub removes location metadata when sharing photos.</p>
+    </article>
+  </div>
+</section>
+
+<aside class="app-section omni-privacy app-panel" aria-labelledby="omni-privacy-title">
+  <span class="app-feature__icon" aria-hidden="true"><i class="fa fa-lock"></i></span>
+  <div>
+    <h2 id="omni-privacy-title">Privacy by design</h2>
+    <p>Most utilities work offline. Sensitive data such as saved passwords is encrypted on your device.</p>
+    <a href="{{ product.privacy | relative_url }}">Read the privacy policy</a>
+  </div>
+</aside>
+
+{% include app_download.html title="Get OmniHub" description="Scan with your phone to open Google Play." button="View on Google Play" qr_label="Google Play QR code for OmniHub" %}

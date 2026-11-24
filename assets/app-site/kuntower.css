@@ -1,0 +1,476 @@
+.kt-hero .app-hero__title span {
+  display: block;
+}
+
+.kt-hero-art {
+  overflow: hidden;
+  border-color: #3f3a55;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, .3);
+}
+
+.kt-hero-art img {
+  width: 100%;
+  height: auto;
+}
+
+.kt-nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .6rem;
+  padding-block: .55rem;
+  border-block: 1px solid var(--border);
+}
+
+.kt-nav-bar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: .7rem;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.kt-nav-bar a:hover {
+  background: var(--surface-raised);
+  color: var(--accent);
+}
+
+.kt-story {
+  margin-top: 1.2rem;
+  padding-inline: 1.15rem;
+}
+
+.kt-story summary {
+  padding-block: .85rem;
+  color: var(--ink);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.kt-story p {
+  max-width: 52rem;
+  padding-bottom: .9rem;
+  color: var(--muted);
+}
+
+.kt-story p:last-child {
+  padding-bottom: 1.1rem;
+}
+
+.kt-mode-grid,
+.kt-realm-tags,
+.kt-artifact-grid,
+.kt-school-grid,
+.kt-achieve-grid,
+.kt-npc-grid {
+  display: grid;
+  gap: .9rem;
+}
+
+.kt-mode-grid,
+.kt-school-grid,
+.kt-npc-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.kt-realm-tags,
+.kt-artifact-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kt-achieve-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.kt-mode-card,
+.kt-artifact-card,
+.kt-school-card,
+.kt-achieve-card,
+.kt-npc-card {
+  padding: clamp(1rem, 2vw, 1.4rem);
+}
+
+.kt-mode-badge {
+  display: inline-block;
+  margin-bottom: .75rem;
+  padding: .25rem .55rem;
+  border-radius: 6px;
+  background: rgba(var(--accent-rgb), .09);
+  color: var(--accent);
+  font-size: .875rem;
+  font-weight: 650;
+}
+
+.kt-mode-card h3,
+.kt-artifact-name,
+.kt-school-title,
+.kt-achieve-title,
+.kt-npc-name,
+.kt-floor-name {
+  margin-bottom: .45rem;
+  font-size: 1.11rem;
+}
+
+.kt-mode-card p,
+.kt-mode-list,
+.kt-artifact-desc,
+.kt-school-desc,
+.kt-achieve-desc,
+.kt-npc-quote,
+.kt-floor-desc {
+  color: var(--muted);
+}
+
+.kt-mode-list {
+  margin: .95rem 0 0;
+  padding: .75rem 0 0 1.2rem;
+  border-top: 1px solid var(--border);
+  font-size: .94rem;
+}
+
+.kt-mode-list li + li {
+  margin-top: .4rem;
+}
+
+.kt-mode-list li::marker {
+  color: var(--accent);
+}
+
+.kt-cultivation-flow {
+  padding: clamp(.9rem, 3vw, 1.45rem);
+}
+
+.kt-realm-item {
+  padding: .75rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--background);
+}
+
+.kt-realm-item.highlight {
+  border-color: rgba(var(--accent-rgb), .3);
+  background: rgba(var(--accent-rgb), .045);
+}
+
+.kt-realm-item--final {
+  border-color: #796295;
+  background: #2b2240;
+}
+
+.kt-realm-lvl,
+.kt-floor-tag {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.kt-realm-name {
+  margin-block: .2rem;
+  font-weight: 700;
+}
+
+.kt-realm-perk,
+.kt-npc-role {
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.kt-widget-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(1.1rem, 4vw, 2.5rem);
+  padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.kt-calc-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 1rem .6rem;
+}
+
+.kt-input-group--enemy {
+  grid-column: 1 / -1;
+}
+
+.kt-input-group label {
+  display: block;
+  margin-bottom: .35rem;
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+.kt-input-group label span {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .8rem;
+}
+
+.kt-input-group :is(input, select) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: .55rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--ink);
+}
+
+.kt-input-group input {
+  font-variant-numeric: tabular-nums;
+}
+
+.kt-input-group select {
+  padding-inline-end: 2rem;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: right 16px center, right 11px center;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  text-overflow: ellipsis;
+}
+
+.kt-gear-label {
+  margin-block: 1.05rem .45rem;
+  font-size: .9rem;
+  font-weight: 650;
+}
+
+.kt-calc-gear-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.kt-gear-btn {
+  min-height: 44px;
+  padding: .35rem .65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-raised);
+  color: var(--ink);
+  font-size: .88rem;
+  cursor: pointer;
+}
+
+.kt-gear-btn:hover {
+  border-color: var(--accent);
+}
+
+.kt-gear-btn--reset {
+  background: transparent;
+  color: var(--muted);
+}
+
+.kt-calc-preview {
+  padding: clamp(.8rem, 3vw, 1.3rem);
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--background);
+}
+
+.kt-calc-monster-preview {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.kt-calc-monster-img,
+.kt-artifact-img,
+.kt-achieve-icon,
+.kt-npc-img {
+  flex: none;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.kt-calc-monster-img {
+  width: 54px;
+  height: 54px;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-raised);
+}
+
+.kt-calc-monster-info h3 {
+  font-size: 1rem;
+}
+
+.kt-calc-monster-info p {
+  margin-top: .18rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.kt-calc-result {
+  --result: #a4eaf9;
+  margin-top: 1rem;
+  padding-top: .95rem;
+  border-top: 1px solid var(--border);
+}
+
+.kt-calc-result[data-state="safe"] { --result: #a9edc4; }
+.kt-calc-result[data-state="lost"] { --result: #ffd3a5; }
+.kt-calc-result[data-state="blocked"] { --result: #ffadb9; }
+
+.kt-result-status {
+  color: var(--result);
+  font-weight: 650;
+}
+
+.kt-hp-bar-wrap {
+  height: 6px;
+  margin-block: .7rem .95rem;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--surface-raised);
+}
+
+.kt-hp-bar-inner {
+  width: 95%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--result);
+}
+
+.kt-result-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .45rem;
+  margin: 0;
+}
+
+.kt-result-details div {
+  min-width: 0;
+  padding: .5rem .35rem;
+  border-radius: 8px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.kt-result-details dt {
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.kt-result-details dd {
+  margin: .2rem 0 0;
+  font: 700 clamp(1rem, 2.2vw, 1.4rem) var(--mono);
+  overflow-wrap: anywhere;
+}
+
+.kt-artifact-img,
+.kt-npc-img {
+  width: 54px;
+  height: 54px;
+  margin-bottom: .85rem;
+}
+
+.kt-school-header,
+.kt-achieve-card {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+}
+
+.kt-school-header {
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.kt-school-title {
+  margin: 0;
+}
+
+.kt-school-icon {
+  display: grid;
+  width: 37px;
+  height: 37px;
+  flex: none;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--surface-raised);
+}
+
+.kt-achieve-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.kt-npc-quote {
+  margin-top: .65rem;
+}
+
+.kt-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: .9rem;
+}
+
+.kt-timeline-item {
+  padding-top: .75rem;
+  border-top: 2px solid rgba(var(--accent-rgb), .3);
+}
+
+.kt-timeline-item:last-child {
+  border-top-color: var(--accent);
+}
+
+.kt-floor-name {
+  margin-top: .35rem;
+}
+
+@media (max-width: 970px) {
+  .kt-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 740px) {
+  .kt-mode-grid,
+  .kt-widget-box {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kt-realm-tags,
+  .kt-artifact-grid,
+  .kt-school-grid,
+  .kt-npc-grid,
+  .kt-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kt-nav-bar {
+    gap: 0;
+  }
+}
+
+@media (max-width: 545px) {
+  .kt-nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .kt-nav-bar a {
+    justify-content: center;
+    padding-inline: .25rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .kt-achieve-grid,
+  .kt-school-grid,
+  .kt-timeline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

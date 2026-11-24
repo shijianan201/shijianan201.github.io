@@ -1,5 +1,7 @@
 ---
-layout: null
+layout: app_document
+app: omnihub
+title: OmniHub Terms of Use
 ---
 
 # Terms of Use for OmniHub

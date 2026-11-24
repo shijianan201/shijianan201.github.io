@@ -1,0 +1,27 @@
+picpic:
+  name: PicCleanUp
+  path: /
+  icon: /assets/app-site/piccleanup-icon.webp
+  google_play: https://play.google.com/store/apps/details?id=com.jannix.picpic
+  qr: /assets/app-site/piccleanup-google-play.png
+  privacy: /legal/picpic_privacy.html
+  terms: /legal/picpic_terms_of_use.html
+omnihub:
+  name: OmniHub
+  path: /omnihub.html
+  icon: /assets/app-site/omnihub-icon.webp
+  google_play: https://play.google.com/store/apps/details?id=com.jannix.omnihub
+  qr: /assets/app-site/omnihub-google-play.png
+  privacy: /legal/omnihub_privacy.html
+  terms: /legal/omnihub_terms_of_use.html
+  deletion: /legal/omnihub_data_deletion.html
+  help: /legal/omnihub_help.html
+kuntower:
+  name: Kun Tower
+  name_zh: 只因魔塔
+  path: /kuntower.html
+  icon: /images/kuntower_icon.png
+  google_play: https://play.google.com/store/apps/details?id=com.jannix.kuntower
+  qr: /assets/app-site/kuntower-google-play.png
+  privacy: /legal/kuntower_privacy.html
+  terms: /legal/kuntower_terms_of_use.html

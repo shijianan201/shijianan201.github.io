@@ -1,5 +1,7 @@
 ---
-layout: null
+layout: app_document
+app: picpic
+title: PicCleanUp Terms of Use
 ---
 
 # Terms of Use for PicPic (PicLite)

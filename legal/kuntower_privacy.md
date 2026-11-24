@@ -1,5 +1,7 @@
 ---
-layout: null
+layout: app_document
+app: kuntower
+title: Kun Tower Privacy Policy
 ---
 
 # Privacy Policy for kuntower (Chikun Tower)

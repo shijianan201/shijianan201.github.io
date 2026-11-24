@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: app_document
+app: omnihub
 title: "Data Deletion Request"
 description: "Instructions on how to request the deletion of your OmniHub account and associated data."
 ---
@@ -12,35 +13,35 @@ At OmniHub, we value your privacy and provide a straightforward way for you to r
 
 Fill out the details below to generate a pre-formatted email to our support team.
 
-<div class="well" style="background-color: #f9f9f9; border-radius: 8px; padding: 25px;">
-  <form id="deletionForm">
+<div class="app-panel deletion-panel">
+  <form id="deletionForm" onsubmit="generateEmail('en'); return false;">
     <div class="form-group">
       <label for="uid">User ID or Registered Email *</label>
-      <input type="text" class="form-control" id="uid" placeholder="e.g., user@example.com or FB-12345" required>
-      <span class="help-block" style="font-size: 0.85em;">Found in App Settings > Profile.</span>
+      <input type="text" class="form-control" id="uid" aria-describedby="uid-help" placeholder="e.g., user@example.com or FB-12345" required>
+      <span class="help-block" id="uid-help">Found in App Settings &gt; Profile.</span>
     </div>
     <div class="form-group">
       <label for="deviceId">Device ID (Optional)</label>
       <input type="text" class="form-control" id="deviceId" placeholder="Your device identifier">
     </div>
     
-    <div class="form-group">
-      <label>Reason for Deletion</label>
+    <fieldset class="form-group">
+      <legend>Reason for Deletion</legend>
       <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="No longer need the app"> No longer need the app</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="Privacy concerns"> Privacy concerns</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="App has too many bugs"> App has too many bugs / stability issues</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonEn" value="Found a better alternative"> Found a better alternative</label></div>
-      <div class="checkbox"><label><input type="checkbox" id="otherReasonEnToggle" onchange="toggleOther('en')"> Other (please specify below)</label></div>
-      <textarea class="form-control" id="reasonEnOther" rows="2" style="display:none; margin-top:10px;" placeholder="Please tell us more..."></textarea>
-    </div>
+      <div class="checkbox"><label><input type="checkbox" id="otherReasonEnToggle" aria-controls="reasonEnOther" onchange="toggleOther('en')"> Other (please specify below)</label></div>
+      <textarea class="form-control" id="reasonEnOther" rows="2" aria-label="Other reason" placeholder="Please tell us more..." hidden></textarea>
+    </fieldset>
 
     <div class="checkbox">
       <label>
         <input type="checkbox" id="confirm" required> I understand that this action is permanent and cannot be undone.
       </label>
     </div>
-    <button type="button" class="btn btn-danger btn-lg" onclick="generateEmail('en')">
-      <i class="fa fa-envelope"></i> Send Deletion Request
+    <button type="submit" class="app-button">
+      <i class="fa fa-envelope" aria-hidden="true"></i> Send Deletion Request
     </button>
   </form>
 </div>
@@ -55,35 +56,35 @@ Fill out the details below to generate a pre-formatted email to our support team
 
 填写以下信息以自动生成发送给技术支持团队的邮件。
 
-<div class="well" style="background-color: #f9f9f9; border-radius: 8px; padding: 25px;">
-  <form id="deletionFormZh">
+<div class="app-panel deletion-panel" lang="zh-CN">
+  <form id="deletionFormZh" onsubmit="generateEmail('zh'); return false;">
     <div class="form-group">
       <label for="uidZh">注册邮箱或用户 ID *</label>
-      <input type="text" class="form-control" id="uidZh" placeholder="例如：user@example.com 或 FB-12345" required>
-      <span class="help-block" style="font-size: 0.85em;">可在应用“设置 > 个人资料”中查看。</span>
+      <input type="text" class="form-control" id="uidZh" aria-describedby="uid-zh-help" placeholder="例如：user@example.com 或 FB-12345" required>
+      <span class="help-block" id="uid-zh-help">可在应用“设置 &gt; 个人资料”中查看。</span>
     </div>
     <div class="form-group">
       <label for="deviceIdZh">设备 ID (选填)</label>
       <input type="text" class="form-control" id="deviceIdZh" placeholder="您的设备识别码">
     </div>
 
-    <div class="form-group">
-      <label>删除原因</label>
+    <fieldset class="form-group">
+      <legend>删除原因</legend>
       <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="不再需要此应用"> 不再需要此应用</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="隐私担忧"> 隐私担忧</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="应用运行不稳定/有Bug"> 应用运行不稳定 / 存在 Bug</label></div>
       <div class="checkbox"><label><input type="checkbox" name="reasonZh" value="找到了更好的替代品"> 找到了更好的替代品</label></div>
-      <div class="checkbox"><label><input type="checkbox" id="otherReasonZhToggle" onchange="toggleOther('zh')"> 其他（请在下方说明）</label></div>
-      <textarea class="form-control" id="reasonZhOther" rows="2" style="display:none; margin-top:10px;" placeholder="请详细说明您的原因..."></textarea>
-    </div>
+      <div class="checkbox"><label><input type="checkbox" id="otherReasonZhToggle" aria-controls="reasonZhOther" onchange="toggleOther('zh')"> 其他（请在下方说明）</label></div>
+      <textarea class="form-control" id="reasonZhOther" rows="2" aria-label="其他原因" placeholder="请详细说明您的原因..." hidden></textarea>
+    </fieldset>
 
     <div class="checkbox">
       <label>
         <input type="checkbox" id="confirmZh" required> 我已知晓此操作不可逆，账户一旦删除将无法恢复。
       </label>
     </div>
-    <button type="button" class="btn btn-danger btn-lg" onclick="generateEmail('zh')">
-      <i class="fa fa-envelope"></i> 发送删除申请邮件
+    <button type="submit" class="app-button">
+      <i class="fa fa-envelope" aria-hidden="true"></i> 发送删除申请邮件
     </button>
   </form>
 </div>
@@ -93,7 +94,7 @@ function toggleOther(lang) {
   var toggleId = lang === 'zh' ? 'otherReasonZhToggle' : 'otherReasonEnToggle';
   var targetId = lang === 'zh' ? 'reasonZhOther' : 'reasonEnOther';
   var isChecked = document.getElementById(toggleId).checked;
-  document.getElementById(targetId).style.display = isChecked ? 'block' : 'none';
+  document.getElementById(targetId).hidden = !isChecked;
 }
 
 function generateEmail(lang) {

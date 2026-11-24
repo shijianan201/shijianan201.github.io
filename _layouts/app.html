@@ -1,0 +1,58 @@
+{% assign product = site.data.apps[page.app] %}
+{% assign language = page.lang | default: 'en' %}
+{% assign language_base = language | slice: 0, 2 %}
+<!doctype html>
+<html lang="{{ language | escape }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1018">
+  <title>{{ page.title | escape }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+  <link rel="icon" href="{{ product.icon | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/themes/evjekylltheme/font-awesome-4.4.0/css/font-awesome.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/app-site/base.css' | relative_url }}">
+  {% if page.layout == 'app_document' %}
+  <link rel="stylesheet" href="{{ '/assets/app-site/documents.css' | relative_url }}">
+  {% else %}
+  <link rel="stylesheet" href="{{ '/assets/app-site/' | append: page.app | append: '.css' | relative_url }}">
+  {% endif %}
+</head>
+<body class="app-site app-site--{{ page.app }}">
+  <a class="app-skip-link" href="#main-content">{% if language_base == 'zh' %}跳到正文{% else %}Skip to content{% endif %}</a>
+  <header class="app-header">
+    <div class="app-shell app-header__inner">
+      <a class="app-brand" href="{{ '/' | relative_url }}">
+        <span class="app-brand__mark" aria-hidden="true"><i class="fa fa-cube"></i></span>
+        <span>Jannix</span>
+      </a>
+      <nav class="app-nav" aria-label="{% if language_base == 'zh' %}应用{% else %}Apps{% endif %}">
+        {% for entry in site.data.apps %}
+          {% assign item = entry[1] %}
+          <a href="{{ item.path | relative_url }}"{% if page.app == entry[0] %} class="app-nav__active"{% if page.layout == 'app' %} aria-current="page"{% endif %}{% endif %}>{% if language_base == 'zh' %}{{ item.name_zh | default: item.name }}{% else %}{{ item.name }}{% endif %}</a>
+        {% endfor %}
+      </nav>
+      <a class="app-blog-link" href="{{ '/archive.html' | relative_url }}">{% if language_base == 'zh' %}博客{% else %}Blog{% endif %}</a>
+    </div>
+  </header>
+
+  <main class="app-shell app-main" id="main-content" tabindex="-1">
+    {{ content }}
+  </main>
+
+  <footer class="app-footer">
+    <div class="app-shell app-footer__inner">
+      <span>© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
+      <nav aria-label="{% if language_base == 'zh' %}支持与政策{% else %}Support and policies{% endif %}">
+        <a href="{{ product.privacy | relative_url }}"{% if page.url == product.privacy %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}隐私政策{% else %}Privacy{% endif %}</a>
+        <a href="{{ product.terms | relative_url }}"{% if page.url == product.terms %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}用户协议{% else %}Terms{% endif %}</a>
+        {% if product.help %}
+        <a href="{{ product.help | relative_url }}"{% if page.url == product.help %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}帮助中心{% else %}Help Center{% endif %}</a>
+        <a href="{{ product.deletion | relative_url }}"{% if page.url == product.deletion %} aria-current="page"{% endif %}>{% if language_base == 'zh' %}删除数据{% else %}Data Deletion{% endif %}</a>
+        {% endif %}
+        <a href="{{ '/z-about.html' | relative_url }}">{% if language_base == 'zh' %}关于{% else %}About{% endif %}</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
